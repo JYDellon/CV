@@ -1,0 +1,606 @@
+@media (min-width:1200px){
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* -------------------------------------------------------------------------------- */
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    #titre{
+        text-align: center;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        color : white;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size:50px;
+        margin-top: 1em;
+    }
+    #adresse{
+        color: white;
+    }
+    h1{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    p{
+        font-size: 2em;
+        color: white;
+    }
+    a{
+        color: white;
+        font-size: 2em;
+        text-decoration:none;
+    }
+    .contact{
+        margin-top: 4em;
+        display: flex;
+        justify-content: space-around
+    }
+    #adresse{
+        text-align: center;
+        margin-top: 7em;
+    }
+    .itineraire{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+    #lien1{
+        text-align: center;
+    }
+    #lien2{
+        text-align: center;
+    }
+    #lien1 a, #lien2  a{
+        font-size: 1.3em;
+    }
+    .route{
+        margin-bottom: 1em;
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1, .group2{
+        display: flex;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* -------------------------------------------------------------------------------- */
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    #titre{
+        text-align: center;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        color : white;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size:50px;
+        margin-top: 1em;
+    }
+    #adresse{
+        color: white;
+    }
+    h1{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    p{
+        font-size: 2em;
+        color: white;
+    }
+    a{
+        color: white;
+        font-size: 2em;
+        text-decoration:none;
+    }
+    .contact{
+        margin-top: 4em;
+        display: flex;
+        justify-content: space-around;
+    }
+    #adresse{
+        text-align: center;
+        margin-top: 7em;
+    }
+    .itineraire{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+    #lien1{
+        text-align: center;
+    }
+    #lien2{
+        text-align: center;
+    }
+    #lien1 a, #lien2  a{
+        font-size: 1.3em;
+    }
+    .route{
+        margin-bottom: 1em;
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1, .group2{
+        display: flex;
+
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* -------------------------------------------------------------------------------- */
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    #titre{
+        text-align: center;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        color : white;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size:40px;
+        margin-top: 1em;
+    }
+    #adresse{
+        color: white;
+    }
+    h1{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    p{
+        font-size: 2em;
+        color: white;
+    }
+    a{
+        color: white;
+        font-size: 2em;
+        text-decoration:none;
+    }
+    .contact{
+        margin-top: 4em;
+        em;
+        display: flex;
+        justify-content: space-around;
+    }
+    #adresse{
+        text-align: center;
+        margin-top: 7em;
+    }
+    .itineraire{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;margin-top: 2em;
+    }
+    #lien1{
+        text-align: center;
+    }
+    #lien2{
+        text-align: center;
+    }
+    .route{
+        margin-bottom: 1em;
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1, .group2{
+        display: flex;
+
+    }
+}
+@media (min-width:501px) and (max-width:767px){
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* -------------------------------------------------------------------------------- */
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    #titre{
+        text-align: center;
+    }
+    header{flex-direction: column;
+        align-items: center;
+        color : white;
+        text-align: center;
+        color : white;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size:35px;
+    }
+    p{
+        font-size: 2em;
+        color: white;
+    }
+    #adresse{
+        color: white;
+        font-size: 1em;
+    }
+    h1{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    
+    a{
+        color: white;
+        font-size: 2em;
+        text-decoration:none;
+    }
+    .contact{
+        text-align: center;
+    }
+    #adresse{
+        text-align: center;
+        margin-top: 7em;
+    }
+    .contact1{
+        margin-bottom: 2em;
+    }
+    .contact2{
+        margin-bottom: 2em;
+    }
+ 
+    .itineraire{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+    #lien1{
+        text-align: center;
+    }
+    #lien2{
+        text-align: center;
+    }
+    .route{
+        margin-bottom: 1em;
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1{
+        display: block;
+
+    }
+}
+@media (max-width:500px){
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* -------------------------------------------------------------------------------- */
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    #titre{
+        text-align: center;
+    }
+    header{flex-direction: column;
+        align-items: center;
+        color : white;
+        text-align: center;
+        color : white;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        font-size:35px;
+    }
+    #adresse{
+        color: white;
+    }
+    h1{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+    p{
+        font-size: 2em;
+        color: white;
+    }
+    a{
+        color: white;
+        font-size: 2em;
+        text-decoration:none;
+    }
+    .contact{
+        margin-top: 4em;
+        text-align: center;
+    }
+    .contact1{
+        margin-bottom: 2em;
+    }
+    .contact2{
+        margin-bottom: 2em;
+    }
+    #adresse{
+        text-align: center;
+        margin-top: 7em;
+    }
+   
+    .itineraire{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2em;margin-top: 2em;
+        text-align: center;
+    }
+    #lien1{
+        text-align: center;
+        width: 35%;
+    }
+    #lien2{
+        text-align: center;
+        width: 20%;   
+    }
+    .route{
+        margin-bottom: 1em;
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1, .group2{
+        display: block;
+
+    }
+}

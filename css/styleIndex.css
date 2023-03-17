@@ -1,0 +1,1108 @@
+@media (min-width:1200px)  {
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------------------------------------------------------------------------- */
+#titre{
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    color : white;
+}
+section{
+    display: flex;
+    justify-content:space-between;
+    text-align: center; 
+}
+#partie1{
+    width: 100%;
+    display: flex;
+}
+#icons{
+    margin-top: 1em;
+}
+#icons img{
+    width: 45px;
+    height: 40px;
+}
+#icons{
+    display: flex;
+    justify-content: space-around;
+}
+.souligne a{
+    text-decoration: underline;
+}
+#competences{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 32%;
+    color : white;    
+}
+#competences:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#formationsLanguesHobbies{
+    width: 32%;
+}
+#formations{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 35% 3%;
+    color : white;
+}
+#formations:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#langues{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+}
+#langues:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#langues img{
+    width: 35px;
+    height: 35px;
+}
+#bilingue{
+    display: flex;
+    justify-content:space-around;
+}
+.imgLang2{
+    margin-bottom: 0.5em;
+}
+.lang1{
+    font-size: 1.3em;
+}
+.lang2{
+    font-size: 1.3em;
+    margin-right: 3em;
+}
+
+#hobbies{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+}
+#hobbies:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#experiences{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 32%;
+    color : white;
+}
+#experiences:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#listhobbies{
+    display: flex;
+    justify-content:space-around;
+}
+#listhobbies{
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+ul{
+    list-style: none;
+}
+#liexperiences{
+    padding-bottom: 4em;
+}
+#licompetences{
+    padding-bottom: 0.6em;
+    font-size: 1.3em;
+}
+h5{
+    margin-top: 0.5em;
+}
+h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+h3{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    font-size:2em;
+}
+h2{
+    font-size:50px;
+    margin-top: 1em;
+}
+h1{
+    font-size: 20px;
+}
+body{
+    background-image : url(../image/fondecran.jpg);
+}
+Header #titre h3{
+    text-decoration:none;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+.parentLien{
+    display: flex;
+    justify-content: space-around;
+}
+#lien1{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    width: 10%;
+    text-align: center;
+}
+#lien1 button a, #lien2 button a{
+    font-size: 1.3em;
+
+}
+#lien2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    width: 10%;
+    text-align: center;
+}
+#masterTitre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+}
+@media (min-width:992px) and (max-width:1199px){
+    
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* --------------------------------- */
+    #titre{
+        text-align: center;
+    }
+    header{
+        display: flex;
+        color : white;
+        justify-content: space-between;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+    }
+
+
+   
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        text-align: center;
+    }
+    #icons{
+        margin-top: 1em;
+    }
+    #icons img{
+        width: 45px;
+        height: 40px;
+    }
+    #icons{
+        display: flex;
+        justify-content: space-around;
+    }
+    #competences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 48%;
+        color : white;    
+    }
+    #competences:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #formationsLanguesHobbies{
+        width: 48%;
+    }
+    #formations{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+    }
+    #formations:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #langues{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    #langues:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #langues img{
+        width: 35px;
+        height: 35px;
+    }
+    #bilingue{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .imgLang2{
+        margin-bottom: 0.5em;
+    }
+    .lang2{
+        margin-right: 3em;
+        font-size: 1.3em;
+    }
+    .lang1{
+        font-size: 1.3em;
+    }
+    .souligne a{
+        text-decoration: underline;
+    }
+    
+    
+    #hobbies{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    #hobbies:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #listhobbies{
+        margin-bottom: 0.5em;
+        font-size: 1.3em;
+    }
+    #experiences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+    }
+    #experiences:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #listhobbies{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    li{
+        padding-bottom: 0.5em;
+    }
+    #liexperiences{
+        padding-bottom: 4em;
+    }
+    #licompetences{
+        padding-bottom: 0.6em;
+        font-size: 1.3em;
+    }
+    h5{
+        margin-top: 0.5em;
+    }
+    h4{
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+    h3{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        font-size:2em;
+    }
+    h2{
+        margin-top: 1em;
+        font-size:50px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    Header #titre h3{
+        text-decoration:none;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+    }
+    #lien1{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    #lien2{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    #lien1 a, #lien2 a{
+        font-size: 1.3em;
+    }
+    
+    #adresse{
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+   /* --------------------------------- */
+    #titre{
+        text-align: center;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        color : white;
+    }
+    section{
+        display: block;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        text-align: center;
+        
+    }
+  
+    #icons{
+        margin-top: 1em;
+    }
+    #icons img{
+        width: 45px;
+        height: 40px;
+    }
+    #icons{
+        display: flex;
+        justify-content: space-around;
+    }
+    #competences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;    
+    }
+    #competences:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #formationsLanguesHobbies{
+        width: 100%;
+    }
+    #formations{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+        margin-top: 1em;
+    }
+    #formations:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #langues{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    #langues:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #langues img{
+        width: 35px;
+        height: 35px;
+    }
+    #bilingue{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .imgLang2{
+        margin-bottom: 0.5em;
+    }
+    .lang1{
+        font-size: 1.3em;
+    }
+    .lang2{
+        font-size: 1.3em;
+        margin-right: 3em;
+    }
+    .souligne a{
+        text-decoration: underline;
+    }
+    
+    
+    #hobbies{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    #hobbies:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #masterTitre{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+#listhobbies{
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+    #experiences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+    }
+    #experiences:hover {
+        background: rgba(145, 171, 227, 0.874);
+        color:black;
+    }
+    #listhobbies{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    li{
+        padding-bottom: 0.5em;
+    }
+    #liexperiences{
+        padding-bottom: 4em;
+    }
+    #licompetences{
+        padding-bottom: 0.6em;
+        font-size: 1.3em;
+    }
+    h5{
+        margin-top: 0.5em;
+    }
+    h4{
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+    h3{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        font-size:2em;
+    }
+    h2{
+        font-size:40px;
+        margin-top: 1em;
+    }
+    h1{
+        font-size: 20px;
+    }
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    Header #titre h3{
+        text-decoration:none;
+    }
+    a{
+        color:white;
+        text-decoration:none;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+    }
+    #lien1{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+    #lien2{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+    #adresse{
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+}
+@media (min-width:501px) and (max-width:767px){
+    
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.souligne a{
+    text-decoration: underline;
+}
+    #titre{
+        text-align: center;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        color : white;
+        text-align: center;
+    }
+    section{
+        display: block;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        text-align: center;
+        
+    }
+  
+    #icons{
+        margin-top: 5em;
+    }
+    #icons img{
+        width: 45px;
+        height: 40px;
+    }
+    #icons{
+        display: flex;
+        justify-content: space-around;
+    }
+    #competences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;    
+    }
+   
+    #formationsLanguesHobbies{
+        width: 100%;
+    }
+    #formations{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+        margin-top: 1em;
+    }
+    #langues{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    #langues img{
+        width: 35px;
+        height: 35px;
+    }
+    #bilingue{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .imgLang2{
+        margin-bottom: 0.5em;
+    }
+    .lang1{
+        font-size: 1.3em;
+    }
+    .lang2{
+        font-size: 1.3em;
+        margin-right: 3em;
+    }
+    #hobbies{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+#listhobbies{
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+    #experiences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+    }
+    #listhobbies{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    li{
+        padding-bottom: 0.5em;
+    }
+    #liexperiences{
+        padding-bottom: 4em;
+    }
+    #licompetences{
+        padding-bottom: 0.6em;
+        font-size: 1.3em;
+    }
+    
+h5{
+    margin-top: 0.5em;
+}
+h4{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+h3{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    font-size:2em;
+}
+h2{
+    font-size:35px;
+}
+h1{
+    font-size: 20px;
+}
+    #adresse{
+        margin-top: 1em;
+        margin-left: 1em;
+        text-align: center;
+    }
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    Header #titre h3{
+        text-decoration:none;
+    }
+    a{
+        color:white;
+        text-decoration:none;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+    }
+    #lien1{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+    #lien2{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+}
+@media (max-width:500px){
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* ------------------------------------------------------------------------------ */
+    #titre{
+        text-align: center;
+    }
+
+    header{
+        text-align: center;
+        color : white;
+    }
+    section{
+        display: block;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        text-align: center;
+        
+    }
+    .souligne a{
+        text-decoration: underline;
+    }
+    #icons{
+        margin-top: 5em;
+    }
+    #icons img{
+        width: 45px;
+        height: 40px;
+    }
+    #icons{
+        display: flex;
+        justify-content: space-around;
+    }
+    #competences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;    
+    }
+
+    #formationsLanguesHobbies{
+        width: 100%;
+    }
+    #formations{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+        margin-top: 1em;
+    }
+    
+    #langues{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    
+    #langues img{
+        width: 35px;
+        height: 35px;
+    }
+    #bilingue{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    .imgLang2{
+        margin-bottom: 0.5em;
+    }
+    .lang1{
+        font-size: 1.3em;
+    }
+    .lang2{
+        font-size: 1.3em;
+        margin-right: 3em;
+    }
+    #hobbies{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+    }
+    
+    #listhobbies{
+        margin-bottom: 0.5em;
+        font-size: 1.3em;
+    }
+    #experiences{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+    }
+    #listhobbies{
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    li{
+        padding-bottom: 0.5em;
+    }
+    #liexperiences{
+        padding-bottom: 4em;
+    }
+    #licompetences{
+        padding-bottom: 0.6em;
+        font-size: 1.3em;
+    }
+    h5{
+        margin-top: 0.5em;
+    }
+    h4{
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+    h3{
+        padding-top: 1em;
+        padding-bottom: 2em;
+        font-size:2em;
+    }
+    h2{
+        font-size:35px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #adresse{
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    body{
+        background-image : url(../image/fondecran.jpg);
+    }
+    Header #titre h3{
+        text-decoration:none;
+    }
+    a{
+        color:white;
+        text-decoration:none;
+    }
+    .parentLien{
+        display: flex;
+        justify-content: space-around;
+    }
+    #lien1{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+    #lien2{
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+    }
+  } 
+ .ancre{
+        text-align: center;
+    }
