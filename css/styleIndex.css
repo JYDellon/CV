@@ -575,7 +575,7 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
-   .card{
+.card{
     width: 100%;
     text-align: center;
 }
@@ -1150,6 +1150,7 @@ h1{
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------ */
+    
     .card{
         width: 100%;
         text-align: center;

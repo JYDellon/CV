@@ -287,6 +287,7 @@
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------- */
+    
     #titre{
         text-align: center;
         width: 100%;
@@ -369,6 +370,9 @@
         border-spacing: 0;
     }
     /* ---------------------------------------------------------------- */
+    .mgtp{
+        margin-top: 3em;
+    }
     #titre{
         text-align: center;
         width: 100%;
@@ -396,7 +400,6 @@
         display: flex;
         justify-content: space-around;
         margin-top: 1em;
-        font-size: 2em;
     }
     #lien1 a{
         text-align: center;
