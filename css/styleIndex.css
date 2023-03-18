@@ -43,6 +43,10 @@ table {
 	border-spacing: 0;
 }
 /* ---------------------------------------------------------------------------------- */
+
+.hidden{
+    display: none;
+   }
 #titre{
     text-align: center;
 }
@@ -170,7 +174,9 @@ ul{
 }
 h5{
     margin-top: 0.5em;
+    margin-bottom: 1em;
 }
+
 h4{
     font-size: 1.3em;
     margin-bottom: 0.5em;
@@ -271,6 +277,69 @@ table {
 	border-spacing: 0;
 }
 /* --------------------------------- */
+.card{
+    width: 100%;
+    text-align: center;
+}
+.fs{
+    font-size: 0.6em;
+}
+.df{
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    display: block;
+}
+.ancre{
+    display: none;
+}
+.bgPerso{
+    background-image : url(../image/fondecran.jpg);
+    color: white;
+    text-align: center;
+}
+.competence{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 100%;
+    color : white;  
+    text-align: center;
+}
+.formation{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 35% 3%;
+    color : white;
+    margin-top: 1em;
+    text-align: center;
+}
+.langue{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+    text-align: center;
+}
+.hobbie{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+    text-align: center;
+}
+.experience{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 100%;
+    color : white;
+    margin-top: 1em;
+    text-align: center;
+}
     #titre{
         text-align: center;
     }
@@ -304,6 +373,7 @@ table {
         justify-content: space-around;
     }
     #competences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -315,6 +385,7 @@ table {
         color:black;
     }
     #formationsLanguesHobbies{
+        display: none;
         width: 48%;
     }
     #formations{
@@ -377,6 +448,7 @@ table {
         font-size: 1.3em;
     }
     #experiences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -406,8 +478,9 @@ table {
         padding-bottom: 0.6em;
         font-size: 1.3em;
     }
-    h5{
+    h5, li h5{
         margin-top: 0.5em;
+        margin-bottom: 1em;
     }
     h4{
         font-size: 1.3em;
@@ -434,18 +507,16 @@ table {
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
     #lien1{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
     }
     #lien2{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
     }
-    #lien1 a, #lien2 a{
+    #lien1 a, #lien2  a{
         font-size: 1.3em;
     }
     
@@ -483,7 +554,7 @@ time, mark, audio, video {
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: none;
 }
 body {
 	line-height: 1;
@@ -504,6 +575,28 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
+   .card{
+    width: 100%;
+    text-align: center;
+}
+.fs{
+    font-size: 0.6em;
+}
+.df{
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    display: block;
+}
+.ancre{
+    display: none;
+}
+.bgPerso{
+    background-image : url(../image/fondecran.jpg);
+    color: white;
+    text-align: center;
+}
     #titre{
         text-align: center;
     }
@@ -532,17 +625,27 @@ table {
         justify-content: space-around;
     }
     #competences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
         width: 100%;
-        color : white;    
+        color : white;
+    }
+    .competence{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;  
+        text-align: center;
     }
     #competences:hover {
         background: rgba(145, 171, 227, 0.874);
         color:black;
     }
     #formationsLanguesHobbies{
+        display: none;
         width: 100%;
     }
     #formations{
@@ -551,6 +654,14 @@ table {
         border-radius: 35% 3%;
         color : white;
         margin-top: 1em;
+    }
+    .formation{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+        margin-top: 1em;
+        text-align: center;
     }
     #formations:hover {
         background: rgba(145, 171, 227, 0.874);
@@ -562,6 +673,14 @@ table {
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
         color : white;
+    }
+    .langue{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+        text-align: center;
     }
     #langues:hover {
         background: rgba(145, 171, 227, 0.874);
@@ -597,6 +716,14 @@ table {
         border-radius: 1em;
         color : white;
     }
+    .hobbie{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+        text-align: center;
+    }
     #hobbies:hover {
         background: rgba(145, 171, 227, 0.874);
         color:black;
@@ -612,12 +739,22 @@ table {
     font-size: 1.3em;
 }
     #experiences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
         width: 100%;
         color : white;
         margin-top: 1em;
+    }
+    .experience{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+        text-align: center;
     }
     #experiences:hover {
         background: rgba(145, 171, 227, 0.874);
@@ -641,8 +778,9 @@ table {
         padding-bottom: 0.6em;
         font-size: 1.3em;
     }
-    h5{
+    h5, li h5{
         margin-top: 0.5em;
+        margin-bottom: 1em;
     }
     h4{
         font-size: 1.3em;
@@ -674,13 +812,13 @@ table {
         display: flex;
         justify-content: space-around;
     }
-    #lien1{
+    #lien1 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 1.3em;
     }
-    #lien2{
+    #lien2 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
@@ -738,7 +876,71 @@ table {
 .souligne a{
     text-decoration: underline;
 }
-    #titre{
+/* ----------------------------------------------------------------------------- */
+.card{
+    width: 100%;
+    text-align: center;
+}
+.fs{
+    font-size: 0.6em;
+}
+.df{
+    display: flex;
+    justify-content: center;
+}
+.hidden{
+    display: block;
+}
+.ancre{
+    display: none;
+}
+.bgPerso{
+    background-image : url(../image/fondecran.jpg);
+    color: white;
+    text-align: center;
+}
+.competence{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 100%;
+    color : white;  
+    text-align: center;
+}
+.formation{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 35% 3%;
+    color : white;
+    margin-top: 1em;
+    text-align: center;
+}
+.langue{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+    text-align: center;
+}
+.hobbie{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+    text-align: center;
+}
+.experience{
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 100%;
+    color : white;
+    margin-top: 1em;
+    text-align: center;
+}    
+#titre{
         text-align: center;
     }
     header{
@@ -767,6 +969,7 @@ table {
         justify-content: space-around;
     }
     #competences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -775,6 +978,7 @@ table {
     }
    
     #formationsLanguesHobbies{
+        display: none;
         width: 100%;
     }
     #formations{
@@ -821,6 +1025,7 @@ table {
     font-size: 1.3em;
 }
     #experiences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -847,9 +1052,10 @@ table {
         font-size: 1.3em;
     }
     
-h5{
-    margin-top: 0.5em;
-}
+    h5, li h5{
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
 h4{
     font-size: 1.3em;
     margin-bottom: 0.5em;
@@ -883,14 +1089,16 @@ h1{
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-bottom: 1em;
+        margin-top: 2em;
     }
-    #lien1{
+    #lien1 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 1.3em;
     }
-    #lien2{
+    #lien2 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
@@ -942,6 +1150,69 @@ h1{
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------ */
+    .card{
+        width: 100%;
+        text-align: center;
+    }
+    .fs{
+        font-size: 0.6em;
+    }
+    .df{
+        display: flex;
+        justify-content: center;
+    }
+    .hidden{
+        display: block;
+    }
+    .ancre{
+        display: none;
+    }
+    .bgPerso{
+        background-image : url(../image/fondecran.jpg);
+        color: white;
+        text-align: center;
+    }
+    .competence{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;  
+        text-align: center;
+    }
+    .formation{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 35% 3%;
+        color : white;
+        margin-top: 1em;
+        text-align: center;
+    }
+    .langue{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+        text-align: center;
+    }
+    .hobbie{
+        margin-top: 1em;
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        color : white;
+        text-align: center;
+    }
+    .experience{
+        background-color: rgba(26, 37, 61, 0.6);
+        border: 1mm ridge rgba(75, 107, 175, 0.6);
+        border-radius: 1em;
+        width: 100%;
+        color : white;
+        margin-top: 1em;
+        text-align: center;
+    }
     #titre{
         text-align: center;
     }
@@ -1054,8 +1325,9 @@ h1{
         padding-bottom: 0.6em;
         font-size: 1.3em;
     }
-    h5{
+    h5, li h5{
         margin-top: 0.5em;
+        margin-bottom: 1em;
     }
     h4{
         font-size: 1.3em;

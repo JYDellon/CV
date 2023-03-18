@@ -156,6 +156,9 @@
     #lien2{
         text-align: center;
     }
+    #lien1 a, #lien2  a{
+        font-size: 1.3em;
+    }
 }
 @media (min-width:768px) and (max-width:991px){
 
@@ -225,14 +228,18 @@
     .parentLien{
         display: flex;
         justify-content: space-around;
+    }
+    #lien1 a{
+        text-align: center;
         margin-top: 1em;
-        font-size: 2em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
     }
-    #lien1{
+    #lien2 a{
         text-align: center;
-    }
-    #lien2{
-        text-align: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1.3em;
     }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -305,14 +312,16 @@
     .parentLien{
         display: flex;
         justify-content: space-around;
-        margin-top: 1em;
-        font-size: 2em;
+        margin-bottom: 1em;
+        margin-top: 2em;
     }
-    #lien1{
+    #lien1 a{
         text-align: center;
+        font-size: 1.3em;
     }
-    #lien2{
+    #lien2 a{
         text-align: center;
+        font-size: 1.3em;
     }
 }
 @media (max-width:500px){
@@ -389,11 +398,12 @@
         margin-top: 1em;
         font-size: 2em;
     }
-    #lien1{
+    #lien1 a{
         text-align: center;
-        width: 2em;
+        font: size 1.3em;
     }
-    #lien2{
+    #lien2 a{ 
         text-align: center;
+        font: size 1.3em;
     }
 }
