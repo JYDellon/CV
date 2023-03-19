@@ -575,6 +575,9 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
+.mtaccordion{
+    margin-top: 6em;
+   }
 .card{
     width: 100%;
     text-align: center;
@@ -877,6 +880,9 @@ table {
     text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------- */
+.mtaccordion{
+    margin-top: 6em;
+   }
 .card{
     width: 100%;
     text-align: center;
@@ -1151,6 +1157,9 @@ h1{
     }
     /* ------------------------------------------------------------------------------ */
     
+    .mtaccordion{
+        margin-top: 6em;
+       }
     .card{
         width: 100%;
         text-align: center;
