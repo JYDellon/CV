@@ -1378,13 +1378,13 @@ h1{
         display: flex;
         justify-content: space-around;
     }
-    #lien1{
+    #lien1 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 1.3em;
     }
-    #lien2{
+    #lien2 a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
