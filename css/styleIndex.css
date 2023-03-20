@@ -1234,7 +1234,7 @@ h1{
         color : white;
     }
     section{
-        display: block;
+        display: none;
         flex-wrap: wrap;
         justify-content:space-between;
         text-align: center;
