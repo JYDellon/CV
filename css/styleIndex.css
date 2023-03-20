@@ -1181,6 +1181,7 @@ h1{
         text-align: center;
     }
     .competence{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -1189,6 +1190,7 @@ h1{
         text-align: center;
     }
     .formation{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 35% 3%;
@@ -1197,6 +1199,7 @@ h1{
         text-align: center;
     }
     .langue{
+        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1205,6 +1208,7 @@ h1{
         text-align: center;
     }
     .hobbie{
+        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1213,6 +1217,7 @@ h1{
         text-align: center;
     }
     .experience{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
