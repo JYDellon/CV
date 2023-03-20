@@ -906,7 +906,6 @@ table {
     text-align: center;
 }
 .competence{
-    display: none;
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
     border-radius: 1em;
@@ -990,6 +989,7 @@ table {
         width: 100%;
     }
     #formations{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 35% 3%;
@@ -997,6 +997,7 @@ table {
         margin-top: 1em;
     }
     #langues{
+        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1022,6 +1023,7 @@ table {
         margin-right: 3em;
     }
     #hobbies{
+        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1183,7 +1185,6 @@ h1{
         text-align: center;
     }
     .competence{
-        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -1192,7 +1193,6 @@ h1{
         text-align: center;
     }
     .formation{
-        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 35% 3%;
@@ -1201,7 +1201,6 @@ h1{
         text-align: center;
     }
     .langue{
-        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1210,7 +1209,6 @@ h1{
         text-align: center;
     }
     .hobbie{
-        display: none;
         margin-top: 1em;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -1219,7 +1217,6 @@ h1{
         text-align: center;
     }
     .experience{
-        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -1259,6 +1256,7 @@ h1{
         justify-content: space-around;
     }
     #competences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
@@ -1267,6 +1265,7 @@ h1{
     }
 
     #formationsLanguesHobbies{
+        display: none;
         width: 100%;
     }
     #formations{
@@ -1316,6 +1315,7 @@ h1{
         font-size: 1.3em;
     }
     #experiences{
+        display: none;
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
         border-radius: 1em;
