@@ -965,6 +965,7 @@ table {
   
     #icons{
         margin-top: 5em;
+        margin-bottom: 2em;
     }
     #icons img{
         width: 45px;
@@ -1243,6 +1244,7 @@ h1{
     }
     #icons{
         margin-top: 5em;
+        margin-bottom: 2em;
     }
     #icons img{
         width: 45px;
