@@ -206,17 +206,23 @@ a{
 .parentLien{
     display: flex;
     justify-content: space-around;
-}
-#lien1 a{
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 1.3em;
-    width: 10%;
     text-align: center;
+}
+#lien1 a{
+    font-size: 1.3em;
 }
 #lien1 button a, #lien2 button a{
     font-size: 1.3em;
 
+}
+#lien1{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    width: 10%;
+    text-align: center;
 }
 #lien2{
     margin-top: 1em;
@@ -1377,18 +1383,16 @@ h1{
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     #lien1 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #lien2 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-size: 1.3em;
+        
     }
   } 
  .ancre{
