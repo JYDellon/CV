@@ -820,17 +820,15 @@ table {
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-bottom: 1em;
+        margin-top: 2em;
     }
     #lien1 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #lien2 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #adresse{
@@ -1108,14 +1106,10 @@ h1{
     }
     #lien1 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #lien2 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
 }
@@ -1383,8 +1377,8 @@ h1{
     .parentLien{
         display: flex;
         justify-content: space-around;
-        margin-top: 1em;
         margin-bottom: 1em;
+        margin-top: 2em;
     }
     #lien1 a{
         text-align: center;
@@ -1392,7 +1386,7 @@ h1{
     }
     #lien2 a{
         text-align: center;
-        
+        font-size: 1.3em;
     }
   } 
  .ancre{
