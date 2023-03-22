@@ -76,7 +76,7 @@
     }
     a{
         color: white;
-        font-size: 2em;
+        font-size: 1.3em;
         text-decoration:none;
     }
     .contact{
@@ -86,7 +86,7 @@
     }
     #adresse{
         text-align: center;
-        margin-top: 7em;
+        margin-top: 3em;
     }
     .itineraire{
         text-align: center;
@@ -195,7 +195,7 @@
     }
     a{
         color: white;
-        font-size: 2em;
+        font-size: 1.3em;
         text-decoration:none;
     }
     .contact{
@@ -205,7 +205,7 @@
     }
     #adresse{
         text-align: center;
-        margin-top: 7em;
+        margin-top: 3em;
     }
     .itineraire{
         text-align: center;
@@ -315,7 +315,7 @@
     }
     a{
         color: white;
-        font-size: 2em;
+        font-size: 1.3em;
         text-decoration:none;
     }
     .contact{
@@ -329,7 +329,7 @@
     }
     #adresse{
         text-align: center;
-        margin-top: 7em;
+        margin-top: 3em;
     }
     .itineraire{
         text-align: center;
@@ -338,17 +338,15 @@
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
     #lien1 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #lien2 a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     .route{
