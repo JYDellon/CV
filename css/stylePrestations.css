@@ -1,0 +1,715 @@
+@media (min-width:768px) {
+.logo{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.logo img{
+    width: 300px;
+}
+.logo2 img{
+    width: 150px;
+}
+.list{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+a{
+    text-decoration-line: none;
+}
+
+li{
+    list-style: none;
+}
+
+.accordion-button, .accordion-button {
+    background-color: #6d6d6d;
+}
+#collapseOne, #collapseFour, #collapseSeven, .card{
+    background-color: #6d6d6d;
+}
+.card{
+    text-align: center;
+}
+.accordion{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 5em;
+}
+.logo img{
+    width: 300px;   
+}
+.debutMot{
+    color: red;
+}
+.finMotBlanc{
+    color: white;
+}
+.finMotNoir{
+    color: rgb(0, 0, 0);
+}
+.nettoyage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.parentNetExt, .parentNetExtInt, .parentNetExtract{
+    display: flex;
+    justify-content: center;
+}
+.netExt, .netInt, .netExtInt, .netExtract, .info1, .tauxHoraire{
+    border: 1mm ridge rgba(62, 60, 60, 0.6);
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
+
+.boutonPrestations{
+    text-decoration: underline;
+}
+.centrerTableau{
+    display: flex;
+    justify-content: center;
+}.info3{
+    border: 1mm ridge rgba(255, 255, 255, 0.6);
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+.netExtract{
+    margin:auto;
+}
+
+.centrerTitre{
+    width: 100%;
+    text-align: center;
+}
+.couleur{
+    background-color: #5d5d5d;
+}
+.mecanique, .nettoyag, .reprogrammation{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.reprog{
+    display: flex;
+    justify-content: center;
+}
+.nettoyag{
+    margin-top: 1em;
+}
+.pro{
+    text-align: center;
+}
+footer a{
+    color: rgb(255, 255, 255);
+}
+
+.rePourLeLogo{
+    margin-top: 3.5em;
+}
+  .souligner{
+    text-decoration-line:underline
+}
+html {
+    height: 100%;
+  }
+.couleur2{
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(75, 75, 75) 50%);
+    }
+body{
+    font-size: 1.3em;
+    font-family: "Cascadia";
+    background: linear-gradient(90deg, rgb(255, 255, 255) 8%, rgba(75, 75, 75, 0.928) 100%);
+    min-height:100vh;
+    height: 100%;
+    display:flex;
+	flex-direction:column;
+}
+button{
+    box-shadow: 10px 5px 5px rgb(75, 75, 75);
+}
+.polisse{
+    font-size: 1em;
+    font-family: "Cascadia";
+}
+section{
+    margin-bottom: 2em;
+    flex-grow:1;
+}
+.retorEnHautDePage{
+    display: flex;
+    justify-content: center;
+}
+.reseaux{
+    display: flex;
+    justify-content: space-around;
+}
+.facebook1 a:hover,.facebook2 a:hover{
+    color:blue;
+}
+.snapchat1  a:hover,.snapchat2 a:hover{
+    color:yellow
+}
+.instagram1 a:hover,.instagram2 a:hover{
+    color:blueviolet
+}
+.parentAscensseur{
+    margin-top: 1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: right;
+}
+.ascensseur a, .tablo{
+    color: white;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+footer{
+    width: 100%;
+    background-color: black;
+    color:white;
+    font-size: 0.8em;
+    bottom: 0;
+}
+footer a{
+    color: white;
+}
+.phase1{
+    display: flex;
+    justify-content: space-around;
+}
+.lienDuSite{
+    flex-direction: column;
+}
+.phase2{
+    text-align: center;
+}
+
+
+/* Style the images inside the grid */
+.opaque a img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.opaque img:hover {
+  opacity: 1;
+}
+
+
+
+.twAudessus {
+    /* Le trame de fond */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .twAudessus a {
+    /* Le truc pour centrer l’image */
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+  }
+  
+  .twAudessus img {
+    /* Le contour de l’image */
+    max-width:1200px;
+    padding: 10px;
+    background: #ffffff;
+  }
+  
+  /* Slecteur « target pour afficher l’image » */
+  .twAudessus:target { display: table; }
+
+  #id1 a img, #id2 a img, #id3 a img, #id4 a img, #id5 a img{
+    width: 600px;
+    height: 600px;
+  }
+  #id6 a img, #id7 a img, #id8 a img, #id9 a img{
+    width: 740px;
+    height: 600px;
+  }
+}
+@media (min-width:501px) AND (max-width:767px){
+    .logo{
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .logo img{
+        width: 300px;
+    }
+    .logo2 img{
+        width: 150px;
+    }
+    .list{
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+    a{
+        text-decoration-line: none;
+    }
+    
+    li{
+        list-style: none;
+    }
+    
+    .accordion-button, .accordion-button {
+        background-color: #6d6d6d;
+    }
+    #collapseOne, #collapseFour, #collapseSeven, .card{
+        background-color: #6d6d6d;
+    }
+    .card{
+        text-align: center;
+    }
+    .accordion{
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 5em;
+    }
+    .logo img{
+        width: 300px;   
+    }
+    .debutMot{
+        color: red;
+    }
+    .finMotBlanc{
+        color: white;
+    }
+    .finMotNoir{
+        color: rgb(0, 0, 0);
+    }
+    .nettoyage{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .parentNetExt, .parentNetExtInt, .parentNetExtract{
+        display: flex;
+        justify-content: center;
+    }
+    .netExt, .netInt, .netExtInt, .netExtract, .info1, .tauxHoraire{
+        border: 1mm ridge rgba(62, 60, 60, 0.6);
+        margin-bottom: 2em;
+        border-radius: 10px;
+    }
+    
+    .boutonPrestations{
+        text-decoration: underline;
+    }
+    .centrerTableau{
+        display: flex;
+        justify-content: center;
+    }.info3{
+        border: 1mm ridge rgba(255, 255, 255, 0.6);
+        margin-bottom: 1em;
+        border-radius: 10px;
+    }
+    .netExtract{
+        margin:auto;
+    }
+    
+    .centrerTitre{
+        width: 100%;
+        text-align: center;
+    }
+    .couleur{
+        background-color: #5d5d5d;
+    }
+    .mecanique, .nettoyag, .reprogrammation{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .reprog{
+        display: flex;
+        justify-content: center;
+    }
+    .nettoyag{
+        margin-top: 1em;
+    }
+    .pro{
+        text-align: center;
+    }
+    footer a{
+        color: rgb(255, 255, 255);
+    }
+    
+    .rePourLeLogo{
+        margin-top: 3.5em;
+    }
+      .souligner{
+        text-decoration-line:underline
+    }
+    html {
+        height: 100%;
+      }
+    .couleur2{
+        background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(75, 75, 75) 50%);
+        }
+    body{
+        font-size: 1.3em;
+        font-family: "Cascadia";
+        background: linear-gradient(90deg, rgb(255, 255, 255) 8%, rgba(75, 75, 75, 0.928) 100%);
+        min-height:100vh;
+        height: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+    button{
+        box-shadow: 10px 5px 5px rgb(75, 75, 75);
+    }
+    .polisse{
+        font-size: 1em;
+        font-family: "Cascadia";
+    }
+    section{
+        margin-bottom: 2em;
+        flex-grow:1;
+    }
+    .retorEnHautDePage{
+        display: flex;
+        justify-content: center;
+    }
+    .reseaux{
+        display: flex;
+        justify-content: space-around;
+    }
+    .facebook1 a:hover,.facebook2 a:hover{
+        color:blue;
+    }
+    .snapchat1  a:hover,.snapchat2 a:hover{
+        color:yellow
+    }
+    .instagram1 a:hover,.instagram2 a:hover{
+        color:blueviolet
+    }
+    .parentAscensseur{
+        margin-top: 1em;
+        margin-right: 1em;
+        display: flex;
+        justify-content: right;
+    }
+    .ascensseur a, .tablo{
+        color: white;
+    }
+    /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+    footer{
+        width: 100%;
+        background-color: black;
+        color:white;
+        font-size: 0.8em;
+        bottom: 0;
+    }
+    footer a{
+        color: white;
+    }
+    .phase1{
+        display: flex;
+        justify-content: space-around;
+    }
+    .lienDuSite{
+        flex-direction: column;
+    }
+    .phase2{
+        text-align: center;
+    }
+    
+    
+    /* Style the images inside the grid */
+    .opaque a img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    
+    .opaque img:hover {
+      opacity: 1;
+    }
+    
+    
+    
+    .twAudessus {
+        /* Le trame de fond */
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,0.7);
+      }
+      
+      .twAudessus a {
+        /* Le truc pour centrer l’image */
+        display: table-cell; 
+        vertical-align: middle; 
+        text-align: center;
+      }
+      
+      .twAudessus img {
+        /* Le contour de l’image */
+        max-width:1200px;
+        padding: 10px;
+        background: #ffffff;
+      }
+      
+      /* Slecteur « target pour afficher l’image » */
+      .twAudessus:target { display: table; }
+
+      #id1 a img, #id2 a img, #id3 a img, #id4 a img, #id5 a img{
+        width: 500px;
+        height: 500px;
+      }
+      #id6 a img, #id7 a img, #id8 a img, #id9 a img{
+        width: 480px;
+        height: 480px;
+      }
+}
+@media (max-width:500px){
+    .logo{
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .logo img{
+        width: 300px;
+    }
+    .logo2 img{
+        width: 150px;
+    }
+    .list{
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+    a{
+        text-decoration-line: none;
+    }
+    
+    li{
+        list-style: none;
+    }
+    
+    .accordion-button, .accordion-button {
+        background-color: #6d6d6d;
+    }
+    #collapseOne, #collapseFour, #collapseSeven, .card{
+        background-color: #6d6d6d;
+    }
+    .card{
+        text-align: center;
+    }
+    .accordion{
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 5em;
+    }
+    .logo img{
+        width: 300px;   
+    }
+    .debutMot{
+        color: red;
+    }
+    .finMotBlanc{
+        color: white;
+    }
+    .finMotNoir{
+        color: rgb(0, 0, 0);
+    }
+    .nettoyage{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .parentNetExt, .parentNetExtInt, .parentNetExtract{
+        display: flex;
+        justify-content: center;
+    }
+    .netExt, .netInt, .netExtInt, .netExtract, .info1, .tauxHoraire{
+        border: 1mm ridge rgba(62, 60, 60, 0.6);
+        margin-bottom: 2em;
+        border-radius: 10px;
+    }
+    
+    .boutonPrestations{
+        text-decoration: underline;
+    }
+    .centrerTableau{
+        display: flex;
+        justify-content: center;
+    }.info3{
+        border: 1mm ridge rgba(255, 255, 255, 0.6);
+        margin-bottom: 1em;
+        border-radius: 10px;
+    }
+    .netExtract{
+        margin:auto;
+    }
+    
+    .centrerTitre{
+        width: 100%;
+        text-align: center;
+    }
+    .couleur{
+        background-color: #5d5d5d;
+    }
+    .mecanique, .nettoyag, .reprogrammation{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .reprog{
+        display: flex;
+        justify-content: center;
+    }
+    .nettoyag{
+        margin-top: 1em;
+    }
+    .pro{
+        text-align: center;
+    }
+    footer a{
+        color: rgb(255, 255, 255);
+    }
+    
+    .rePourLeLogo{
+        margin-top: 3.5em;
+    }
+      .souligner{
+        text-decoration-line:underline
+    }
+    html {
+        height: 100%;
+      }
+    .couleur2{
+        background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(75, 75, 75) 50%);
+        }
+    body{
+        font-size: 1.3em;
+        font-family: "Cascadia";
+        background: linear-gradient(90deg, rgb(255, 255, 255) 8%, rgba(75, 75, 75, 0.928) 100%);
+        min-height:100vh;
+        height: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+    button{
+        box-shadow: 10px 5px 5px rgb(75, 75, 75);
+    }
+    .polisse{
+        font-size: 1em;
+        font-family: "Cascadia";
+    }
+    section{
+        margin-bottom: 2em;
+        flex-grow:1;
+    }
+    .retorEnHautDePage{
+        display: flex;
+        justify-content: center;
+    }
+    .reseaux{
+        display: flex;
+        justify-content: space-around;
+    }
+    .facebook1 a:hover,.facebook2 a:hover{
+        color:blue;
+    }
+    .snapchat1  a:hover,.snapchat2 a:hover{
+        color:yellow
+    }
+    .instagram1 a:hover,.instagram2 a:hover{
+        color:blueviolet
+    }
+    .parentAscensseur{
+        margin-top: 1em;
+        margin-right: 1em;
+        display: flex;
+        justify-content: right;
+    }
+    .ascensseur a, .tablo{
+        color: white;
+    }
+    /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+    footer{
+        width: 100%;
+        background-color: black;
+        color:white;
+        font-size: 0.8em;
+        bottom: 0;
+    }
+    footer a{
+        color: white;
+    }
+    .phase1{
+        display: flex;
+        justify-content: space-around;
+    }
+    .lienDuSite{
+        flex-direction: column;
+    }
+    .phase2{
+        text-align: center;
+    }
+    
+    
+    /* Style the images inside the grid */
+    .opaque a img {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    
+    .opaque img:hover {
+      opacity: 1;
+    }
+    
+    
+    /* ------------------------------------------------------------------------------------------------------------------------------- */
+    .twAudessus {
+        /* Le trame de fond */
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100000;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,0.7);
+      }
+      .twAudessus a {
+        /* Le truc pour centrer l’image */
+        display: table-cell; 
+        vertical-align: middle; 
+        text-align: center;
+      }
+      .twAudessus img {
+        /* Le contour de l’image */
+        max-width:1200px;
+        padding: 10px;
+        background: #ffffff;
+      }
+      
+      /* Slecteur « target pour afficher l’image » */
+      .twAudessus:target { display: table; }
+
+      #id1 a img, #id2 a img, #id3 a img, #id4 a img, #id5 a img{
+        width: 300px;
+        height: 300px;
+      }
+      #id6 a img, #id7 a img, #id8 a img, #id9 a img{
+        width: 480px;
+        height: 480px;
+      }
+}
+.retourCv{
+    text-align: center;
+}
