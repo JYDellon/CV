@@ -413,7 +413,7 @@
 .text{
     color: white;
     font-size: 1.3em;
-    width: 50%;
+    width: 75%;
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
     border-radius: 1em;
