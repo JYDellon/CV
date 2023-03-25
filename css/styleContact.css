@@ -6,13 +6,17 @@
     width: 300px;
 }
 .logo2 img{
-    width: 150px;
+    width: 80px;
 }
 .list{
     display: flex;
     justify-content: space-around;
     list-style: none;
     margin-top: 2em;
+    flex-wrap: wrap;
+}
+.list li{
+    font-size: 1em;
 }
 a{
     text-decoration-line: none;

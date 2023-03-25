@@ -9,15 +9,19 @@ h1 {
 .logo img {
     width: 300px;
 }
+.menu{
+    font-size: 1em;}
 .logo2 img {
-    width: 150px;
+    width: 80px;
 }
 .list {
     display: flex;
     justify-content: space-around;
     list-style: none;
     margin-top: 2em;
+    flex-wrap: wrap;
 }
+
 a {
     text-decoration-line: none;
 }
@@ -102,7 +106,7 @@ footer {
     width: 100%;
     background-color: black;
     color: white;
-    font-size: 1em;
+    font-size: 0.5em;
     position: fixed;
     bottom: 0;     
 }
