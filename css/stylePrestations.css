@@ -51,6 +51,7 @@ li{
 }
 .nettoyage{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .parentNetExt, .parentNetExtInt, .parentNetExtract{
