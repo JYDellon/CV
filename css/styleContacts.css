@@ -117,6 +117,18 @@
     .group1, .group2{
         display: flex;
     }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
+    .bouton1{
+        border-radius: 40px;
+        width:200px;
+    }
+    .bouton2{
+        border-radius: 40px;
+        width: 200px;
+    }
 }
 @media (min-width:992px) and (max-width:1199px){
     html, body, div, span, applet, object, iframe,
@@ -236,6 +248,18 @@
     .group1, .group2{
         display: flex;
 
+    }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
+    .bouton1{
+        border-radius: 40px;
+        width:200px;
+    }
+    .bouton2{
+        border-radius: 40px;
+        width: 200px;
     }
 }
 @media (min-width:768px) and (max-width:991px){
@@ -358,6 +382,18 @@
     }
     .group1, .group2{
         display: flex;
+    }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
+    .bouton1{
+        border-radius: 40px;
+        width:200px;
+    }
+    .bouton2{
+        border-radius: 40px;
+        width: 200px;
     }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -485,6 +521,18 @@
         display: block;
 
     }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
+    .bouton1{
+        border-radius: 40px;
+        width:200px;
+    }
+    .bouton2{
+        border-radius: 40px;
+        width: 200px;
+    }
 }
 @media (max-width:500px){
     html, body, div, span, applet, object, iframe,
@@ -610,6 +658,18 @@
         display: block;
 
     }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
+    .bouton1{
+        border-radius: 40px;
+        width:160px;
+    }
+    .bouton2{
+        border-radius: 40px;
+        width: 200px;
+    }
 }
 #lien1 button, #lien2 button{
     border-radius: 40px;
@@ -617,7 +677,7 @@
 }
 .bouton1{
     border-radius: 40px;
-    width:160px;
+    width:200px;
 }
 .bouton2{
     border-radius: 40px;
