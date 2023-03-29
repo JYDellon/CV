@@ -123,11 +123,11 @@
     }
     .bouton1{
         border-radius: 40px;
-        width:200px;
+        width:220px;
     }
     .bouton2{
         border-radius: 40px;
-        width: 200px;
+        width: 220px;
     }
 }
 @media (min-width:992px) and (max-width:1199px){
@@ -255,11 +255,11 @@
     }
     .bouton1{
         border-radius: 40px;
-        width:200px;
+        width:220px;
     }
     .bouton2{
         border-radius: 40px;
-        width: 200px;
+        width: 220px;
     }
 }
 @media (min-width:768px) and (max-width:991px){
@@ -389,11 +389,11 @@
     }
     .bouton1{
         border-radius: 40px;
-        width:200px;
+        width:220px;
     }
     .bouton2{
         border-radius: 40px;
-        width: 200px;
+        width: 220px;
     }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -527,11 +527,11 @@
     }
     .bouton1{
         border-radius: 40px;
-        width:200px;
+        width:220px;
     }
     .bouton2{
         border-radius: 40px;
-        width: 200px;
+        width: 220px;
     }
 }
 @media (max-width:500px){
@@ -668,18 +668,10 @@
     }
     .bouton2{
         border-radius: 40px;
-        width: 200px;
+        width: 220px;
     }
 }
 #lien1 button, #lien2 button{
     border-radius: 40px;
     width:130px;
-}
-.bouton1{
-    border-radius: 40px;
-    width:200px;
-}
-.bouton2{
-    border-radius: 40px;
-    width: 200px;
 }
