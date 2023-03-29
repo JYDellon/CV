@@ -365,11 +365,11 @@
         margin-top: 2em;
         margin-bottom: 2em;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
         font-size: 1.3em;
     }
-    #lien2 a{
+    #lien2 button a{
         text-align: center;
         font-size: 1.3em;
     }
@@ -502,11 +502,11 @@
         margin-bottom: 1em;
         margin-top: 1em;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
         font: size 1.3em;
     }
-    #lien2 a{
+    #lien2 button a{
         text-align: center;
         font: size 1.3em;
     }
@@ -639,11 +639,11 @@
         margin-top: 1em;
         text-align: center;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
         font-size: 1.3em;
     }
-    #lien2 a{
+    #lien2 button a{
         text-align: center;
         font-size: 1.3em;
     }
@@ -670,8 +670,4 @@
         border-radius: 40px;
         width: 220px;
     }
-}
-#lien1 button, #lien2 button{
-    border-radius: 40px;
-    width:130px;
 }
