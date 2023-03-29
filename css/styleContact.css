@@ -141,3 +141,7 @@ footer a{
 .presta{
     margin-bottom: 1em;
 }
+.bouton{
+    border-radius: 40px;
+    width:130px;
+}

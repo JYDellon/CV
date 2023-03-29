@@ -611,3 +611,15 @@
 
     }
 }
+#lien1 button, #lien2 button{
+    border-radius: 40px;
+    width:130px;
+}
+.bouton1{
+    border-radius: 40px;
+    width:160px;
+}
+.bouton2{
+    border-radius: 40px;
+    width: 200px;
+}

@@ -215,7 +215,10 @@ a{
 }
 #lien1 button a, #lien2 button a{
     font-size: 1.3em;
-
+}
+#lien1 button, #lien2 button{
+    border-radius: 40px;
+    width:130px;
 }
 #lien1{
     margin-top: 1em;
@@ -525,7 +528,10 @@ table {
     #lien1 a, #lien2  a{
         font-size: 1.3em;
     }
-    
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
     #adresse{
         margin-top: 1em;
         margin-left: 1em;
@@ -831,6 +837,10 @@ table {
         text-align: center;
         font-size: 1.3em;
     }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
     #adresse{
         margin-top: 1em;
         margin-left: 1em;
@@ -1112,6 +1122,10 @@ h1{
         text-align: center;
         font-size: 1.3em;
     }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
+    }
 }
 @media (max-width:500px){
 
@@ -1387,6 +1401,10 @@ h1{
     #lien2 a{
         text-align: center;
         font-size: 1.3em;
+    }
+    #lien1 button, #lien2 button{
+        border-radius: 40px;
+        width:130px;
     }
   } 
  .ancre{

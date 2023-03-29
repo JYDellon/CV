@@ -78,6 +78,9 @@
     #lien1 a, #lien2  a{
         font-size: 1.3em;
     }
+    #lien1 button, #lien2 button{
+    border-radius: 40px;
+}
 }
 @media (min-width:992px) and (max-width:1199px){
 
@@ -437,4 +440,8 @@
 }
 .italik{
     font-style: italic;
+}
+#lien1 button, #lien2 button{
+    border-radius: 40px;
+    width:130px;
 }
