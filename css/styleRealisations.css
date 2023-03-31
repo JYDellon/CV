@@ -229,17 +229,16 @@
     .parentLien{
         display: flex;
         justify-content: space-around;
+        margin-top: 2em;
+        margin-bottom: 1em;
     }
     #lien1 button a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
         font-size: 1.3em;
     }
     #lien2 button a{
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        
         font-size: 1.3em;
     }
 }
@@ -443,5 +442,5 @@
 }
 #lien1 button, #lien2 button{
     border-radius: 40px;
-    width:130px;
+    width:140px;
 }
