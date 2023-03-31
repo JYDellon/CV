@@ -206,13 +206,11 @@ a{
 .parentLien{
     display: flex;
     justify-content: space-around;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     text-align: center;
 }
-#lien1 a{
-    font-size: 1.3em;
-}
+
 #lien1 button a, #lien2 button a{
     font-size: 1.3em;
 }
@@ -222,17 +220,9 @@ a{
     text-align: center;
 }
 #lien1{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 2em;
-    width: 10%;
     text-align: center;
 }
 #lien2{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 2em;
-    width: 10%;
     text-align: center;
 }
 #masterTitre{
