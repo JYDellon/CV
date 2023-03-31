@@ -406,11 +406,11 @@
     }
     #lien1 button a{
         text-align: center;
-        font: size 1.3em;
+        font-size: 1.3em;
     }
     #lien2 button a{ 
         text-align: center;
-        font: size 1.3em;
+        font-size: 1.3em;
     }
 }
 .text{
