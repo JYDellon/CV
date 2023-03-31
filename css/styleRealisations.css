@@ -75,12 +75,10 @@
     #lien2{
         text-align: center;
     }
-    #lien1 a, #lien2  a{
+    #lien1 button a, #lien2 button a{
         font-size: 1.3em;
+        border-radius: 40px;
     }
-    #lien1 button, #lien2 button{
-    border-radius: 40px;
-}
 }
 @media (min-width:992px) and (max-width:1199px){
 
@@ -159,7 +157,7 @@
     #lien2{
         text-align: center;
     }
-    #lien1 a, #lien2  a{
+    #lien1 button a, #lien2 button a{
         font-size: 1.3em;
     }
 }
@@ -232,13 +230,13 @@
         display: flex;
         justify-content: space-around;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
         font-size: 1.3em;
     }
-    #lien2 a{
+    #lien2 button a{
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
@@ -319,11 +317,11 @@
         margin-bottom: 1em;
         margin-top: 2em;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
         font-size: 1.3em;
     }
-    #lien2 a{
+    #lien2 button a{
         text-align: center;
         font-size: 1.3em;
     }
@@ -402,15 +400,14 @@
     .parentLien{
         display: flex;
         justify-content: space-around;
-        margin-top: 1em;
     }
-    #lien1 a{
+    #lien1 button a{
         text-align: center;
-        font: size 1.3em;
+        font: size 1em;
     }
-    #lien2 a{ 
+    #lien2 button a{ 
         text-align: center;
-        font: size 1.3em;
+        font: size 1em;
     }
 }
 .text{

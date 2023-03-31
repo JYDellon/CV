@@ -104,7 +104,7 @@
     #lien2{
         text-align: center;
     }
-    #lien1 a, #lien2  a{
+    #lien1 button a, #lien2 button a{
         font-size: 1.3em;
     }
     .route{
@@ -236,7 +236,7 @@
     #lien2 {
         text-align: center;
     }
-    #lien1 a, #lien2  a{
+    #lien1 button a, #lien2 button a{
         font-size: 1.3em;
     }
     .route{
