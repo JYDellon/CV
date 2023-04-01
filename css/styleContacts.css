@@ -537,6 +537,10 @@
         border-radius: 40px;
         width: 220px;
     }
+    .reseau{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }
 @media (max-width:500px){
     html, body, div, span, applet, object, iframe,
@@ -674,5 +678,9 @@
     .bouton2{
         border-radius: 40px;
         width: 220px;
+    }
+    .reseau{
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 }
