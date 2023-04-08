@@ -5,6 +5,7 @@ body{
 }
 #lien button a{
     font-size: 1.3em;
+    color: white;
 }
 #lien button{
     border-radius: 40px;
@@ -26,6 +27,12 @@ body{
 .container4 img{
     width: 80px;
 }
+.container1 img{
+    width: 160px;
+}
+.container2 img {
+    cursor: pointer;
+  }
 #diable1, #diable2, #diable3{
     width: 150px;
     visibility: hidden;
@@ -69,12 +76,13 @@ body{
         justify-content: space-evenly;
     }
     .resultat{
-        margin-top: -5.5em;
+        margin-top: -12em;
         display: flex;
         justify-content: space-evenly;
     }
+    
     .container1 img{
-        width: 80px;
+        width: 120px;
     }
     #ange1, #ange2, #ange3{
         margin-top: 3em;
@@ -110,12 +118,12 @@ body{
     justify-content: space-evenly;
 }
 .resultat{
-    margin-top: -3em;
+    margin-top: -6em;
     display: flex;
     justify-content: space-evenly;
 }
 .container1 img{
-    width: 80px;
+    width: 100px;
 }
 #ange1, #ange2, #ange3{
     margin-top: 3em;
@@ -152,25 +160,18 @@ body{
         justify-content: center;
     }
     .resultat{
-        margin-top: -2.75em;
+        margin-top: -1em;
         display: flex;
         justify-content: space-around;
     }
-    .container1 img{
-        width: 40px;
-    }
+    
     #ange1, #ange2, #ange3{
         display: none;
     }
     #diable1, #diable2, #diable3{
         display: none;
     }
-    .container4 img{
-        width: 50px;
-    }
-    .container4{
-    width: 25%;
-    }
+
     #pierreUser:hover{
         box-shadow: 10px 5px 5px teal;
     }
