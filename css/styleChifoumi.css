@@ -55,6 +55,15 @@ body{
     font-size: 50px;
     color: white;
 }
+#pierreUser:hover{
+    box-shadow: 10px 5px 5px teal;
+}
+#papierUser:hover{
+    box-shadow: 10px 5px 5px teal;
+}
+#ciseauxUser:hover{
+    box-shadow: 10px 5px 5px teal;
+}
 @media (min-width:768px) and (max-width:991px){
     body{
         background-image : url(../image/fondecran.jpg);
@@ -173,15 +182,7 @@ body{
         display: none;
     }
 
-    #pierreUser:hover{
-        box-shadow: 10px 5px 5px teal;
-    }
-    #papierUser:hover{
-        box-shadow: 10px 5px 5px teal;
-    }
-    #ciseauxUser:hover{
-        box-shadow: 10px 5px 5px teal;
-    }
+    
 
 
 }

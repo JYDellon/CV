@@ -7,7 +7,9 @@
 
 
         function letsGo(choix){
-        
+                var ciseauxCpu=document.getElementById('ciseauxCpu');
+                var papierCpu=document.getElementById('papierCpu');
+                var pierreCpu=document.getElementById('pierreCpu');
                 var diable1=document.getElementById('diable1');
                 var diable2=document.getElementById('diable2');
                 var diable3=document.getElementById('diable3');
@@ -18,6 +20,9 @@
                 var auPif = Math.floor(Math.random() * 3);
 
                 if (auPif == 0 && diable1.style.visibility === "hidden" ){
+                        pierreCpu.style.boxShadow = "10px 2px 10px red";
+                        ciseauxCpu.style.boxShadow = "none";
+                        papierCpu.style.boxShadow = "none";
                         diable1.style.visibility = "visible";
                         diable2.style.visibility = "hidden";
                         diable3.style.visibility = "hidden";
@@ -47,6 +52,9 @@
                                 }
                 }               
                 else if (auPif == 1 && diable2.style.visibility === "hidden"){
+                        papierCpu.style.boxShadow = "10px 2px 10px red";
+                        ciseauxCpu.style.boxShadow = "none";
+                        pierreCpu.style.boxShadow = "none";
                         diable1.style.visibility = "hidden";
                         diable2.style.visibility = "visible";
                         diable3.style.visibility = "hidden";
@@ -74,7 +82,9 @@
                                 resultDiable.innerHTML= cptCpu
                                 }   
                         
-                }else{
+                }else{  ciseauxCpu.style.boxShadow = "10px 2px 10px red";
+                        pierreCpu.style.boxShadow = "none";
+                        papierCpu.style.boxShadow = "none";
                         diable1.style.visibility = "hidden";
                         diable2.style.visibility = "hidden";
                         diable3.style.visibility = "visible";
