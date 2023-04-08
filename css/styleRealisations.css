@@ -430,12 +430,12 @@
     background: rgba(145, 171, 227, 0.874);
     color:black;
 }
-.realisation01{
+.realisation01, .realisation02 {
     display: flex;
     justify-content: center;
     text-align: justify;
     width: 100%;
-    margin-top: 5em;
+    margin-top: 2em;
 }
 .italik{
     font-style: italic;
