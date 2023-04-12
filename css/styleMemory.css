@@ -1,11 +1,54 @@
-@media (min-width:768px){
+@media (min-width:992px){
+    body{
+        background-image: url(../image/fondecran.jpg);
+    }
+    .container1{
+        display: flex;
+        justify-content: center;   
+    }
+
+    .container2{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;    
+    }
+    .container3{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;    
+    }
+    .card{
+        margin-right: 2em;
+    }
+
+    .bouton{
+        margin-right: 2em;
+        text-align: center;
+        color: white;
+    }
+
+    .resultat{
+        margin-top: 2em;
+        text-align: center;
+        color: white;
+    }
+
+    #lien{
+        text-align: center;
+    }
+
+    #lien button a{
+        font-size: 1em;
+        color: white;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
     body{
         background-image: url(../image/fondecran.jpg);
     }
     .container1{
         display: flex;
         justify-content: center;
-        margin-top: 7em;    
     }
 
     .container2{
@@ -83,6 +126,10 @@
     #lien button a{
         font-size: 1em;
         color: white;
+    }
+    .card img{
+
+        width: 80px;
     }
 }
 
