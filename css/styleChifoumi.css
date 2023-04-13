@@ -18,6 +18,7 @@ body{
 .container0{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 8em;
 }
 .resultat{
     margin-top: -4em;
