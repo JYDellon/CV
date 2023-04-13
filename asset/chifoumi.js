@@ -1,12 +1,14 @@
         
-        var init=1;                
-        var cptUser=0;
-        var cptCpu=0;
-        
+      
+                var init=1;                
+                var cptUser=0;
+                var cptCpu=0;
+ 
         
 
 
         function letsGo(choix){
+        
                 var ciseauxCpu=document.getElementById('ciseauxCpu');
                 var papierCpu=document.getElementById('papierCpu');
                 var pierreCpu=document.getElementById('pierreCpu');
@@ -122,15 +124,15 @@
 
 
                 if (cptCpu == 5 && cptUser<5) {result3.innerHTML="Perdu";
-                                                cptCpu=0;  cptUser=0;}
+                                                cptCpu=0;  cptUser=0;fin()}
                else if (cptCpu < 5 && cptUser== 5) {result3.innerHTML="Gagné";
-                                                    cptCpu=0;  cptUser=0;}
-                
-
-
+                                                cptCpu=0;  cptUser=0;fin()}
+        
 
 }
-
+function fin(){
+        
+}
 
 
 

@@ -9,19 +9,19 @@ body{
 }
 #lien button{
     border-radius: 40px;
-    width:140px;
+    width:200px;
 }
 #lien{
-    margin-top: 0em;
+    margin-top: 2em;
     text-align: center;
+    
 }
 .container0{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 8em;
+    margin-top: 4em;
 }
 .resultat{
-    margin-top: -4em;
     display: flex;
     justify-content: space-evenly;
 }
@@ -74,7 +74,7 @@ body{
     }
     #lien button{
         border-radius: 40px;
-        width:140px;
+        width:200px;
     }
     #lien{
         margin-top: 0em;
@@ -106,7 +106,7 @@ body{
     .container4 img{
         width: 60px;
     }
-    }
+}
 @media (min-width:501px) and (max-width:767px){
     body{
         background-image : url(../image/fondecran.jpg);
@@ -116,7 +116,7 @@ body{
     }
     #lien button{
         border-radius: 40px;
-        width:140px;
+        width:200px;
     }
     #lien{
         margin-top: -0.5em;
@@ -158,7 +158,7 @@ body{
     }
     #lien button{
         border-radius: 40px;
-        width:140px;
+        width:200px;
     }
     #lien{
         margin-top: -0.5em;
