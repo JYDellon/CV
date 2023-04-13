@@ -12,12 +12,12 @@
     .container2{
         display: flex;
         justify-content: center;
-        margin-top: 2em;    
+        margin-top: 2em;
     }
     .container3{
         display: flex;
-        justify-content: center;
-        margin-top: 2em;    
+        justify-content: space-evenly;
+        margin-top: 2em;
     }
     .card{
         margin-right: 2em;
@@ -43,6 +43,11 @@
         font-size: 1em;
         color: white;
     }
+    #lien button{
+        border-radius: 40px;
+    }
+    /* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    
 }
 @media (min-width:768px) and (max-width:991px){
     body{
