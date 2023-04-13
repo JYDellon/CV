@@ -18,7 +18,7 @@
                 var resultDiable=document.getElementById('resultDiable');
                 result3.innerHTML="";
                 var auPif = Math.floor(Math.random() * 3);
-
+                // ---------------------------------------------------------------------Si le CPU choisit la pierre---------------------------------------------------------------------
                 if (auPif == 0 && diable1.style.visibility === "hidden" ){
                         pierreCpu.style.boxShadow = "10px 2px 10px red";
                         ciseauxCpu.style.boxShadow = "none";
@@ -26,13 +26,14 @@
                         diable1.style.visibility = "visible";
                         diable2.style.visibility = "hidden";
                         diable3.style.visibility = "hidden";
+                        // SI l'humain choisit pierre
                         if (choix == 0) {resultAnge.innerHTML= cptUser
                                         result3.innerHTML="Vs"
                                         resultDiable.innerHTML= cptCpu
                                         ange1.style.visibility = "visible";
                                         ange2.style.visibility = "hidden";
                                         ange3.style.visibility = "hidden";}
-                                        
+                        // SI l'humain choisit feuille                
                         else if (choix == 1) {  cptUser++
                                                 ange1.style.visibility = "hidden";
                                                 ange2.style.visibility = "visible";
@@ -41,7 +42,7 @@
                                                 result3.innerHTML="Vs"
                                                 resultDiable.innerHTML= cptCpu
                                                 }
-                                                
+                        // SI l'humain choisit ciseaux                        
                         else {  cptCpu++
                                 ange1.style.visibility = "hidden";
                                 ange2.style.visibility = "hidden";
@@ -51,6 +52,8 @@
                                 resultDiable.innerHTML= cptCpu
                                 }
                 }               
+ // ---------------------------------------------------------------------Si le CPU choisit la feuille---------------------------------------------------------------------
+                               
                 else if (auPif == 1 && diable2.style.visibility === "hidden"){
                         papierCpu.style.boxShadow = "10px 2px 10px red";
                         ciseauxCpu.style.boxShadow = "none";
@@ -58,6 +61,7 @@
                         diable1.style.visibility = "hidden";
                         diable2.style.visibility = "visible";
                         diable3.style.visibility = "hidden";
+                        // SI l'humain choisit pierre
                         if (choix == 0) {cptCpu++
                                         ange1.style.visibility = "visible";
                                         ange2.style.visibility = "hidden";
@@ -66,6 +70,7 @@
                                         result3.innerHTML="Vs"
                                         resultDiable.innerHTML= cptCpu
                                         }
+                        // SI l'humain choisit feuille                  
                         else if (choix == 1) {  ange1.style.visibility = "hidden";
                                                 ange2.style.visibility = "visible";
                                                 ange3.style.visibility = "hidden";
@@ -73,6 +78,7 @@
                                                 result3.innerHTML="Vs"
                                                 resultDiable.innerHTML= cptCpu
                                                 }
+                        // SI l'humain choisit ciseaux                        
                         else {  ange1.style.visibility = "hidden";
                                 ange2.style.visibility = "hidden";
                                 ange3.style.visibility = "visible";
@@ -81,13 +87,14 @@
                                 result3.innerHTML="Vs"
                                 resultDiable.innerHTML= cptCpu
                                 }   
-                        
+ // ---------------------------------------------------------------------Si le CPU choisit les ciseaux---------------------------------------------------------------------                       
                 }else{  ciseauxCpu.style.boxShadow = "10px 2px 10px red";
                         pierreCpu.style.boxShadow = "none";
                         papierCpu.style.boxShadow = "none";
                         diable1.style.visibility = "hidden";
                         diable2.style.visibility = "hidden";
                         diable3.style.visibility = "visible";
+                        // SI l'humain choisit pierre
                         if (choix == 0) {ange1.style.visibility = "visible";
                                         ange2.style.visibility = "hidden";
                                         ange3.style.visibility = "hidden";
@@ -95,6 +102,7 @@
                                         resultAnge.innerHTML= cptUser
                                         result3.innerHTML="Vs"
                                         resultDiable.innerHTML= cptCpu}
+                        // SI l'humain choisit feuille  
                         else if (choix == 1) {  ange1.style.visibility = "hidden";
                                                 ange2.style.visibility = "visible";
                                                 ange3.style.visibility = "hidden";
@@ -103,7 +111,7 @@
                                                 result3.innerHTML="Vs"
                                                 resultDiable.innerHTML= cptCpu
                                                 }
-                                                
+                        // SI l'humain choisit ciseaux                          
                         else {  resultAnge.innerHTML= cptUser
                                 result3.innerHTML="Vs"
                                 resultDiable.innerHTML= cptCpu

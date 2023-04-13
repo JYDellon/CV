@@ -79,6 +79,11 @@
         font-size: 1.3em;
         border-radius: 40px;
     }
+    .positionnement{
+        margin-left: -62em;
+        font-style: italic;
+        text-decoration: underline;
+    }
 }
 @media (min-width:992px) and (max-width:1199px){
 

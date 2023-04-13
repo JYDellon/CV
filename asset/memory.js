@@ -31,9 +31,7 @@ var nbre=0;
         }
     }
 
-    for (i=1; i<11;i++){
-        console.log("carte n°: "+ i +" " +"couleur n°: " + valeur2[i]);
-    }
+
 
 }
 
@@ -43,7 +41,7 @@ function memory(nbre){
     var img     = [0,document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img')];
     var tImages = [ "../image/1.png", "../image/2.png", "../image/3.png", "../image/4.png", "../image/5.png","../image/dos.png"];
     var card    = [document.getElementById("card"+1),document.getElementById("card"+2),document.getElementById("card"+3),document.getElementById("card"+4),document.getElementById("card"+5),document.getElementById("card"+6),document.getElementById("card"+7),document.getElementById("card"+8),document.getElementById("card"+9),document.getElementById("card"+10),document.getElementById("card"+11)];
-
+//---------------------------------------decouvre 2 cartes---------------------------------------------------
         if (nbre==1 && vu<2 && check[nbre] == false){
             vu++;
             cpt++;
@@ -162,7 +160,7 @@ function memory(nbre){
             check[nbre] = true;
             nbre == 0;
         }
-        
+//-------------------------------Si les couleurs de s cartes sont identiques --------------------------------      
     if (couleur[1]==couleur[2] && vu==2){
     
         setTimeout(tempo2,400,compar[1]-1,compar[2]-1)
@@ -176,7 +174,7 @@ function memory(nbre){
             couleur[1]=0;
             couleur[2]=0;
             
-        
+//------------------------------------Si les couleurs sont différentes------- --------------------------------          
     }else if (couleur[1]!=couleur[2] && vu==2){       
               
         setTimeout(tempo,400,compar[1],compar[2])
@@ -193,6 +191,7 @@ function memory(nbre){
             check = new Array(11).fill(false);
     }
 }
+//----------------------------retournement des cartes non identiques---------------------------
 function tempo(x,y){
  
     var img     = [0,document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img')];
@@ -214,6 +213,7 @@ function tempo(x,y){
     card[y].appendChild(img[y]);
 
 }
+//---------------------------disparition des cartes identiques--------------------------------
 
 function tempo2(x,y){
     var img     = [0,document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img')];

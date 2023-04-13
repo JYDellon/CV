@@ -51,6 +51,7 @@
     .container1{
         display: flex;
         justify-content: center;
+        margin-top: 8em;
     }
 
     .container2{
@@ -96,7 +97,7 @@
     .container1{
         display: flex;
         justify-content: center;
-        margin-top: 7em;    
+        margin-top: 7em;
     }
 
     .container2{
