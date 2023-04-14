@@ -41,6 +41,7 @@
     }
 
     #lien button a{
+        text-decoration: none;
         font-size: 1.3em;
         color: white;
     }
@@ -97,6 +98,7 @@
     }
 
     #lien button a{
+        text-decoration: none;
         font-size: 1.3em;
         color: white;
     }
@@ -149,6 +151,7 @@
     }
 
     #lien button a{
+        text-decoration: none;
         font-size: 1em;
         color: white;
     }
@@ -217,6 +220,7 @@
     #lien button a{
         font-size: 1em;
         color: white;
+        text-decoration: none;
     }
     #lien .bouton{
         border-radius: 40px;

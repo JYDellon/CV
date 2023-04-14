@@ -71,13 +71,14 @@ body{
     }
     #lien button a{
         font-size: 1.3em;
+        text-decoration: none;
     }
     #lien button{
         border-radius: 40px;
         width:200px;
     }
     #lien{
-        margin-top: 0em;
+        margin-top: 1em;
         text-align: center;
     }
     .container0{
@@ -113,13 +114,14 @@ body{
     }  
     #lien button a{
         font-size: 1.3em;
+        text-decoration: none;
     }
     #lien button{
         border-radius: 40px;
         width:200px;
     }
     #lien{
-        margin-top: -0.5em;
+        margin-top: 1em;
         text-align: center;
     }  
 .container0{
@@ -155,6 +157,7 @@ body{
     }
     #lien button a{
         font-size: 1.3em;
+        text-decoration: none;
     }
     #lien button{
         border-radius: 40px;
