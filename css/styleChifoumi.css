@@ -6,6 +6,7 @@ body{
 #lien button a{
     font-size: 1.3em;
     color: white;
+    text-decoration: none;
 }
 #lien button{
     border-radius: 40px;
