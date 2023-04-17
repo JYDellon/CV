@@ -3,7 +3,6 @@
                 var init=1;                
                 var cptUser=0;
                 var cptCpu=0;
- 
         
 
 
@@ -124,15 +123,42 @@
 
 
                 if (cptCpu == 5 && cptUser<5) {result3.innerHTML="Perdu";
-                                                cptCpu=0;  cptUser=0;fin()}
+                                                ange1.style.visibility = "hidden";
+                                                ange2.style.visibility = "hidden";
+                                                ange3.style.visibility = "hidden";
+                                                diable1.style.visibility = "hidden";
+                                                diable2.style.visibility = "hidden";
+                                                diable3.style.visibility = "hidden";
+                                                ciseauxCpu.style.visibility = "hidden";
+                                                pierreCpu.style.visibility = "hidden";
+                                                papierCpu.style.visibility = "hidden";
+                                                ciseauxUser.style.visibility = "hidden";
+                                                pierreUser.style.visibility = "hidden";
+                                                papierUser.style.visibility = "hidden";
+                                                localStorage.setItem("scorecpu",cptCpu);
+                                                cptCpu=0;  cptUser=0;}
                else if (cptCpu < 5 && cptUser== 5) {result3.innerHTML="Gagné";
-                                                cptCpu=0;  cptUser=0;fin()}
+                                                ange1.style.visibility = "hidden";
+                                                ange2.style.visibility = "hidden";
+                                                ange3.style.visibility = "hidden";
+                                                diable1.style.visibility = "hidden";
+                                                diable2.style.visibility = "hidden";
+                                                diable3.style.visibility = "hidden";
+                                                ciseauxCpu.style.visibility = "hidden";
+                                                pierreCpu.style.visibility = "hidden";
+                                                papierCpu.style.visibility = "hidden";
+                                                ciseauxUser.style.visibility = "hidden";
+                                                pierreUser.style.visibility = "hidden";
+                                                papierUser.style.visibility = "hidden";
+                                                if (localStorage.getItem("scorecpu")==null){localStorage.setItem("scorecpu", 5)}                                                if (cptCpu<localStorage.getItem("scorecpu")){localStorage.setItem("scorecpu",cptCpu);
+
+                                                }
+                                                result3.innerHTML="Mieilleur score: " + "5 / " + localStorage.getItem("scorecpu") ;
+                                                cptCpu=0;  cptUser=0;}
         
 
 }
-function fin(){
-        
-}
+
 
 
 
