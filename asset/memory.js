@@ -170,7 +170,6 @@ function memory(nbre){
             total++;
             NombreDeCoup++
             document.getElementById("result").textContent=NombreDeCoup;
-            console.log(localStorage.getItem('Record'));
             //------------------------------Enregistrement du meilleur score--------------------------------
             if (total== 5) {
                 if(localStorage.getItem('Record')==null || localStorage.getItem('Record') > NombreDeCoup){
