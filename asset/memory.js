@@ -1,6 +1,5 @@
 
 //----------------------------------------------------------------------------------------------------------
-
 var vu = 0;
 var valeur2 = [0,0,0,0,0,0,0,0,0,0,0];
 var tPair   = [0,0,0,0,0,0];
@@ -11,6 +10,8 @@ var couleur = [0,0,0];
 var cpt=0;
 var check = new Array(11).fill(false);
 var NombreDeCoup=0;
+var record="";
+var total=0;
 //----------------------------------------------------------------------------------------------------------
 
 window.onload = function initialisation (){
@@ -31,7 +32,7 @@ var nbre=0;
         }
     }
 
-
+    document.getElementById("result2").textContent=localStorage.getItem("Record");
 
 }
 
@@ -164,24 +165,35 @@ function memory(nbre){
     if (couleur[1]==couleur[2] && vu==2){
     
         setTimeout(tempo2,400,compar[1]-1,compar[2]-1)
-
+            
+            
+            total++;
             NombreDeCoup++
-            document.getElementById("result").textContent=NombreDeCoup; 
+            document.getElementById("result").textContent=NombreDeCoup;
+            console.log(localStorage.getItem('Record'));
+            //------------------------------Enregistrement du meilleur score--------------------------------
+            if (total== 5) {
+                if(localStorage.getItem('Record')==null || localStorage.getItem('Record') > NombreDeCoup){
+                    localStorage.setItem("Record",NombreDeCoup);
+                }
+            }
+            document.getElementById("result2").textContent=localStorage.getItem("Record");
+            //----------------------------------------------------------------------------------------------
             cpt=0;
             vu=0;
             compar[1] = 0;
             compar[2] = 0;
             couleur[1]=0;
-            couleur[2]=0;
+            couleur[2]=0;       
             
-//------------------------------------Si les couleurs sont différentes------- --------------------------------          
+//------------------------------------Si les couleurs sont différentes---------------------------------------          
     }else if (couleur[1]!=couleur[2] && vu==2){       
               
         setTimeout(tempo,400,compar[1],compar[2])
 
             NombreDeCoup++
-            document.getElementById("result").textContent=NombreDeCoup; 
-
+            document.getElementById("result").textContent=NombreDeCoup;
+    
             cpt=0;
             vu=0;
             compar[1] = 0;
@@ -213,7 +225,7 @@ function tempo(x,y){
     card[y].appendChild(img[y]);
 
 }
-//---------------------------disparition des cartes identiques--------------------------------
+//---------------------------disparition des cartes identiques--------------------------------------------------------
 
 function tempo2(x,y){
     var img     = [0,document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img'),document.createElement('img')];
@@ -224,3 +236,11 @@ function tempo2(x,y){
     card[y].style.visibility = "hidden";
    
 }
+//-------------------------------------------Enregistrement du record-------------------------------------------------
+
+
+        
+   
+       
+    
+

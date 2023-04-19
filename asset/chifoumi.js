@@ -150,9 +150,9 @@
                                                 ciseauxUser.style.visibility = "hidden";
                                                 pierreUser.style.visibility = "hidden";
                                                 papierUser.style.visibility = "hidden";
-                                                if (localStorage.getItem("scorecpu")==null){localStorage.setItem("scorecpu", 5)}                                                if (cptCpu<localStorage.getItem("scorecpu")){localStorage.setItem("scorecpu",cptCpu);
+                                                if (localStorage.getItem("scorecpu")==null){localStorage.setItem("scorecpu", 5)}                                              
+                                                if (cptCpu<localStorage.getItem("scorecpu")){localStorage.setItem("scorecpu",cptCpu);}
 
-                                                }
                                                 result3.innerHTML="Mieilleur score: " + "5 / " + localStorage.getItem("scorecpu") ;
                                                 cptCpu=0;  cptUser=0;}
         
