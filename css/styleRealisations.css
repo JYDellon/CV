@@ -151,18 +151,26 @@
         color : white;
     }
     .cache{
-        display: none;
+        display: block;
     }
-    body{
+    body,.bg{
         background-image : url(../image/fondecran.jpg);
     }
-    .realisation01, .realisation02, .realisation03 {
-        display: block;
-        display: flex;
-        justify-content: center;
-        text-align: justify;
+    p{
+        color: white;
+    }
+    .click{
+        color: white;
+        text-align: center;
+    }
+    .centre{   
         width: 100%;
-        margin-top: 2em;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .realisation01, .realisation02, .realisation03 {
+        display: none;
     }
     a{
         color:white;
@@ -243,18 +251,26 @@
         color : white;
     }
     .cache{
-        display: none;
+        display: block;
     }
-    body{
+    body,.bg{
         background-image : url(../image/fondecran.jpg);
     }
-    .realisation01, .realisation02, .realisation03 {
-        display: block;
-        display: flex;
-        justify-content: center;
-        text-align: justify;
+    p{
+        color: white;
+    }
+    .click{
+        color: white;
+        text-align: center;
+    }
+    .centre{   
         width: 100%;
-        margin-top: 2em;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .realisation01, .realisation02, .realisation03 {
+        display: none;
     }
     a{
         color:white;
