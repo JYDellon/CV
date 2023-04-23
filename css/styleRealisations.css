@@ -52,8 +52,19 @@
         justify-content:space-between;
         color : white;
     }
+    .cache{
+        display: none;
+    }
     body{
         background-image : url(../image/fondecran.jpg);
+    }
+    .realisation01, .realisation02, .realisation03 {
+        display: block;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        width: 100%;
+        margin-top: 2em;
     }
     a{
         color:white;
@@ -139,8 +150,19 @@
         justify-content:space-between;
         color : white;
     }
+    .cache{
+        display: none;
+    }
     body{
         background-image : url(../image/fondecran.jpg);
+    }
+    .realisation01, .realisation02, .realisation03 {
+        display: block;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        width: 100%;
+        margin-top: 2em;
     }
     a{
         color:white;
@@ -220,8 +242,19 @@
         justify-content:space-between;
         color : white;
     }
+    .cache{
+        display: none;
+    }
     body{
         background-image : url(../image/fondecran.jpg);
+    }
+    .realisation01, .realisation02, .realisation03 {
+        display: block;
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        width: 100%;
+        margin-top: 2em;
     }
     a{
         color:white;
@@ -312,8 +345,28 @@
     h2{
         font-size:35px;
     }
-    body{
+
+    body,.bg{
         background-image : url(../image/fondecran.jpg);
+    }
+    p{
+        color: white;
+    }
+    .click{
+        color: white;
+        text-align: center;
+    }
+    .centre{   
+        width: 100%;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .realisation01, .realisation02, .realisation03 {
+        display: none;
+    }
+    .cache{
+        margin-top: 3em;
     }
     .parentLien{
         display: flex;
@@ -398,8 +451,24 @@
     h2{
         font-size:35px;
     }
-    body{
+    body,.bg{
         background-image : url(../image/fondecran.jpg);
+    }
+    .click{
+        color: white;
+        text-align: center;
+    }
+    .centre{   
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: 1.3em;
+    }
+    .realisation01, .realisation02, .realisation03 {
+        display: none;
+    }
+    .cache{
+        margin-top: 3em;
     }
     .parentLien{
         display: flex;
@@ -431,17 +500,17 @@
     padding-bottom: 1em;
     text-align: center;
 }
+
+
+
+
+
+
 .text:hover{
     background: rgba(145, 171, 227, 0.874);
     color:black;
 }
-.realisation01, .realisation02, .realisation03 {
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    width: 100%;
-    margin-top: 2em;
-}
+
 .italik{
     font-style: italic;
 }
