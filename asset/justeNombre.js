@@ -40,7 +40,7 @@ function justeNbre(){
             document.getElementById('resultat1').innerHTML="BRAVO";
             document.getElementById('resultat1').style.color="white";
             var tempsRestant = 30-s;
-                document.getElementById('resultat1').innerHTML="Le nombre " + nbre + " a été trouvé en "+ tempsRestant + "s" + " et " + compteurCoups + " coups";
+                document.getElementById('resultat1').innerHTML="Le " + nbre + " a été trouvé en "+ tempsRestant + "s" + " et " + compteurCoups + " coups";
             document.getElementById('resultat1').style.color="white";
             document.getElementById('nbre').readOnly = true;
             if((localStorage.getItem('compteurCoups') == null) || (localStorage.getItem('tempsRestant')>tempsRestant)){
