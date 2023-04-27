@@ -1,0 +1,116 @@
+body{
+    background-image : url(../image/fondecran.jpg);
+}
+.info1{
+    margin-top: 1em;
+}
+#lien{
+    margin-top: 1em;
+    text-align: center;
+}
+
+#lien button a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+}
+#lien button{
+    border-radius: 40px;
+}
+#lien .bouton{
+    border-radius: 40px;
+    width:175px;
+}
+.container3{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (min-width:768px){
+.container1{
+    margin-top: 1em;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+.container2{
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+.centrer{
+    font-size: 2em;
+    text-align: center;
+}
+#selection{
+    background-image : url(../image/fondecran.jpg);
+    background-color: rgb(10, 10, 64);
+    border-radius: 40px;
+    margin-top: 1em;
+    width: 8em;
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
+}
+#btn{
+    width: 8em;
+    font-size: 1.3em;
+    text-align: center;
+}
+#resultat{
+    margin-top: 1em;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+option
+{
+    width: 100px;
+}
+
+
+}
+@media (max-width:767px){
+    .container1{
+        margin-top: 1em;
+        color: white;
+        font-size: 1.3em;
+        text-align: center;
+    }
+    .container2{
+        margin-top: 1.3em;
+        color: white;
+        font-size: 2em;
+        text-align: center;
+    }
+    .centrer{
+        font-size: 1.3em;
+        text-align: center;
+    }
+    #selection{
+        background-image : url(../image/fondecran.jpg);
+        background-color: rgb(10, 10, 64);
+        border-radius: 40px;
+        margin-top: 1em;
+        width: 8em;
+        font-size: 1.3em;
+        text-align: center;
+        color: white;
+    }
+    #btn{
+        width: 8em;
+        font-size: 1.3em;
+        text-align: center;
+    }
+    #resultat{
+        margin-top: 2em;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+    option
+    {
+        width: 100px;
+    }
+    
+    
+    }
