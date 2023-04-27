@@ -8,6 +8,7 @@ var compteurCoups=0;
 
 onload = function initialisation (){
 
+    // lancement du compte à rebour de s=30 secondes
     document.getElementById('tempo').innerHTML=s;
     var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
                                             if (s<10 && s>0){document.getElementById('tempo').style.color="red";
@@ -18,40 +19,54 @@ onload = function initialisation (){
                 , 1000);
 }
 //------------------------------------------------------------------------------------------------------------------------------------------
-function justeNbre(){   
-
+function justeNbre(){
+    
+    
+    // Enregistrement de la saisie dans l'input
     nb = document.getElementById("nbre").value
     nbre=parseInt(nb);
+    // Effacement de la saisie dans l'input
     document.getElementById("nbre").value="";
-    compteurCoups++;
+    // préparation pour une nouvelle saisie sans passer par la souris ni le clavier
     document.getElementById("nbre").focus();
+    compteurCoups++;
 
     if (s>0){
+        // Si le nombre saisi est supérieur au nombre à trouver
         if (nbre < auPif){
-
-            document.getElementById('up').style.display = "block";   
-            document.getElementById('down').style.display = "none";  
+            // Faire apparaitre la flèche qui pointe vers le haut
+            document.getElementById('up').style.display = "block";  
+            // Faire disparaitre la flèche qui pointe vers le bas 
+            document.getElementById('down').style.display = "none";
+        // Si le nombre saisi est inférieur au nombre à trouver      
         }else if (nbre > auPif){
+            // Faire apparaitre la flèche qui pointe vers le bas
             document.getElementById('down').style.display = "block";
-            document.getElementById('up').style.display = "none"; 
+            // Faire disparaitre la flèche qui pointe vers le haut 
+            document.getElementById('up').style.display = "none";
+        // Si le nombre saisi est égal au nombre à trouver 
         }else if(nbre == auPif){
+            // Faire disparaitre les deux flèches
             document.getElementById('up').style.display = "none";  
             document.getElementById('down').style.display = "none";  
-            document.getElementById('resultat1').innerHTML="BRAVO";
-            document.getElementById('resultat1').style.color="white";
+            // afficher le résultat
             var tempsRestant = 30-s;
                 document.getElementById('resultat1').innerHTML="Le " + nbre + " a été trouvé en "+ tempsRestant + "s" + " et " + compteurCoups + " coups";
             document.getElementById('resultat1').style.color="white";
+            // Interdire une nouvelle saisie de nombre
             document.getElementById('nbre').readOnly = true;
+            // Enregistrement du record dans le localStorage
             if((localStorage.getItem('compteurCoups') == null) || (localStorage.getItem('tempsRestant')>tempsRestant)){
                 localStorage.setItem('compteurCoups',compteurCoups);
                 localStorage.setItem('tempsRestant',tempsRestant);
+                // Affichage du record
                 document.getElementById('record').innerHTML="Record: " +  localStorage.getItem('tempsRestant') + "s" + " et " + localStorage.getItem('compteurCoups') + " coups";
                 document.getElementById('record').style.color="white";
             }else{
+                // Affichage du record
                 document.getElementById('record').innerHTML="Record: " +  localStorage.getItem('tempsRestant') + "s" + " et " + localStorage.getItem('compteurCoups') + " coups";
                 document.getElementById('record').style.color="white";
-        }
             }
+        }
     }
 }
