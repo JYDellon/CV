@@ -4,6 +4,7 @@ const cpt = 30000;
 var ladate= new Date();
 var s = 30;
 var compteurCoups=0;
+var trouver = new Boolean;
 //------------------------------------------------------------------------------------------------------------------------------------------
 
 onload = function initialisation (){
@@ -11,9 +12,12 @@ onload = function initialisation (){
     // lancement du compte à rebour de s=30 secondes
     document.getElementById('tempo').innerHTML=s;
     var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
+                                            if (trouver == true) {clearInterval(monInterval);}
                                             if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                                             }else if (s<0){
                                                             clearInterval(monInterval);
+                                                            console.log(trouver);
+                                                            
                                                           }
     }
                 , 1000);
@@ -67,6 +71,7 @@ function justeNbre(){
                 document.getElementById('record').innerHTML="Record: " +  localStorage.getItem('tempsRestant') + "s" + " et " + localStorage.getItem('compteurCoups') + " coups";
                 document.getElementById('record').style.color="white";
             }
+            trouver = true;
         }
     }
 }
