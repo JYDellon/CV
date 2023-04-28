@@ -55,7 +55,7 @@ body{
     font-size: 1.3em;
     text-align: center;
 }
-#resultat{
+#resultat, #tempo{
     margin-top: 1em;
     color: white;
     text-align: center;
@@ -104,7 +104,7 @@ option
         font-size: 1.3em;
         text-align: center;
     }
-    #resultat{
+    #resultat, #tempo{
         /* margin-top: 2em; */
         color: white;
         text-align: center;

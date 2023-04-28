@@ -1,5 +1,7 @@
 var nbre = Math.floor(Math.random() * 100);
 var compteur = 0;
+var s=30;
+var trouver = new Boolean; trrouvez = false;
 document.getElementById('azerty').innerHTML = nbre;
 onload=function initialisation1(){
     
@@ -16,6 +18,33 @@ if (localStorage.getItem('compteur') == null ){
 }
 
 
+var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
+
+if (s<10 && s>0){document.getElementById('tempo').style.color="red";
+}else if (s<0){
+                clearInterval(monInterval);
+                //-----------------------------------------------------------------------------------
+                if (localStorage.getItem('compteur') == null ){
+                
+                    localStorage.setItem('compteur',compteur);
+    
+                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
+    
+                }else if (localStorage.getItem('compteur') < compteur){
+                    
+                    localStorage.setItem('compteur',compteur);
+                    var record = localStorage.getItem('compteur');
+                    document.getElementById('record').innerHTML = "Record: " + record;
+    
+                }
+                //------------------------------------------------------------------------------------
+              }
+if(trouver == true){ 
+                    clearInterval(monInterval) 
+                    }
+}
+, 1000);
+
 
 }
 
@@ -25,6 +54,7 @@ function initialisation2(){
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     document.getElementById('azerty').innerHTML = nbre;
+    
 }
 
 function fizzBuzz(choix){
@@ -64,7 +94,7 @@ function fizzBuzz(choix){
 
             result = document.getElementById('resultat').innerHTML="INCORRECT";
             document.getElementById('resultat').style.color="red";
-
+           
             if (localStorage.getItem('compteur') == null ){
                 
                 localStorage.setItem('compteur',compteur);
@@ -79,6 +109,7 @@ function fizzBuzz(choix){
 
             }
             
+            trouver= true;
             compteur = 0;
         }
 
@@ -92,3 +123,4 @@ function fizzBuzz(choix){
             initialisation2()
         } 
     }
+
