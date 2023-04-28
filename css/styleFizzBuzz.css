@@ -73,12 +73,7 @@ option
 
 }
 @media (max-width:767px){
-    .container1{
-        margin-top: 1em;
-        color: white;
-        font-size: 1.3em;
-        text-align: center;
-    }
+
     .container2{
         margin-top: 1.3em;
         color: white;
@@ -89,23 +84,8 @@ option
         font-size: 1.3em;
         text-align: center;
     }
-    /* #selection{
-        background-image : url(../image/fondecran.jpg);
-        background-color: rgb(10, 10, 64);
-        border-radius: 40px;
-        margin-top: 1em;
-        width: 8em;
-        font-size: 1.3em;
-        text-align: center;
-        color: white;
-    } */
-    #btn{
-        width: 8em;
-        font-size: 1.3em;
-        text-align: center;
-    }
+    
     #resultat, #tempo{
-        /* margin-top: 2em; */
         color: white;
         text-align: center;
         font-size: 2em;
@@ -115,10 +95,6 @@ option
         text-align: center;
         font-size: 1.3em;
     }
-    /* option
-    {
-        width: 100px;
-    } */
-    
+   
     
     }
