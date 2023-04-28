@@ -3,6 +3,10 @@ var compteur = 0;
 var s=30;
 var trouver = new Boolean; trrouvez = false;
 document.getElementById('azerty').innerHTML = nbre;
+
+
+localStorage.clear()
+
 onload=function initialisation1(){
     
 document.getElementById('nbr').innerHTML = nbre;
