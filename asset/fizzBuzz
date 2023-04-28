@@ -5,6 +5,9 @@ var trouver = new Boolean; trouver = false;
 var fin = new Boolean; fin = false;
 document.getElementById('azerty').innerHTML = nbre;
 
+localStorage.clear()
+
+
 
 onload=function initialisation1(){
     
