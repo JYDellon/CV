@@ -1,44 +1,60 @@
 var nbre = Math.floor(Math.random() * 100);
+var compteur = 0;
 
 onload=function initialisation1(){
     
-  
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
 }
+
 function initialisation2(){
     
     nbre = Math.floor(Math.random() * 100);
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
 }
+
 function fizzBuzz(){
         const choix = document.getElementById('selection').value;
         // fizz buzz-------------------------------------------------------------
         if ((nbre%3 == 0 && nbre%5 == 0) && (choix == "Fizz-Buzz")){
 
-            result = document.getElementById('resultat').innerHTML="CORRECT"
-            document.getElementById('resultat').style.color="green"
+            result = document.getElementById('resultat').innerHTML="CORRECT";
+            document.getElementById('resultat').style.color="green";
+            compteur++;
+
         // fizz -----------------------------------------------------------------
         }else if ((nbre%3 == 0 && nbre%5 != 0 ) && (choix == "Fizz")){
 
-            result = document.getElementById('resultat').innerHTML="CORRECT"
-            document.getElementById('resultat').style.color="green"
+            result = document.getElementById('resultat').innerHTML="CORRECT";
+            document.getElementById('resultat').style.color="green";
+            compteur++;
+
         // buzz------------------------------------------------------------------
         }else if ((nbre%5 == 0 && nbre%3 != 0 ) && (choix == "Buzz")){
 
-            result = document.getElementById('resultat').innerHTML="CORRECT"
-            document.getElementById('resultat').style.color="green"
+            result = document.getElementById('resultat').innerHTML="CORRECT";
+            document.getElementById('resultat').style.color="green";
+            compteur++;
+
         // ni l'un ni l'autre----------------------------------------------------
         }else if ((nbre % 3 != 0 && nbre % 5 != 0) && (choix == "Ni l'un ni l'autre")){
 
-                result = document.getElementById('resultat').innerHTML="CORRECT"
-                document.getElementById('resultat').style.color="green"
+            result = document.getElementById('resultat').innerHTML="CORRECT";
+            document.getElementById('resultat').style.color="green";
+            compteur++;
+
         }else {
 
-            result = document.getElementById('resultat').innerHTML="INCORRECT"
-            document.getElementById('resultat').style.color="red"
+            result = document.getElementById('resultat').innerHTML="INCORRECT";
+            document.getElementById('resultat').style.color="red";
         }
 
-        if (result == "CORRECT"){initialisation2()}
+        if (result == "CORRECT"){
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                document.getElementById('resultat').style.color="white";
+            }else{document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                  document.getElementById('resultat').style.color="white";
+            }
+            initialisation2()}
     }
