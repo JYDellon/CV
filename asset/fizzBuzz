@@ -1,11 +1,10 @@
 var nbre = Math.floor(Math.random() * 100);
 var compteur = 0;
-var s=30;
-var trouver = new Boolean; trrouvez = false;
+var s=29;
+var trouver = new Boolean; trouver = false;
+var fin = new Boolean; fin = false;
 document.getElementById('azerty').innerHTML = nbre;
 
-
-localStorage.clear()
 
 onload=function initialisation1(){
     
@@ -15,8 +14,8 @@ document.getElementById('nbr').style.color="white";
 if (localStorage.getItem('compteur') == null ){
     
     localStorage.setItem('compteur',0);
-
     document.getElementById('record').innerHTML = "Record: " + 0;
+
 }else{
     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
 }
@@ -26,7 +25,8 @@ var monInterval = setInterval(function () {document.getElementById('tempo').inne
 
 if (s<10 && s>0){document.getElementById('tempo').style.color="red";
 }else if (s<0){
-                clearInterval(monInterval);
+                clearInterval(monInterval);fin = true;
+
                 //-----------------------------------------------------------------------------------
                 if (localStorage.getItem('compteur') == null ){
                 
@@ -44,7 +44,8 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                 //------------------------------------------------------------------------------------
               }
 if(trouver == true){ 
-                    clearInterval(monInterval) 
+                    clearInterval(monInterval);fin = true;
+
                     }
 }
 , 1000);
@@ -64,7 +65,7 @@ function initialisation2(){
 function fizzBuzz(choix){
 
         
-
+if (fin == false){
         
         // fizz buzz-------------------------------------------------------------
         if ((nbre%3 == 0 && nbre%5 == 0) && (choix == "Fizz-Buzz")){
@@ -128,3 +129,8 @@ function fizzBuzz(choix){
         } 
     }
 
+
+
+
+
+}
