@@ -3,8 +3,20 @@ var compteur = 0;
 
 onload=function initialisation1(){
     
-    document.getElementById('nbr').innerHTML = nbre;
-    document.getElementById('nbr').style.color="white";
+document.getElementById('nbr').innerHTML = nbre;
+document.getElementById('nbr').style.color="white";
+
+if (localStorage.getItem('compteur') == null ){
+    
+    localStorage.setItem('compteur',0);
+
+    document.getElementById('record').innerHTML = "Record: " + 0;
+}else{
+    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
+}
+
+
+
 }
 
 function initialisation2(){
@@ -12,9 +24,13 @@ function initialisation2(){
     nbre = Math.floor(Math.random() * 100);
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
+
 }
 
 function fizzBuzz(){
+
+        
+
         const choix = document.getElementById('selection').value;
         // fizz buzz-------------------------------------------------------------
         if ((nbre%3 == 0 && nbre%5 == 0) && (choix == "Fizz-Buzz")){
@@ -48,6 +64,22 @@ function fizzBuzz(){
 
             result = document.getElementById('resultat').innerHTML="INCORRECT";
             document.getElementById('resultat').style.color="red";
+
+            if (localStorage.getItem('compteur') == null ){
+                
+                localStorage.setItem('compteur',compteur);
+
+                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
+
+            }else if (localStorage.getItem('compteur') < compteur){
+                
+                localStorage.setItem('compteur',compteur);
+                var record = localStorage.getItem('compteur');
+                document.getElementById('record').innerHTML = "Record: " + record;
+
+            }
+            
+            compteur = 0;
         }
 
         if (result == "CORRECT"){
@@ -56,5 +88,7 @@ function fizzBuzz(){
             }else{document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
                   document.getElementById('resultat').style.color="white";
             }
-            initialisation2()}
+            
+            initialisation2()
+        } 
     }
