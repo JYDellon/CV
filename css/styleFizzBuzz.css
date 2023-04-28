@@ -3,7 +3,7 @@ body{
 }
 
 #lien{
-    margin-top: 0.5em;
+    margin-top: 0em;
     text-align: center;
 }
 
@@ -115,10 +115,10 @@ option
         text-align: center;
         font-size: 1.3em;
     }
-    option
+    /* option
     {
         width: 100px;
-    }
+    } */
     
     
     }
