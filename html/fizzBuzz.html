@@ -9,22 +9,11 @@
     <title>Fizz-Buzz</title>
 </head>
 <body>
-    
-    <div class="container1">
-        <div class="info1">
-          Fizz = Divisible par 3
-        </div>
-        <div class="info1">
-          Buzz = Divisible par 5
-        </div>
-        <div class="info1">
-          Fizz-Buzz = Divisible par 3 et 5 
-        </div>
-    </div>
 
     <div id="resultat">RESULTAT</div>
     <div class="centrer"><div id="record">Record:</div></div>
 
+    
 
     <div class="container2">
         <form action="">
@@ -33,7 +22,7 @@
                 <div id="nbr"></div>
             </div>
             <!--  -->
-            <div class="select">
+            <!-- <div class="select">
                 <select name="fizzbuzz" id="selection">
                     <optgroup label="Choisissez"  selected>
                         <option value="Fizz">Fizz</option>
@@ -42,8 +31,42 @@
                         <option value="Ni l'un ni l'autre">Ni l'un ni l'autre</option>
                     </optgroup>
                 </select>
-            </div>
+            </div> -->
         </form>    
+        <div class="container1">
+            <div id="lien">
+                <button type="button" class="btn btn-outline-primary bouton" onclick="fizzBuzz('Fizz')">
+                    <a>
+                        Fizz
+                    </a>
+                </button>
+            </div>
+            
+            <div id="lien">
+                <button type="button1" class="btn btn-outline-primary bouton" onclick="fizzBuzz('Buzz')">
+                    <a>
+                     Buzz
+                    </a>
+                </button>
+            </div>
+        </div>   
+    
+        <div id="lien">
+            <button type="button" class="btn btn-outline-primary bouton" onclick="fizzBuzz('Fizz-Buzz')">
+                <a>
+                  Fizz-Buzz
+                </a>
+            </button>
+        </div>
+    
+        <div id="lien">
+            <button type="button" class="btn btn-outline-primary bouton" onclick="fizzBuzz('Ni l\'un ni l\'autre')">
+                <a id="azerty">
+                    Ni l'un ni l'autre
+                </a>
+            </button>
+        </div>
+
             <div class="container3">
                 <div id="lien">
                     <button type="button" class="btn btn-outline-primary bouton">
