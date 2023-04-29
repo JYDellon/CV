@@ -113,9 +113,8 @@ if (fin == false){
             compteur++;
 
         }else {
-
-            result = document.getElementById('resultat').innerHTML="INCORRECT";
-            document.getElementById('resultat').style.color="red";
+            document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+            document.getElementById('resultat').style.color="white";
             echec()
             if (localStorage.getItem('compteur') == null ){
                 
@@ -138,8 +137,6 @@ if (fin == false){
         if (result == "CORRECT"){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                 document.getElementById('resultat').style.color="white";
-            }else{document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                  document.getElementById('resultat').style.color="white";
             }
             
             initialisation2()
