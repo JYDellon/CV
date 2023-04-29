@@ -11,27 +11,20 @@ document.getElementById('azerty').innerHTML = nbre;
 
 onload=function initialisation1(){
    
-    if (localStorage.getItem('compteur') == null ){
-    
-        localStorage.setItem('compteur',0);
-        document.getElementById('record').innerHTML = "Record: " + 0;
-    
-    }else{
-        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
-    }
+    rcord1()
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     //------------------------
     var monInterval2 = setInterval(function () {
         
-if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
-else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
-else if (s2<=1){
-                clearInterval(monInterval2)
-                fin = false;
-                initialisation03()}
-                s2--
-;}, 1000);
+                                                if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
+                                                else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
+                                                else if (s2<=1){
+                                                                clearInterval(monInterval2)
+                                                                fin = false;
+                                                                initialisation03()}
+                                                s2--;beep();
+                                            }, 1000);
 
     //------------------------
 
@@ -42,14 +35,7 @@ function initialisation03(){
 document.getElementById('nbr').innerHTML = nbre;
 document.getElementById('nbr').style.color="white";
 
-if (localStorage.getItem('compteur') == null ){
-    
-    localStorage.setItem('compteur',0);
-    document.getElementById('record').innerHTML = "Record: " + 0;
-
-}else{
-    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
-}
+rcord1()
 
 
 var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
@@ -164,4 +150,19 @@ if (fin == false){
 
 
 
+}
+function rcord1(){
+    if (localStorage.getItem('compteur') == null ){
+    
+        localStorage.setItem('compteur',0);
+        document.getElementById('record').innerHTML = "Record: " + 0;
+    
+    }else{
+        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
+    }
+}
+
+function beep(){
+    let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
+    audio.play();
 }
