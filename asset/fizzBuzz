@@ -11,7 +11,7 @@ document.getElementById('azerty').innerHTML = nbre;
 
 onload=function initialisation1(){
    
-    rcord1()
+    record1()
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     //------------------------
@@ -35,7 +35,7 @@ function initialisation03(){
 document.getElementById('nbr').innerHTML = nbre;
 document.getElementById('nbr').style.color="white";
 
-rcord1()
+record1()
 
 
 var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
@@ -52,7 +52,7 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
     
                 }else if (localStorage.getItem('compteur') < compteur){
-                    
+                    win();
                     localStorage.setItem('compteur',compteur);
                     var record = localStorage.getItem('compteur');
                     document.getElementById('record').innerHTML = "Record: " + record;
@@ -116,7 +116,7 @@ if (fin == false){
 
             result = document.getElementById('resultat').innerHTML="INCORRECT";
             document.getElementById('resultat').style.color="red";
-           
+            echec()
             if (localStorage.getItem('compteur') == null ){
                 
                 localStorage.setItem('compteur',compteur);
@@ -151,7 +151,7 @@ if (fin == false){
 
 
 }
-function rcord1(){
+function record1(){
     if (localStorage.getItem('compteur') == null ){
     
         localStorage.setItem('compteur',0);
@@ -165,4 +165,12 @@ function rcord1(){
 function beep(){
     let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
     audio.play();
+}
+function echec(){
+    let audio = new Audio("https://www.soundjay.com/misc/sounds/fail-trombone-03.mp3");
+    audio.play();
+}
+function win(){
+    let audio = new Audio("https://universal-soundbank.com/sounds/11497.mp3");
+    audio.play();    
 }
