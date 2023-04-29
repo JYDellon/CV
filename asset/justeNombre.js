@@ -2,13 +2,28 @@ const auPif = Math.floor(Math.random() * 100);
 var date= Date.now();
 const cpt = 30000;
 var ladate= new Date();
-var s = 29;
+var s = 30;var s2=2;
 var compteurCoups=0;
 var trouver = new Boolean;
 //------------------------------------------------------------------------------------------------------------------------------------------
 
 onload = function initialisation (){
+    var monInterval2 = setInterval(function () {
+        
+        if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
+        else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
+        else if (s2<=1){
+                        clearInterval(monInterval2)
+                        fin = false;
+                        initialisation02()}
+                        s2--
+        ;}, 1000);
+}
 
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+function initialisation02(){
     // lancement du compte à rebour de s=30 secondes
     document.getElementById('tempo').innerHTML=s;
     var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s--;
