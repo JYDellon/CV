@@ -1,8 +1,8 @@
 var nbre = Math.floor(Math.random() * 100);
 var compteur = 0;
-var s=29;
+var s=30;var s2 = 2;
 var trouver = new Boolean; trouver = false;
-var fin = new Boolean; fin = false;
+var fin = new Boolean; fin = true;
 document.getElementById('azerty').innerHTML = nbre;
 
 
@@ -10,7 +10,35 @@ document.getElementById('azerty').innerHTML = nbre;
 
 
 onload=function initialisation1(){
+   
+    if (localStorage.getItem('compteur') == null ){
     
+        localStorage.setItem('compteur',0);
+        document.getElementById('record').innerHTML = "Record: " + 0;
+    
+    }else{
+        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
+    }
+    document.getElementById('nbr').innerHTML = nbre;
+    document.getElementById('nbr').style.color="white";
+    //------------------------
+    var monInterval2 = setInterval(function () {
+        
+if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
+else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
+else if (s2<=1){
+                clearInterval(monInterval2)
+                fin = false;
+                initialisation03()}
+                s2--
+;}, 1000);
+
+    //------------------------
+
+
+}
+function initialisation03(){
+
 document.getElementById('nbr').innerHTML = nbre;
 document.getElementById('nbr').style.color="white";
 
