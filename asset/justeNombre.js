@@ -2,7 +2,7 @@ const auPif = Math.floor(Math.random() * 100);
 var date= Date.now();
 const cpt = 30000;
 var ladate= new Date();
-var s = 30;
+var s = 29;
 var compteurCoups=0;
 var trouver = new Boolean;
 //------------------------------------------------------------------------------------------------------------------------------------------
@@ -15,9 +15,7 @@ onload = function initialisation (){
                                             if (trouver == true) {clearInterval(monInterval);}
                                             if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                                             }else if (s<0){
-                                                            clearInterval(monInterval);
-                                                            console.log(trouver);
-                                                            
+                                                            clearInterval(monInterval);                                                            
                                                           }
     }
                 , 1000);
