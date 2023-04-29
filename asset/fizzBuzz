@@ -43,7 +43,11 @@ var monInterval = setInterval(function () {document.getElementById('tempo').inne
 if (s<10 && s>0){document.getElementById('tempo').style.color="red";
 }else if (s<0){
                 clearInterval(monInterval);fin = true;
-
+                if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                document.getElementById('resultat').style.color="white";
+}else{
+    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+    document.getElementById('resultat').style.color="white";}
                 //-----------------------------------------------------------------------------------
                 if (localStorage.getItem('compteur') == null ){
                 
@@ -113,8 +117,11 @@ if (fin == false){
             compteur++;
 
         }else {
-            document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-            document.getElementById('resultat').style.color="white";
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                document.getElementById('resultat').style.color="white";
+            }else{
+            document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+            document.getElementById('resultat').style.color="white";}
             echec()
             if (localStorage.getItem('compteur') == null ){
                 
