@@ -44,10 +44,10 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
 }else if (s<0){
                 clearInterval(monInterval);fin = true;
                 if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                document.getElementById('resultat').style.color="white";
-}else{
-    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-    document.getElementById('resultat').style.color="white";}
+                                    document.getElementById('resultat').style.color="white";
+                }else{
+                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                    document.getElementById('resultat').style.color="white";}
                 //-----------------------------------------------------------------------------------
                 if (localStorage.getItem('compteur') == null ){
                 
@@ -94,6 +94,11 @@ if (fin == false){
             result = document.getElementById('resultat').innerHTML="CORRECT";
             document.getElementById('resultat').style.color="green";
             compteur++;
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                    document.getElementById('resultat').style.color="white";
+                }else{
+                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                    document.getElementById('resultat').style.color="white";}
 
         // fizz -----------------------------------------------------------------
         }else if ((nbre%3 == 0 && nbre%5 != 0 ) && (choix == "Fizz")){
@@ -101,6 +106,11 @@ if (fin == false){
             result = document.getElementById('resultat').innerHTML="CORRECT";
             document.getElementById('resultat').style.color="green";
             compteur++;
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                    document.getElementById('resultat').style.color="white";
+                }else{
+                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                    document.getElementById('resultat').style.color="white";}
 
         // buzz------------------------------------------------------------------
         }else if ((nbre%5 == 0 && nbre%3 != 0 ) && (choix == "Buzz")){
@@ -108,6 +118,11 @@ if (fin == false){
             result = document.getElementById('resultat').innerHTML="CORRECT";
             document.getElementById('resultat').style.color="green";
             compteur++;
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                    document.getElementById('resultat').style.color="white";
+                }else{
+                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                    document.getElementById('resultat').style.color="white";}
 
         // ni l'un ni l'autre----------------------------------------------------
         }else if ((nbre % 3 != 0 && nbre % 5 != 0) && (choix == "Ni l'un ni l'autre")){
@@ -115,9 +130,14 @@ if (fin == false){
             result = document.getElementById('resultat').innerHTML="CORRECT";
             document.getElementById('resultat').style.color="green";
             compteur++;
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                    document.getElementById('resultat').style.color="white";
+                }else{
+                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+                    document.getElementById('resultat').style.color="white";}
 
         }else {
-            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+            if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                 document.getElementById('resultat').style.color="white";
             }else{
             document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
