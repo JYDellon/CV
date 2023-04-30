@@ -4,7 +4,7 @@ var s=30;var s2 = 2;
 var trouver = new Boolean; trouver = false;
 var fin = new Boolean; fin = true;
 document.getElementById('azerty').innerHTML = nbre;
-
+var result = "";
 
 
 
@@ -43,11 +43,7 @@ var monInterval = setInterval(function () {document.getElementById('tempo').inne
 if (s<10 && s>0){document.getElementById('tempo').style.color="red";
 }else if (s<0){
                 clearInterval(monInterval);fin = true;
-                if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
-                }else{
-                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                    document.getElementById('resultat').style.color="white";}
+                scores();
                 //-----------------------------------------------------------------------------------
                 if (localStorage.getItem('compteur') == null ){
                 
@@ -63,6 +59,7 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
     
                 }
                 //------------------------------------------------------------------------------------
+                
               }
 if(trouver == true){ 
                     clearInterval(monInterval);fin = true;
@@ -91,57 +88,29 @@ if (fin == false){
         // fizz buzz-------------------------------------------------------------
         if ((nbre%3 == 0 && nbre%5 == 0) && (choix == "Fizz-Buzz")){
 
-            result = document.getElementById('resultat').innerHTML="CORRECT";
-            document.getElementById('resultat').style.color="green";
+            result="CORRECT"
             compteur++;
-            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
-                }else{
-                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                    document.getElementById('resultat').style.color="white";}
+            scores();
 
         // fizz -----------------------------------------------------------------
         }else if ((nbre%3 == 0 && nbre%5 != 0 ) && (choix == "Fizz")){
-
-            result = document.getElementById('resultat').innerHTML="CORRECT";
-            document.getElementById('resultat').style.color="green";
+            result="CORRECT"
             compteur++;
-            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
-                }else{
-                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                    document.getElementById('resultat').style.color="white";}
+            scores();
 
         // buzz------------------------------------------------------------------
         }else if ((nbre%5 == 0 && nbre%3 != 0 ) && (choix == "Buzz")){
-
-            result = document.getElementById('resultat').innerHTML="CORRECT";
-            document.getElementById('resultat').style.color="green";
+            result="CORRECT"
             compteur++;
-            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
-                }else{
-                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                    document.getElementById('resultat').style.color="white";}
+            scores();
 
         // ni l'un ni l'autre----------------------------------------------------
         }else if ((nbre % 3 != 0 && nbre % 5 != 0) && (choix == "Ni l'un ni l'autre")){
-
-            result = document.getElementById('resultat').innerHTML="CORRECT";
-            document.getElementById('resultat').style.color="green";
+            result="CORRECT"
             compteur++;
-            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
-                }else{
-                    document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-                    document.getElementById('resultat').style.color="white";}
-
+            scores();
         }else {
-            if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                document.getElementById('resultat').style.color="white";
-            }else{
-            document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-            document.getElementById('resultat').style.color="white";}
+            scores();
             echec()
             if (localStorage.getItem('compteur') == null ){
                 
@@ -169,11 +138,6 @@ if (fin == false){
             initialisation2()
         } 
     }
-
-
-
-
-
 }
 function record1(){
     if (localStorage.getItem('compteur') == null ){
@@ -185,16 +149,27 @@ function record1(){
         document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
     }
 }
-
+//-----------------------------------------------------------------------------------------------------------
 function beep(){
     let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
     audio.play();
 }
+//-----------------------------------------------------------------------------------------------------------
 function echec(){
     let audio = new Audio("https://www.soundjay.com/misc/sounds/fail-trombone-03.mp3");
     audio.play();
 }
+//-----------------------------------------------------------------------------------------------------------
 function win(){
     let audio = new Audio("https://universal-soundbank.com/sounds/11497.mp3");
     audio.play();    
 }
+//-----------------------------------------------------------------------------------------------------------
+function scores(){
+    if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                    document.getElementById('resultat').style.color="white";
+    }else{
+        document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+        document.getElementById('resultat').style.color="white";}
+}
+//-----------------------------------------------------------------------------------------------------------
