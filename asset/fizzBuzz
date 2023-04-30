@@ -115,7 +115,6 @@ if (fin == false){
             if (localStorage.getItem('compteur') == null ){
                 
                 localStorage.setItem('compteur',compteur);
-
                 document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
 
             }else if (localStorage.getItem('compteur') < compteur){

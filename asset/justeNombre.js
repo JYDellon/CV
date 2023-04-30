@@ -8,6 +8,9 @@ var trouver = new Boolean;
 //------------------------------------------------------------------------------------------------------------------------------------------
 
 onload = function initialisation (){
+    // Interdire une nouvelle saisie de nombre
+    document.getElementById('nbre').readOnly = true;
+
     // lancement du compte à rebour de s=3 secondes
         var monInterval2 = setInterval(function () {
         if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
@@ -32,7 +35,8 @@ function initialisation02(){
                                                             clearInterval(monInterval);                                                            
                                                           }
     }
-                , 1000);
+    , 1000);
+    document.getElementById('nbre').readOnly = false;
 }
 //------------------------------------------------------------------------------------------------------------------------------------------
 function justeNbre(){
