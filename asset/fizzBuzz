@@ -111,7 +111,7 @@ if (fin == false){
             scores();
         }else {
             scores();
-            echec()
+            
             if (localStorage.getItem('compteur') == null ){
                 
                 localStorage.setItem('compteur',compteur);
@@ -153,11 +153,7 @@ function beep(){
     let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
     audio.play();
 }
-//-----------------------------------------------------------------------------------------------------------
-function echec(){
-    let audio = new Audio("https://www.soundjay.com/misc/sounds/fail-trombone-03.mp3");
-    audio.play();
-}
+
 //-----------------------------------------------------------------------------------------------------------
 function win(){
     let audio = new Audio("https://universal-soundbank.com/sounds/11497.mp3");
