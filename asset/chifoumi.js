@@ -153,7 +153,7 @@
                                                 if (localStorage.getItem("scorecpu")==null){localStorage.setItem("scorecpu", 5)}                                              
                                                 if (cptCpu<localStorage.getItem("scorecpu")){localStorage.setItem("scorecpu",cptCpu);}
 
-                                                result3.innerHTML="Mieilleur score: " + "5 / " + localStorage.getItem("scorecpu") ;
+                                                result3.innerHTML="Meilleur score: " + "5 / " + localStorage.getItem("scorecpu") ;
                                                 cptCpu=0;  cptUser=0;}
         
 
