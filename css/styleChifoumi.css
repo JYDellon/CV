@@ -18,11 +18,12 @@ body{
 }
 .container0{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .resultat{
     display: flex;
     justify-content: space-evenly;
+    margin-top: -5em;
 }
 .container4 img{
     width: 80px;
@@ -38,7 +39,6 @@ body{
     visibility: hidden;
 }
 #ange1, #ange2, #ange3{
-    margin-top: 0em;
     visibility: hidden;
 }
 .affichResultat, .affichResultat2, .affichResultat3 {
@@ -67,6 +67,7 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+
 @media (min-width:768px) and (max-width:991px){
     body{
         background-image : url(../image/fondecran.jpg);
@@ -85,24 +86,22 @@ body{
     .container0{
         margin-left: 3em;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     .resultat{
         margin-top: -2em;
         display: flex;
         justify-content: space-evenly;
+        margin-top: -5em;
     }
     
     .container1 img{
         width: 120px;
     }
     #ange1, #ange2, #ange3{
-        margin-top: 1em;
-        margin-bottom: 3em;
         visibility: hidden;
     }
     #diable1, #diable2, #diable3{
-        margin-bottom: 3.5em;
         visibility: hidden;
     }
     .container4 img{
@@ -132,7 +131,7 @@ body{
 .container0{
     margin-left: 3em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .resultat{
     margin-top: -4em;
@@ -143,13 +142,9 @@ body{
     width: 100px;
 }
 #ange1, #ange2, #ange3{
-    margin-top: 1em;
-    margin-bottom: 5em;
     visibility: hidden;
 }
 #diable1, #diable2, #diable3{
-    margin-top: 1em;
-    margin-bottom: 5em;
     visibility: hidden;
 }
 .container4 img{
