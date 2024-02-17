@@ -44,6 +44,20 @@ table {
 }
 /* ---------------------------------------------------------------------------------- */
 
+
+.contact{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around
+}
+.contact0 img, .contact3 img{
+    width: 50px;
+    height: 50px;
+}
+.group1, .group2{
+    display: flex;
+}
+
 .hidden{
     display: none;
    }
@@ -95,10 +109,14 @@ section{
 #formations{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
-    border-radius: 35% 3%;
+    border-radius: 1em;
     color : white;
 }
 #formations:hover {
+    background: rgba(145, 171, 227, 0.874);
+    color:black;
+}
+#savoiretre:hover {
     background: rgba(145, 171, 227, 0.874);
     color:black;
 }
@@ -119,7 +137,7 @@ section{
 }
 #bilingue{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
 .imgLang2{
     margin-bottom: 0.5em;
@@ -129,7 +147,6 @@ section{
 }
 .lang2{
     font-size: 1.3em;
-    margin-right: 3em;
 }
 
 #hobbies{
@@ -183,9 +200,10 @@ h4{
 }
 h3{
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     font-size:2em;
 }
+
 h2{
     font-size:50px;
     margin-top: 1em;
@@ -206,7 +224,6 @@ a{
 .parentLien{
     display: flex;
     justify-content: space-around;
-    margin-top: 2em;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -229,6 +246,22 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#savoiretre{
+    margin-top: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    color : white;
+    width: 100%;
+    font-size: 1em;
+}
+#listsavoiretre1{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;;
 }
 
 }
@@ -277,6 +310,23 @@ table {
 	border-spacing: 0;
 }
 /* --------------------------------- */
+
+.contact{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around
+}
+.contact0 img, .contact3 img{
+    width: 50px;
+    height: 50px;
+}
+.group1, .group2{
+    display: flex;
+}
+
+
+
+
 .card{
     width: 100%;
     text-align: center;
@@ -287,6 +337,10 @@ table {
 .df{
     display: flex;
     justify-content: center;
+}
+
+#CorpsDuCv2{
+    display:none;
 }
 .hidden{
     display: block;
@@ -310,7 +364,7 @@ table {
 .formation{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
-    border-radius: 35% 3%;
+    border-radius: 1em;
     color : white;
     margin-top: 1em;
     text-align: center;
@@ -421,7 +475,6 @@ table {
         margin-bottom: 0.5em;
     }
     .lang2{
-        margin-right: 3em;
         font-size: 1.3em;
     }
     .lang1{
@@ -507,7 +560,6 @@ table {
     .parentLien{
         display: flex;
         justify-content: space-around;
-        margin-top: 2em;
         margin-bottom: 2em;
     }
     #lien1{
@@ -533,6 +585,7 @@ table {
         display: flex;
         justify-content: center;
     }
+    
 }
 @media (min-width:768px) and (max-width:991px){
     
@@ -579,6 +632,23 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
+
+   .contact{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around
+}
+.contact0 img, .contact3 img{
+    width: 50px;
+    height: 50px;
+}
+.group1, .group2{
+    display: flex;
+}
+
+
+
+
 .mtaccordion{
     margin-top: 6em;
    }
@@ -592,6 +662,9 @@ table {
 .df{
     display: flex;
     justify-content: center;
+}
+#CorpsDuCv2{
+    display:none;
 }
 .hidden{
     display: block;
@@ -665,7 +738,7 @@ table {
     .formation{
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
-        border-radius: 35% 3%;
+        border-radius: 1em;
         color : white;
         margin-top: 1em;
         text-align: center;
@@ -709,7 +782,6 @@ table {
     }
     .lang2{
         font-size: 1.3em;
-        margin-right: 3em;
     }
     .souligne a{
         text-decoration: underline;
@@ -819,7 +891,6 @@ table {
         display: flex;
         justify-content: space-around;
         margin-bottom: 1em;
-        margin-top: 2em;
     }
     #lien1 a{
         text-align: center;
@@ -887,6 +958,23 @@ table {
     text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------- */
+
+.contact{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around
+}
+.contact0 img, .contact3 img{
+    width: 50px;
+    height: 50px;
+}
+.group1, .group2{
+    display: flex;
+}
+
+
+
+
 .mtaccordion{
     margin-top: 6em;
    }
@@ -900,6 +988,9 @@ table {
 .df{
     display: flex;
     justify-content: center;
+}
+#CorpsDuCv2{
+    display:none;
 }
 .hidden{
     display: block;
@@ -924,7 +1015,7 @@ table {
 .formation{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
-    border-radius: 35% 3%;
+    border-radius: 1em;
     color : white;
     margin-top: 1em;
     text-align: center;
@@ -1027,7 +1118,6 @@ table {
     }
     .lang2{
         font-size: 1.3em;
-        margin-right: 3em;
     }
     #hobbies{
         display: none;
@@ -1105,7 +1195,6 @@ h1{
         display: flex;
         justify-content: space-around;
         margin-bottom: 1em;
-        margin-top: 2em;
     }
     #lien1 a{
         text-align: center;
@@ -1166,6 +1255,23 @@ h1{
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------ */
+
+    .contact{
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-around
+    }
+    .contact0 img, .contact3 img{
+        width: 50px;
+        height: 50px;
+    }
+    .group1, .group2{
+        display: flex;
+    }
+    
+
+
+
     
     .mtaccordion{
         margin-top: 4em;
@@ -1180,6 +1286,9 @@ h1{
     .df{
         display: flex;
         justify-content: center;
+    }
+    #CorpsDuCv2{
+        display:none;
     }
     .hidden{
         display: block;
@@ -1203,7 +1312,7 @@ h1{
     .formation{
         background-color: rgba(26, 37, 61, 0.6);
         border: 1mm ridge rgba(75, 107, 175, 0.6);
-        border-radius: 35% 3%;
+        border-radius: 1em;
         color : white;
         margin-top: 1em;
         text-align: center;
@@ -1308,7 +1417,6 @@ h1{
     }
     .lang2{
         font-size: 1.3em;
-        margin-right: 3em;
     }
     #hobbies{
         margin-top: 1em;
@@ -1386,7 +1494,6 @@ h1{
         display: flex;
         justify-content: space-around;
         margin-bottom: 1em;
-        margin-top: 2em;
     }
     #lien1 a{
         text-align: center;
