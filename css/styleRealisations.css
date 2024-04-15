@@ -1057,7 +1057,9 @@ body article {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: rgba(102, 102, 102, 0.8);
+  /* background-color: rgba(102, 102, 102, 0.8); */
+  /* background:  #12c6e2; */
+  background-color: rgba(26, 37, 61, 0.6);
   border-radius: 7px;
   padding: 10px;
   margin: 0;
@@ -1093,7 +1095,7 @@ body article {
 }
 
 .swiper .swiper-slide:hover {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     #ff1e9c99,
     #ff1ea499,
@@ -1107,7 +1109,10 @@ body article {
     #252aff99,
     #2641ff99,
     #2649ff99
-  );
+  ); */
+  /* background: #2649ff99; */
+  background: rgba(145, 171, 227, 0.874);
+    color:black;
 }
 
 .swiper .swiper-slide:hover::before,
@@ -1205,15 +1210,14 @@ body article {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #2649ff;
+  /* background-color: #2649ff; */
+  background-color:#12c6e2;
   content: "";
   z-index: -1;
   transition: all 0.6s ease;
 }
 
-.swiper .swiper-slide a{
-  
-}
+
 
 
 .swiper .swiper-slide a:hover::after {
