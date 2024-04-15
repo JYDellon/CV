@@ -1,4 +1,7 @@
 @media (min-width:992px){
+    .card {
+        width: 120px;
+    }
     body{
         background-image: url(../image/fondecran.jpg);
     }
@@ -56,6 +59,9 @@
     
 }
 @media (min-width:768px) and (max-width:991px){
+    .card {
+        width: 120px;
+    }
     body{
         background-image: url(../image/fondecran.jpg);
     }
