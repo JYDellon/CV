@@ -128,6 +128,7 @@
     a{
         font-size: 1.6em;
     }
+    
     h2{
         margin-top: 1em;
         margin-bottom: 1em;
@@ -1305,3 +1306,23 @@ body article {
 #h1,h2,h3,h4,h5,a,p{
   font-family: 'fira Sans', sans-serif;
 }
+
+.portfolio{
+  font-size: 1em;
+  border:none;
+  text-decoration:none;
+  color:#fff;
+  width:400px;
+  background:transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0 rgb(75,107,171);
+  animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+
+}
+
+@keyframes battement {
+  to{
+      box-shadow: 0 0 0 30px rgba(255,71,84,0);
+    }
+}
+
