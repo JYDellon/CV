@@ -1569,8 +1569,10 @@ h1{
     border: 1mm ridge rgba(75, 107, 175, 0.6);
     border-radius: 1em;
     width: 80%;
+    height: 7em;
     text-align:center;
     line-height: 150%;
+    padding-top: 1em;
 }
 
 .leTexte:hover{
