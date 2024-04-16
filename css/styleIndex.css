@@ -1556,3 +1556,28 @@ h1{
         font-family: 'fira Sans', sans-serif;
     }
 
+.presentation{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+.leTexte{
+    color: white;
+    font-size: 1em;
+    background-color: rgba(26, 37, 61, 0.6);
+    border: 1mm ridge rgba(75, 107, 175, 0.6);
+    border-radius: 1em;
+    width: 80%;
+    text-align:center;
+    line-height: 150%;
+}
+
+.leTexte:hover{
+    background: rgba(145, 171, 227, 0.874);
+    color:black;    
+}
+
+  p::first-letter {
+    font-size: 130%;
+  }
