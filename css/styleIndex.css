@@ -44,26 +44,20 @@ table {
 }
 /* ---------------------------------------------------------------------------------- */
 
-.reseau{
-    display: flex;
-    justify-content:space-around;
-    margin-left: 65px;
+.reseau1{
+    margin-left: 50px;
 }
-
-.reseau2{
-    margin-left: 65px;
-}
-
 .contact{
-    
-        margin-top: 2em;
+    margin-top: 2em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around
 }
 
 .contact .group1 .contact1 a, .contact .group2 .contact2 a{
     font-size: 1.6em; /* Ajustez la taille selon vos besoins */
 }
+
+
 
 .contact0 img, .contact3 img{
     width: 50px;
@@ -344,15 +338,7 @@ table {
 .group1, .group2{
     display: flex;
 }
-.reseau{
-    display: flex;
-    justify-content:space-around;
-    margin-left: 65px;
-}
 
-.reseau2{
-    margin-left: 65px;
-}
 
 
 
@@ -675,15 +661,7 @@ table {
     display: flex;
 }
 
-.reseau{
-    display: flex;
-    justify-content:space-around;
-    margin-left: 65px;
-}
 
-.reseau2{
-    margin-left: 65px;
-}
 
 
 .mtaccordion{
@@ -1009,15 +987,7 @@ table {
     display: flex;
 }
 
-.reseau{
-    display: flex;
-    justify-content:space-around;
-    margin-left: 65px;
-}
 
-.reseau2{
-    margin-left: 65px;
-}
 
 
 .mtaccordion{
@@ -1304,9 +1274,7 @@ h1{
     .contact{
         margin-top: 2em;
         display: flex;
-        /* justify-content: space-around */
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around
     }
     .contact0 img, .contact3 img{
         width: 50px;
@@ -1588,31 +1556,3 @@ h1{
         font-family: 'fira Sans', sans-serif;
     }
 
-.presentation{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5em;
-}
-
-.leTexte{
-    color: white;
-    font-size: 1.3em;
-    background-color: rgba(26, 37, 61, 0.6);
-    border: 1mm ridge rgba(75, 107, 175, 0.6);
-    border-radius: 1em;
-    width: 80%;
-    height: auto;
-    text-align:center;
-    line-height: 150%;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-}
-
-.leTexte:hover{
-    background: rgba(145, 171, 227, 0.874);
-    color:black;    
-}
-
-  p::first-letter {
-    font-size: 130%;
-  }
