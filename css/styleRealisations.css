@@ -288,7 +288,7 @@
         text-align: center;
     }
     #lien1 button a, #lien2 button a{
-        font-size: 1.3em;
+        font-size: .7em;
     }
 }
 @media (min-width:768px) and (max-width:991px){
@@ -668,6 +668,7 @@
     font-style: italic;
 }
 #lien1 button, #lien2 button{
+  font-size: 1.3em;
     border-radius: 40px;
     width:140px;
 }
@@ -1287,4 +1288,22 @@ body article {
 
 #h1,h2,h3,h4,h5,a,p{
   font-family: 'fira Sans', sans-serif;
+}
+
+.portfolio{
+  border:none;
+  text-decoration:none;
+  color:#fff;
+  width:400px;
+  background:transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0 rgb(75,107,171);
+  animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+
+}
+
+@keyframes battement {
+  to{
+      box-shadow: 0 0 0 30px rgba(255,71,84,0);
+    }
 }
