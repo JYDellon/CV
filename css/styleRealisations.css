@@ -129,10 +129,9 @@
         font-size: 1.6em;
     }
     h2{
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-size: 45px;
-    }
+      font-size:50px;
+      margin-top: 1.25em;
+  }
     .realisation-link{
         padding-left: 7em;
     }
@@ -161,7 +160,11 @@
         margin-bottom: 2em;
         color:white;
     }
-
+    #masterTitre{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
     #lien0{
           text-align: center;
     }
@@ -298,6 +301,12 @@
     }
     #lien0{
       text-align: center;
+}
+
+#masterTitre{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #lien1{
