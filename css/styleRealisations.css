@@ -58,14 +58,9 @@
     body{
         background-image : url(../image/fondecran.jpg);
     }
-    /* .realisation01, .realisation02, .realisation03, .realisation04, .realisation05 {
-        display: block;
-        display: flex;
-        justify-content: center;
-        text-align: justify;
-        width: 100%;
-        margin-top: 2em;
-    } */
+    .contact0, .contact3{
+      display: none;
+  }
 
     h3{
         padding-top: 1em;                                                           
@@ -243,6 +238,9 @@
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------- */
+    .contact0, .contact3{
+      display: none;
+  }
     #titre{
         text-align: center;
         width: 100%;
@@ -380,6 +378,9 @@ width: 5em;
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------- */
+    .contact0, .contact3{
+      display: none;
+  }
     #titre{
         text-align: center;
         width: 100%;
@@ -505,7 +506,9 @@ width: 5em;
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------- */
-    
+    .contact0, .contact3{
+      display: none;
+  }
     #titre{
         text-align: center;
         width: 100%;
@@ -640,6 +643,13 @@ width: 5em;
         border-spacing: 0;
     }
     /* ---------------------------------------------------------------- */
+    
+    .contact0, .contact3{
+      display: block;
+  }
+  .contact1, .contact2{
+    display: none;
+}
     .mgtp{
         margin-top: 3em;
     }
