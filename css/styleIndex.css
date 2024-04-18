@@ -1292,7 +1292,7 @@ h1{
     }
     /* ------------------------------------------------------------------------------ */
     .reseaux{
-        margin-left: 1.5em;
+        margin-left: .5em;
         display: flex;
         justify-content: space-around;
         width: 10em;
