@@ -559,11 +559,11 @@ table {
         font-size:2em;
     }
     h2{
-        margin-top: 1em;
+        margin-top: 0em;
         font-size:50px;
     }
     h1{
-        font-size: 20px;
+        font-size: 2em;
     }
     body{
         background-image : url(../image/fondecran.jpg);
@@ -886,10 +886,9 @@ table {
     }
     h2{
         font-size:40px;
-        margin-top: 1em;
     }
     h1{
-        font-size: 20px;
+        font-size: 2em;
     }
     body{
         background-image : url(../image/fondecran.jpg);
@@ -1188,7 +1187,7 @@ h2{
     font-size:35px;
 }
 h1{
-    font-size: 20px;
+    font-size: 2em;
 }
     #adresse{
         margin-top: 1em;
@@ -1551,7 +1550,7 @@ h1{
     border:none;
 }
 
-#h1,h2,h3,h4,h5,a,p{
+h1,h2,h3,h4,h5,a,p{
         font-family: 'fira Sans', sans-serif;
     }
 
