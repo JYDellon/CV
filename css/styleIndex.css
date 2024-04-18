@@ -43,10 +43,14 @@ table {
 	border-spacing: 0;
 }
 /* ---------------------------------------------------------------------------------- */
+.reseaux{
+    margin-left: 4em;
+    display: flex;
+    justify-content: space-around;
+    width: 10em;
 
-.reseau1{
-    margin-left: 50px;
 }
+
 .contact{
     margin-top: 2em;
     display: flex;
@@ -325,7 +329,12 @@ table {
 	border-spacing: 0;
 }
 /* --------------------------------- */
-
+.reseaux{
+    margin-left: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    width: 10em;
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -647,7 +656,13 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
+   .reseaux{
+    margin-left: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    width: 10em;
 
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -973,7 +988,13 @@ table {
     text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------- */
+.reseaux{
+    margin-left: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    width: 10em;
 
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -1270,11 +1291,21 @@ h1{
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------ */
-
+    .reseaux{
+        margin-left: 1.5em;
+        display: flex;
+        justify-content: space-around;
+        width: 10em;
+    
+    }
+    
     .contact{
         margin-top: 2em;
         display: flex;
         justify-content: space-around
+    }
+    .contact1{
+        width:9em;
     }
     .contact0 img, .contact3 img{
         width: 50px;
