@@ -57,7 +57,9 @@ table {
     font-size: 1.6em; /* Ajustez la taille selon vos besoins */
 }
 
-
+.contact0, .contact3{
+    display: none;
+}
 
 .contact0 img, .contact3 img{
     width: 50px;
@@ -324,7 +326,9 @@ table {
 	border-spacing: 0;
 }
 /* --------------------------------- */
-
+.contact0, .contact3{
+    display: none;
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -646,7 +650,9 @@ table {
 	border-spacing: 0;
 }
    /* --------------------------------- */
-
+   .contact0, .contact3{
+    display: none;
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -971,7 +977,9 @@ table {
     text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------- */
-
+.contact0, .contact3{
+    display: none;
+}
 .contact{
     margin-top: 2em;
     display: flex;
@@ -1268,7 +1276,12 @@ h1{
         border-spacing: 0;
     }
     /* ------------------------------------------------------------------------------ */
-
+    .contact0, .contact3{
+        display: block;
+    }
+    .contact1, .contact2{
+        display: none;
+    }
     .contact{
         margin-top: 2em;
         display: flex;
