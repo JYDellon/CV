@@ -47,10 +47,17 @@ table {
 .reseau1{
     margin-left: 50px;
 }
+
+.centree{
+    display: flex;
+    justify-content:center;
+}
+
 .contact{
+    width: 80%;
     margin-top: 2em;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 .contact .group1 .contact1 a, .contact .group2 .contact2 a{
@@ -329,10 +336,16 @@ table {
 .contact0, .contact3{
     display: none;
 }
+.centree{
+    display: flex;
+    justify-content:center;
+}
+
 .contact{
+    width: 80%;
     margin-top: 2em;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 .contact0 img, .contact3 img{
     width: 50px;
@@ -653,10 +666,16 @@ table {
    .contact0, .contact3{
     display: none;
 }
+.centree{
+    display: flex;
+    justify-content:center;
+}
+
 .contact{
+    width: 80%;
     margin-top: 2em;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 .contact0 img, .contact3 img{
     width: 50px;
@@ -980,10 +999,16 @@ table {
 .contact0, .contact3{
     display: none;
 }
+.centree{
+    display: flex;
+    justify-content:center;
+}
+
 .contact{
+    width: 80%;
     margin-top: 2em;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 .contact0 img, .contact3 img{
     width: 50px;
@@ -1282,10 +1307,16 @@ h1{
     .contact1, .contact2{
         display: none;
     }
+    .centree{
+        display: flex;
+        justify-content:center;
+    }
+    
     .contact{
+        width: 80%;
         margin-top: 2em;
         display: flex;
-        justify-content: space-around
+        justify-content: space-around;
     }
     .contact0 img, .contact3 img{
         width: 50px;
