@@ -133,12 +133,17 @@
     .realisation-link{
         padding-left: 7em;
     }
-    .contact{
-        margin-top: 2em;
-        display: flex;
-        justify-content: space-around;
-        color:white;
-    }
+    .centree{
+      display: flex;
+      justify-content:center;
+  }
+  
+  .contact{
+      width: 80%;
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+  }
 
     .reseau1{
         margin-left: 50px;
@@ -286,11 +291,17 @@
         margin-top: 0.25em;
         font-size: 50px;
     }
-    .contact{
-        margin-top: 2em;
-        display: flex;
-        justify-content: space-around
-    }
+    .centree{
+      display: flex;
+      justify-content:center;
+  }
+  
+  .contact{
+      width: 80%;
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+  }
     .contact0 img, .contact3 img{
         width: 50px;
         height: 50px;
@@ -428,11 +439,17 @@ width: 5em;
         font-size:40px;
         margin-top: 0.25em;
     }
-    .contact{
-        margin-top: 2em;
-        display: flex;
-        justify-content: space-around
-    }
+    .centree{
+      display: flex;
+      justify-content:center;
+  }
+  
+  .contact{
+      width: 80%;
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+  }
     .contact0 img, .contact3 img{
         width: 50px;
         height: 50px;
@@ -560,11 +577,17 @@ width: 5em;
       display:none;
     }
 
-    .contact{
-        margin-top: 2em;
-        display: flex;
-        justify-content: space-around
-    }
+    .centree{
+      display: flex;
+      justify-content:center;
+  }
+  
+  .contact{
+      width: 80%;
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+  }
     .contact0 img, .contact3 img{
         width: 50px;
         height: 50px;
@@ -696,11 +719,17 @@ width: 5em;
     .hidden{
       display:none;
     }
-    .contact{
-        margin-top: 2em;
-        display: flex;
-        justify-content: space-around
-    }
+    .centree{
+      display: flex;
+      justify-content:center;
+  }
+  
+  .contact{
+      width: 80%;
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+  }
     .contact0 img, .contact3 img{
         width: 50px;
         height: 50px;
