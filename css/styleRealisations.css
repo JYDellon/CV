@@ -128,6 +128,7 @@
         font-size: 1.6em;
     }
     h1{
+      color:rgb(234, 163, 76);
       font-size: 2em;
   }
     h2{
@@ -289,6 +290,7 @@
         text-decoration: none;
     }
     h1{
+      color:rgb(234, 163, 76);
       font-size: 2em;
   }
     h2{
@@ -443,6 +445,7 @@ width: 5em;
         text-decoration: none;
     }
     h1{
+      color:rgb(234, 163, 76);
       font-size: 2em;
   }
     h2{
@@ -560,6 +563,7 @@ width: 5em;
         text-decoration: none;
     }
     h1{
+      color:rgb(234, 163, 76);
       font-size: 2em;
   }
     h2{
@@ -786,6 +790,10 @@ width: 5em;
   .accordion{
     margin-bottom: 2em;
   }
+  h1{
+    font-size: 20px;
+    color:rgb(220, 183, 36);
+}
 }
 
 
@@ -1221,7 +1229,6 @@ body article {
   top: -50%;
   width: 200%;
   height: 200%;
-  /* background-image: url("https://rb.gy/wk4c6n"); */
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1491,4 +1498,14 @@ h1,h2,h3,h4,h5,a,p{
 .contact0 img,.contact3 img{
   width: 60px;
   height: 60px;
+}
+
+.tp{
+  padding-top: 6px;
+  padding-bottom: 11px;
+  display: inline-block;
+background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }

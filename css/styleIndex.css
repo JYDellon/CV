@@ -226,6 +226,7 @@ h2{
     font-size:50px;
 }
 h1{
+    color:rgb(234, 163, 76);
     font-size: 2em;
 }
 body{
@@ -577,11 +578,11 @@ table {
         font-size:2em;
     }
     h2{
-        margin-top: 0em;
         font-size:50px;
     }
     h1{
         font-size: 2em;
+        color:rgb(234, 163, 76);
     }
     body{
         background-image : url(../image/fondecran.jpg);
@@ -919,6 +920,7 @@ table {
     }
     h1{
         font-size: 2em;
+        color:rgb(234, 163, 76);
     }
     body{
         background-image : url(../image/fondecran.jpg);
@@ -1232,6 +1234,7 @@ h2{
     font-size:35px;
 }
 h1{
+    color:rgb(234, 163, 76);
     font-size: 2em;
 }
     #adresse{
@@ -1545,6 +1548,7 @@ h1{
     }
     h1{
         font-size: 20px;
+        color:rgb(220, 183, 36);
     }
     #adresse{
         margin-top: 1em;
@@ -1639,4 +1643,11 @@ h1,h2,h3,h4,h5,a,p{
 .contact0 img,.contact3 img{
     width: 60px;
     height: 60px;
+}
+.tp{
+    display: inline-block;
+    background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
