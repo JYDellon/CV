@@ -65,7 +65,7 @@ table {
 }
 
 .contact0, .contact3{
-    display: none;
+    display: block;
 }
 
 .contact0 img, .contact3 img{
@@ -254,7 +254,7 @@ a{
     text-align: center;
 }
 
-.contact1 #button a{
+.contact1 button a{
     
     font-size: 10.3em;
 }
@@ -334,7 +334,7 @@ table {
 }
 /* --------------------------------- */
 .contact0, .contact3{
-    display: none;
+    display: block;
 }
 .centree{
     display: flex;
@@ -664,7 +664,7 @@ table {
 }
    /* --------------------------------- */
    .contact0, .contact3{
-    display: none;
+    display: block;
 }
 .centree{
     display: flex;
@@ -996,7 +996,7 @@ table {
     text-decoration: underline;
 }
 /* ----------------------------------------------------------------------------- */
-.contact0, .contact3{
+.contact1, .contact2{
     display: none;
 }
 .centree{
@@ -1014,6 +1014,7 @@ table {
     width: 50px;
     height: 50px;
 }
+
 .group1, .group2{
     display: flex;
 }
@@ -1255,6 +1256,7 @@ h1{
         width:140px;
         text-align: center;
     }
+    
 }
 @media (max-width:500px){
 

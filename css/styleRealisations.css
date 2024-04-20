@@ -59,7 +59,7 @@
         background-image : url(../image/fondecran.jpg);
     }
     .contact0, .contact3{
-      display: none;
+      display: block;
   }
 
     h3{
@@ -244,7 +244,7 @@
     }
     /* ------------------------------------------------------------------------------- */
     .contact0, .contact3{
-      display: none;
+      display: block;
   }
     #titre{
         text-align: center;
@@ -390,7 +390,7 @@ width: 5em;
     }
     /* ------------------------------------------------------------------------------- */
     .contact0, .contact3{
-      display: none;
+      display: block;
   }
     #titre{
         text-align: center;
@@ -524,8 +524,11 @@ width: 5em;
     }
     /* ------------------------------------------------------------------------------- */
     .contact0, .contact3{
-      display: none;
+      display: block;
   }
+  .contact1, .contact2{
+    display: none;
+}
     #titre{
         text-align: center;
         width: 100%;
