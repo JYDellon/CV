@@ -230,7 +230,8 @@ h1{
 }
 body{
     background-image : url(../image/fondecran.jpg);
-}lien1
+}
+
 Header #titre h3{
     text-decoration:none;
 }
@@ -254,10 +255,10 @@ a{
     text-align: center;
 }
 
-.contact1 button a{
-    
-    font-size: 10.3em;
-}
+.contact1 a button,  .contact2 a button{
+    color:white;
+    font-size: 1em;
+  }
 
 #lien1{
     text-align: center;
@@ -616,6 +617,10 @@ table {
         display: flex;
         justify-content: center;
     }
+    .contact1 a button,  .contact2 a button{
+        color:white;
+        font-size: 1.3em;
+      }
     
 }
 @media (min-width:768px) and (max-width:991px){
@@ -947,6 +952,12 @@ table {
         margin-top: 1em;
         margin-left: 1em;
     }
+    .contact1 a button,  .contact2 a button{
+        color:white;
+        font-size: 1.3em;
+      }
+
+
 }
 @media (min-width:501px) and (max-width:767px){
     
