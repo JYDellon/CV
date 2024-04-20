@@ -73,7 +73,7 @@ table {
     height: 50px;
 }
 .group1, .group2{
-    display: flex;
+    text-align: center;
 }
 
 .hidden{
@@ -256,7 +256,7 @@ a{
 }
 
 .contact1 a button,  .contact2 a button{
-    color:white;
+    color:rgb(234, 163, 76);
     font-size: 1em;
   }
 
@@ -353,7 +353,7 @@ table {
     height: 50px;
 }
 .group1, .group2{
-    display: flex;
+    text-align: center;
 }
 
 
@@ -618,7 +618,7 @@ table {
         justify-content: center;
     }
     .contact1 a button,  .contact2 a button{
-        color:white;
+        color:rgb(234, 163, 76);
         font-size: 1.3em;
       }
     
@@ -687,7 +687,7 @@ table {
     height: 50px;
 }
 .group1, .group2{
-    display: flex;
+    text-align: center;
 }
 
 
@@ -953,7 +953,7 @@ table {
         margin-left: 1em;
     }
     .contact1 a button,  .contact2 a button{
-        color:white;
+        color:rgb(234, 163, 76);
         font-size: 1.3em;
       }
 
@@ -1027,7 +1027,7 @@ table {
 }
 
 .group1, .group2{
-    display: flex;
+    text-align: center;
 }
 
 
@@ -1336,7 +1336,7 @@ h1{
         height: 50px;
     }
     .group1, .group2{
-        display: flex;
+        text-align: center;
     }
     
 
