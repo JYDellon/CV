@@ -1431,3 +1431,8 @@ h1,h2,h3,h4,h5,a,p{
       box-shadow: 0 0 0 30px rgba(255,71,84,0);
     }
 }
+
+.contact0 img,.contact3 img{
+  width: 80px;
+  height: 80px;
+}
