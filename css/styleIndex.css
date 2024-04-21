@@ -253,7 +253,7 @@ a{
 }
 #lien1 button, #lien2 button{
     border-radius: 40px;
-    width:140px;
+    width:160px;
     text-align: center;
 }
 
@@ -602,11 +602,11 @@ table {
         text-align: center;
     }
     #lien1 a, #lien2  a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     #lien1 button, #lien2 button{
         border-radius: 40px;
-        width:140px;
+        width:160px;
         text-align: center;
     }
     #adresse{
@@ -940,7 +940,7 @@ table {
     }
     #lien1 a{
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1em;
     }
     #lien2 a{
         text-align: center;
@@ -948,7 +948,7 @@ table {
     }
     #lien1 button, #lien2 button{
         border-radius: 40px;
-        width:140px;
+        width:160px;
         text-align: center;
     }
     #adresse{
@@ -1260,7 +1260,7 @@ h1{
     }
     #lien1 a{
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1em;
     }
     #lien2 a{
         text-align: center;
@@ -1268,7 +1268,7 @@ h1{
     }
     #lien1 button, #lien2 button{
         border-radius: 40px;
-        width:140px;
+        width:160px;
         text-align: center;
     }
     
@@ -1572,7 +1572,7 @@ h1{
     }
     #lien1 a{
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1em;
     }
     #lien2 a{
         text-align: center;
@@ -1580,7 +1580,7 @@ h1{
     }
     #lien1 button, #lien2 button{
         border-radius: 40px;
-        width:140px;
+        width:160px;
         text-align: center;
     }
   } 
