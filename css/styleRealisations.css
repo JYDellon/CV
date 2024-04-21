@@ -43,10 +43,11 @@
         border-spacing: 0;
     }
 
+    
     #titre{
-        text-align: center;
-        width: 100%;
-    }
+      text-align: center;
+      margin-top: 3em;
+  }
     header{
         display: flex;
         justify-content:space-between;
@@ -132,8 +133,8 @@
       font-size: 2em;
   }
     h2{
-      font-size:50px;
-      margin-top: 0.25em;
+            font-size:50px;
+      margin-top: 0.15em;
   }
     .realisation-link{
         padding-left: 7em;
@@ -251,10 +252,11 @@
     .contact0, .contact3{
       display: block;
   }
-    #titre{
-        text-align: center;
-        width: 100%;
-    }
+  #titre{
+    text-align: center;
+    margin-top: 3em;
+}
+
     header{
         display: flex;
         justify-content:space-between;
@@ -294,8 +296,9 @@
       font-size: 2em;
   }
     h2{
-        margin-top: 0.25em;
+        margin-top: 0.15em;
         font-size: 50px;
+        height: auto;
     }
     .centree{
       display: flex;
@@ -404,10 +407,10 @@ width: 5em;
     .contact0, .contact3{
       display: block;
   }
-    #titre{
-        text-align: center;
-        width: 100%;
-    }
+  #titre{
+    text-align: center;
+    margin-top: 3em;
+}
     header{
         display: flex;
         justify-content:space-between;
@@ -493,6 +496,11 @@ width: 5em;
   .contact1 a button,  .contact2 a button{
     color:rgb(234, 163, 76);
     font-size: 1.3em;
+  }
+  #masterTitre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -791,9 +799,9 @@ width: 5em;
     margin-bottom: 2em;
   }
   h1{
-    font-size: 20px;
+    font-size: 2em;
     color:rgb(220, 183, 36);
-}
+  }
 }
 
 
@@ -1183,12 +1191,9 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: flex-start;
-  /* background: #222; */
   width: 100vw;
   height: 150vh;
-  /* overflow: hidden; */
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -1386,9 +1391,7 @@ body article {
   transition: all 0.6s ease;
 }
 
-.swiper .swiper-slide a{
-  
-}
+
 
 
 .swiper .swiper-slide a:hover::after {

@@ -81,6 +81,7 @@ table {
    }
 #titre{
     text-align: center;
+    margin-top: 3em;
 }
 header{
     display: flex;
@@ -427,9 +428,10 @@ table {
     margin-top: 1em;
     text-align: center;
 }
-    #titre{
-        text-align: center;
-    }
+#titre{
+    text-align: center;
+    margin-top: 3em;
+}
     header{
         display: flex;
         color : white;
@@ -587,9 +589,7 @@ table {
     body{
         background-image : url(../image/fondecran.jpg);
     }
-    Header #titre h3{
-        text-decoration:none;
-    }
+    
     .parentLien{
         display: flex;
         justify-content: space-around;
@@ -722,9 +722,10 @@ table {
     color: white;
     text-align: center;
 }
-    #titre{
-        text-align: center;
-    }
+#titre{
+    text-align: center;
+    margin-top: 3em;
+}
     header{
         display: flex;
         justify-content: space-between;
@@ -1547,7 +1548,7 @@ h1{
         font-size:35px;
     }
     h1{
-        font-size: 20px;
+        font-size: 2em;
         color:rgb(220, 183, 36);
     }
     #adresse{
@@ -1651,3 +1652,7 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+
+h1,h2,h3,h4,h5,a,p{
+    font-family: 'fira Sans', sans-serif;
+  }
