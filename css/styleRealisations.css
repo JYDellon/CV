@@ -349,7 +349,7 @@
 
 
 #lien0 button {
-font-size: 1.6em;
+font-size: 1.3em;
 border-radius: 40px;
 width: 5em;
 }
@@ -490,7 +490,7 @@ width: 5em;
   
   
   #lien0 button {
-  font-size: 1.6em;
+  font-size: 1.3em;
   border-radius: 40px;
   width: 5em;
   }
@@ -641,7 +641,7 @@ width: 5em;
   
   
   #lien0 button {
-  font-size: 1.6em;
+  font-size: 1.3em;
   border-radius: 40px;
   width: 5em;
   }
@@ -790,7 +790,7 @@ width: 5em;
   
   
   #lien0 button {
-  font-size: 1.6em;
+  font-size: 1.3em;
   border-radius: 40px;
   width: 5em;
   }
@@ -1482,6 +1482,7 @@ h1,h2,h3,h4,h5,a,p{
 }
 
 .portfolio{
+  font-size: 1.6em;
   border:none;
   text-decoration:none;
   color:#fff;
