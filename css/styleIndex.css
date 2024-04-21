@@ -1600,6 +1600,13 @@ h1{
     box-shadow: 0 0 0 0 rgb(75,107,171);
     animation:battement 2s infinite cubic-bezier(.66,0,0,1);
 
+
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 @keyframes battement {
