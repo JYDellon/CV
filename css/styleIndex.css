@@ -637,7 +637,9 @@ p{
     .swiper{
         display:none;
     }
-      
+    .accordion-itemBis h2{
+        font-size: 2em;
+    }
 
 }
 @media (min-width:768px) and (max-width:991px){
@@ -984,7 +986,9 @@ table {
         font-size: 1.5em;
      color: rgb(55, 174, 178);   
     }
-    
+    .accordion-itemBis h2{
+        font-size: 2em;
+    }
 }
 @media (min-width:501px) and (max-width:767px){
     
@@ -1307,7 +1311,9 @@ h1{
         font-size: 1.5em;
      color: rgb(55, 174, 178);   
     }
-    
+    .accordion-itemBis h2{
+        font-size: 1.8em;
+    }
 }
 @media (max-width:500px){
 
@@ -1628,7 +1634,9 @@ h1{
         font-size: 1.5em;
      color: rgb(55, 174, 178);   
     }
-    
+    .accordion-itemBis h2{
+        font-size: 1.8em;
+    }
   } 
 
 
