@@ -135,7 +135,6 @@
                                                 ciseauxUser.style.visibility = "hidden";
                                                 pierreUser.style.visibility = "hidden";
                                                 papierUser.style.visibility = "hidden";
-                                                localStorage.setItem("scorecpu",cptCpu);
                                                 cptCpu=0;  cptUser=0;}
                else if (cptCpu < 5 && cptUser== 5) {result3.innerHTML="Gagné";
                                                 ange1.style.visibility = "hidden";
