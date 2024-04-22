@@ -638,7 +638,9 @@ p{
         display:none;
     }
     .accordion-itemBis h2{
-        font-size: 2em;
+        font-size: 1.8em;
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc;
     }
 
 }
@@ -987,7 +989,9 @@ table {
      color: rgb(55, 174, 178);   
     }
     .accordion-itemBis h2{
-        font-size: 2em;
+        font-size: 1.8em;
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc;
     }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -1313,6 +1317,8 @@ h1{
     }
     .accordion-itemBis h2{
         font-size: 1.8em;
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc;
     }
 }
 @media (max-width:500px){
@@ -1636,7 +1642,11 @@ h1{
     }
     .accordion-itemBis h2{
         font-size: 1.8em;
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc;
     }
+    
+
   } 
 
 
