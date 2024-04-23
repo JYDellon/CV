@@ -202,7 +202,7 @@ ul{
     list-style: none;
 }
 #liexperiences{
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 #licompetences{
     padding-bottom: 0.6em;
@@ -266,7 +266,7 @@ a{
 #lien2{
     text-align: center;
 }
-#masterTitre{
+#cv{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -624,7 +624,7 @@ p{
         margin-top: 1em;
         margin-left: 1em;
     }
-    #masterTitre{
+    #cv{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -877,7 +877,7 @@ table {
         background: rgba(145, 171, 227, 0.874);
         color:black;
     }
-    #masterTitre{
+    #cv{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -1707,7 +1707,7 @@ h1{
 }
 
 h1,h2,h3,h4,h5,a,p{
-        font-family: 'fira Sans', sans-serif;
+        font-family: 'Calibri';
         color:white;
     }
     h1{
