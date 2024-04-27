@@ -169,6 +169,11 @@
 
         width: 80px;
     }
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
 }
 @media (max-width:500px){
 
@@ -217,7 +222,7 @@
         text-align: center;
     }
 
-    #lien button a{
+    #lien a button{
         font-size: 1em;
         color: white;
         text-decoration: none;

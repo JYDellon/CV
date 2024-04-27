@@ -67,6 +67,11 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
 
 @media (min-width:768px) and (max-width:991px){
     body{
@@ -110,6 +115,11 @@ body{
     .container{
         display: flex;
         justify-content: space-evenly;
+    }
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
     }
 }
 @media (min-width:501px) and (max-width:767px){
@@ -155,12 +165,17 @@ body{
     justify-content: space-evenly;
     margin-top: -1em;
 }
+#lien a button{
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
 }
 @media  (max-width:500px){
     body{
         background-image : url(../image/fondecran.jpg);
     }
-    #lien button a{
+    #lien a button{
         font-size: 1.3em;
         text-decoration: none;
     }
@@ -183,6 +198,11 @@ body{
         justify-content: space-around;
     }
     
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
     #ange1, #ange2, #ange3{
         display: none;
     }
