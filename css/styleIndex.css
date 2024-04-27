@@ -2042,3 +2042,20 @@ body .hidden2 {
     background-color: rgb(230, 145, 17);
     color:black;
 }
+.contact1 a .btn{
+    border-radius: 400px;
+    width:260px;
+    text-align: center;
+}
+.contact1 a .btn{
+    border-radius: 40px;
+    width:180px;
+    height: auto;
+    text-align: center;
+}
+.contact2 a .btn{
+    border-radius: 40px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+}
