@@ -2039,8 +2039,8 @@ body .hidden2 {
    margin-bottom: 0.5em;
 }
 .btn:hover{
-    background-color: rgb(230, 145, 17);
-    color:black;
+    text-decoration:underline ;
+    color: rgb(230, 145, 17);
 }
 .contact1 a .btn{
     border-radius: 400px;
