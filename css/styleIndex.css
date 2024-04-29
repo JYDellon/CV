@@ -1771,6 +1771,7 @@ body .hidden2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 15.5em;
 }
 
 .sectionWrapper {
@@ -1786,7 +1787,7 @@ body .hidden2 {
 
 .swiper {
   width: 100%;
-  height: 450px;
+  height: 0px;
   padding: 50px 20px;
   overflow: visible;
 }
@@ -2028,9 +2029,8 @@ body .hidden2 {
     text-align: center;
   }
   .parentLien4{
-    margin-top: 1em;
-    
-    margin-bottom: 1em;
+    margin-top: 11em;
+    margin-bottom: 2em;
     text-align: center;
   }
   .accordion2{
