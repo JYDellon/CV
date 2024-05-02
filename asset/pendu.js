@@ -215,17 +215,30 @@ function verifierMotTrouve() {
 function gererVictoire() {
     document.getElementById('mot-devine').textContent = motSecret;
     setTimeout(function() {
-        // Charger et démarrer la vidéo
         const video = document.getElementById('videoPlayer');
         video.style.display = 'block'; 
-        video.addEventListener('timeupdate', function() {
-            if (video.currentTime >= video.duration - 2) {
-                video.style.opacity = (video.duration - video.currentTime) / 2; 
-            }
-        });
         video.play();
+
+        setTimeout(function() {
+            // Fondu
+            const fonduDuration = 2;
+            const fadeOutInterval = 50; 
+            const fadeOutSteps = fonduDuration * 1000 / fadeOutInterval;
+            let currentStep = 0;
+
+            const fadeOutIntervalId = setInterval(function() {
+                currentStep++;
+                const opacity = 1 - (currentStep / fadeOutSteps);
+                video.style.opacity = opacity;
+                if (currentStep >= fadeOutSteps) {
+                    clearInterval(fadeOutIntervalId);
+                    video.style.display = 'none';
+                }
+            }, fadeOutInterval);
+        }, 5000); 
     }, 500);
 }
+
 
 // Appeler la fonction extractTextFromPDF pour extraire le texte du PDF et initialiser le jeu du pendu
 extractTextFromPDF('../pdf/test.pdf');
