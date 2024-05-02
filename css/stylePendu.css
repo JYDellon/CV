@@ -1,0 +1,571 @@
+@media (min-width:1200px) {
+body {
+    background-image: url(../image/fondecran.jpg);
+    color: white;
+    
+}
+
+.contenaire {
+    display: flex;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+    text-align: center;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section, .right-section {
+    justify-content: center;
+}
+
+.lettres-autorisees-container {
+    display: flex;
+    flex-wrap: wrap;margin-top: 4em;
+}
+
+.lettre {
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    border-radius: 10%;
+    margin: 5px; 
+    padding: 10px;
+}
+
+
+
+
+
+
+ #mot-devine, #tentatives-restantes, .laReponse {
+    text-align: center;
+    font-size: 2em;
+}
+
+#tentatives-restantes {
+    margin-top: 2.5em;
+        margin-top: 2.5em;
+        letter-spacing: 4px;
+}
+
+#mot-devine {
+    margin-top: 1em;
+    color: #fffaff qua;
+}
+
+.lesBoutons {
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lesBoutons #lien a .bouton, .validation .bouton {
+    border-radius: 40px;
+    width: 175px;
+    color: white;
+}
+
+.lettre-non-trouvee {
+    color: rgb(234, 163, 76);
+}
+.lettre-trouvee{
+    color: aqua;
+    
+}
+.lettre-deja-essayee {
+    color: rgb(175, 5, 5);
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 20%; 
+    height: auto; 
+    z-index: -1;
+}
+
+#videoPlayer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 50%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    body {
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+    }
+    
+    .contenaire {
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+    }
+    
+    .left-section {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .right-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left-section, .right-section {
+        justify-content: center;
+        justify-content: center;
+    }
+    
+    .lettres-autorisees-container {
+        display: flex;
+        flex-wrap: wrap;margin-top: 4em;
+    }
+    
+    .lettre {
+        font-size: 2em;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 1px solid transparent;
+        border-radius: 10%;
+        margin: 5px; 
+        padding: 10px; 
+    }
+    
+    
+    
+    
+     #mot-devine, #tentatives-restantes, .laReponse {
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    #tentatives-restantes {
+        margin-top: 2.5em;
+    }
+    
+    #mot-devine {
+        margin-top: 1em;
+    }
+    
+    .lesBoutons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 4;
+    }
+    
+    .lesBoutons #lien a .bouton, .validation .bouton {
+        border-radius: 40px;
+        width: 175px;
+        color: white;
+    }
+    
+    .lettre-non-trouvee {
+        color: rgb(234, 163, 76);
+    }
+    .lettre-deja-essayee {
+        color: rgb(175, 5, 5);
+    }
+
+    #background-image {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 22%; 
+        height: auto; 
+        z-index: -1;
+    }
+
+
+    #videoPlayer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: 50%;
+        height: auto;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+        body {
+            background-image: url(../image/fondecran.jpg);
+            color: white;
+        }
+        
+        .contenaire {
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+        }
+        
+        .left-section {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .left-section, .right-section {
+            justify-content: center;
+            justify-content: center;
+        }
+        
+        .lettres-autorisees-container {
+            display: flex;
+            flex-wrap: wrap;margin-top: 4em;
+        }
+        
+        .lettre {
+            font-size: 2em;
+            padding: 0.5em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 1px solid transparent;
+            border-radius: 10%;
+            margin: 5px; 
+            padding: 10px; 
+        }
+        
+      
+        
+        
+         #mot-devine, #tentatives-restantes, .laReponse {
+            text-align: center;
+            font-size: 2em;
+        }
+        
+        #tentatives-restantes {
+            margin-top: 2em;
+        }
+        
+        #mot-devine {
+            margin-top: 4em;
+        }
+        
+        .lesBoutons {
+            margin-top:-10em;
+            margin-left:15%;
+        }
+        #lien{
+            margin-top:1em;
+        }
+        
+        .lesBoutons #lien a .bouton, .validation .bouton {
+            border-radius: 40px;
+            width: 200px;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        .lettre-non-trouvee {
+            color: rgb(234, 163, 76);
+        }
+        .lettre-deja-essayee {
+            color: rgb(175, 5, 5);
+        }
+
+        #background-image {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 24%; 
+            height: auto; 
+            z-index: -1;
+        }
+
+        #videoPlayer {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: 50%;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+
+
+
+}
+@media (min-width: 501px) and (max-width: 767px) {
+    body {
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+        text-align: center;
+    }
+    
+    .contenaire {
+        display: flex;
+        flex-direction: column; /* Changement de la disposition en colonne */
+        align-items: center; /* Centrage horizontal */
+    }
+    
+    #mot-devine {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+    
+    #tentatives-restantes {
+        font-size: 1.5em; /* Réduction de la taille de la police pour le nombre de tentatives */
+        margin-top: 1em;
+    }
+    
+    .lettres-autorisees-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em; /* Réduction de l'espace entre le mot à deviner et les lettres */
+    }
+    
+    .lettre {
+        font-size: 2em;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 1px solid transparent;
+        border-radius: 10%;
+        margin: 2px; 
+        padding: 10px; 
+    }
+
+    
+    .lesBoutons {
+        margin-top: 1em; /* Espace ajouté entre les lettres et les boutons */
+        display: flex;
+        justify-content:space-around;
+    }
+    
+    .lesBoutons #lien a .bouton, .validation .bouton {
+        border-radius: 40px;
+        width: 175px;
+        color: white;
+        font-size: 1.2em;
+    }
+    
+    #lien {
+        margin-top: 1em;
+    }
+    
+    .lettre-non-trouvee {
+        color: rgb(234, 163, 76);
+    }
+    
+    .lettre-deja-essayee {
+        color: rgb(175, 5, 5);
+    }
+
+    #background-image {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 35%; 
+        height: auto; 
+        z-index: -1;
+    }
+
+    #videoPlayer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: 50%;
+        height: auto;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width:500px) {
+    body {
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+        text-align: center;
+    }
+    
+    .contenaire {
+        display: flex;
+        flex-direction: column; /* Changement de la disposition en colonne */
+        align-items: center; /* Centrage horizontal */
+    }
+    
+    #mot-devine {
+        font-size: 2em;
+        margin-top: 0.5em;
+    }
+    
+    #tentatives-restantes {
+        font-size: 1.5em; /* Réduction de la taille de la police pour le nombre de tentatives */
+        margin-top: 1em;
+    }
+    
+    .lettres-autorisees-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em; /* Réduction de l'espace entre le mot à deviner et les lettres */
+    }
+    
+    .lettre {
+        font-size: 2em;
+        padding: 0.5em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: 1px solid transparent;
+        border-radius: 10%;
+        margin: 2px; 
+        padding: 10px; 
+    }
+    
+ 
+    .lesBoutons {
+        margin-top: 1em;
+    }
+    
+    .lesBoutons #lien a bouton, .validation .bouton {
+        border-radius: 40px;
+        width: 175px;
+        color: white;
+        font-size: 1.2em;
+    }
+
+    
+    .lettre-non-trouvee {
+        color: rgb(234, 163, 76);
+    }
+    
+    .lettre-deja-essayee {
+        color: rgb(175, 5, 5);
+    }
+
+
+    #background-image {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50%; 
+        height: auto; 
+        z-index: -1;
+    }
+
+    #videoPlayer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: 50%;
+        height: auto;
+        z-index: -1;
+        object-fit: cover;
+    }
+
+}   
+
+
+.portfolio{
+    font-size: 1.6em;
+    border:none;
+    text-decoration:none;
+    color:#fff;
+    width:200px;
+    height: 42PX;
+    background:transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0 rgb(75,107,171);
+    animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes battement {
+    to{
+        box-shadow: 0 0 0 30px rgba(255,71,84,0);
+      }
+}
+.tp{
+    display: inline-block;
+    background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 40px;
+    font-size: 1.3em;
+    width: 200px;
+}
+
+.lettre-accentuee {
+    font-weight: bold;
+}
+.lettre-alphabet {
+    font-weight: bold;
+}
+
+
+.mot-devine-container {
+    color: aqua;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+body{
+    
+    position: relative;
+}
+
+
+.lettre-selectionnee {
+    border-color:aqua; 
+    color:aqua;
+    border-radius: 10px;
+}
+
+
+.background.fade-out {
+    transition: opacity 2s ease;
+    opacity: 0; 
+}
+.lettre:hover {
+    border: 1px solid aqua;
+    color: aqua;
+}
+
