@@ -138,5 +138,47 @@ function compterPionsRestants() {
     return nombrePions;
 }
 
+//-------------------------------------------------------------------------
+
+var rulesBtn = document.getElementById("rules-button");
+
+// Obtenez le modal
+var modal = document.getElementById("rules1");
+
+// Obtenez le bouton de fermeture du modal
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Lorsque l'utilisateur clique sur le bouton, ouvrez le modal
+rulesBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Ajout d'écouteurs d'événements pour le le bouton close du Modal des records
+closeBtninfo.addEventListener("click", function() {
+    rules1.style.display = "none";
+});
+
+// Obtenez le bouton pour ouvrir le modal
+var rulesBtn = document.getElementById("rules-button");
+
+
+// Obtenez le modal
+var modal = document.getElementById("rules1");
+
+// Récupère le bouton de fermeture
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Lorsque l'utilisateur clique sur le bouton de fermeture, ferme le modal
+closeBtn.onclick = function() {
+    document.getElementById("rules1").style.display = "none";
+}
+
+// Lorsque l'utilisateur clique en dehors du modal, ferme le modal
+window.onclick = function(event) {
+    if (event.target == document.getElementById("rules1")) {
+        document.getElementById("rules1").style.display = "none";
+    }
+}
+
 
 initialiserPlateau();

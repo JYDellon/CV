@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le solitaire</title>
+    <title>Le Puzzle glissant</title>
     <link rel="stylesheet" href="../css/stylePuzzle.css">
-    <link rel="icon" type="image/vnd.icon" href="../image/symfony.png">
+    <link rel="icon" type="image/vnd.icon" href="../image/ID.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
 </head>
 <body>
     <header>
-        <div class="titre"><h1>LE PUZZLE GLISSANT</h1></div>
+        <div class="titre">
+            <h1>LE PUZZLE GLISSANT</h1>
+        </div>
+        <button class="btn" id="rules-button">
+            <img  src="../image/Help.png.png" alt="">
+        </button>
     </header>
     <div class="contenaire">
         <div class="puzzle">
@@ -46,6 +51,24 @@
         </div>
 
     </div>
+
+
+
+    <!-- Modal Règles du jeu-->
+    <div id="rules1" class="modal">
+        <div class="modal-content" id="rules">
+            <span class="close">&times;</span>
+            <h2>RÈGLES DU JEU</h2>
+            <div class="texte">Sur un plateau de 9 cases, il faut replacer, en les glissant, 8 pions dans le bon ordre avec le moins de mouvements possibles.</div>
+           <div class="footer btn">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtninfo" style="text-align: center;">Fermer</button>
+        </div>
+        </div>
+        
+    </div>
+    
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="../asset/puzzle.js"></script>  

@@ -821,7 +821,7 @@ function displayPlayers() {
     // Parcourir tous les joueurs et leurs scores
     players.forEach(function(player) {
         // Vérifier si le score du joueur est défini et différent de 3600
-        var scoreDisplay = player.score !== undefined && player.score !== null && player.score !== 7200 ? player.score : "N'a pas encore joué";
+        var scoreDisplay = player.score !== undefined && player.score !== null && player.score !== 7200 ? player.score : "N'a pas encore gagné";
         
         // Ajouter chaque joueur et son score (ou "n'a pas encore joué" si le score est 3600) au contenu du tableau
         tableHTML += "<tr><td class='aqua'>" + player.username + "</td><td class='aqua'>" + scoreDisplay + "</td></tr>";

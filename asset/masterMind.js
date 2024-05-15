@@ -16,8 +16,6 @@ if (loginUsername=="nonInscrits"){
     localStorage.setItem('MM_nonInscrits', userDataJSON);
     connected=false;
 }else{connected=true
-    console.log("connected",connected);
-    console.log("loginUsername",loginUsername);
     localStorage.setItem('MM_connected',connected);
     localStorage.setItem('loginUsername',loginUsername);
 }
@@ -39,13 +37,9 @@ if (userDataJSON) {
 
     // Utilisez userEmail et userScore comme nécessaire dans votre application
     
-    console.log("Pseudo de l'utilisateur :", loginUsername);
-    console.log("mot de passe de l'utilisateur :", loginPassword);
-    console.log("Email de l'utilisateur :", userEmail);
-    console.log("Score de l'utilisateur :", userScore);
 } else {
     // Si les informations de l'utilisateur n'existent pas dans le localStorage, affichez un message d'erreur
-    console.log("Aucune information trouvée pour l'utilisateur :", loginUsername);
+    
 }
 
 eye=true;
@@ -72,7 +66,7 @@ var totalCoups = 10; // Par exemple, 10 coups au total
 
 // Sélectionner l'élément span pour afficher le texte dynamique
 var tentativeText = document.getElementById("tentativeText");
-tentativeText.textContent = "Tentative N° 1/10";
+tentativeText.textContent = "Tentative N° 1/" + totalCoups;
 
 // Déclaration et initialisation de la variable gamePaused au niveau global
 var gamePaused = false;
@@ -127,9 +121,9 @@ function resetFormFields() {
 
 // Fonction pour mettre à jour le texte affichant le nombre total de coups restants
 function updateTentativeText() {
-    if (playerGuesses.length < 10) {
+    if (playerGuesses.length < totalCoups) {
         var coupsRestants = totalCoups - playerGuesses.length;
-        tentativeText.textContent = "Tentative N° " + (playerGuesses.length + 1) + "/10";
+        tentativeText.textContent = "Tentative N° " + (playerGuesses.length + 1) + "/" + totalCoups;
     }
 }
 
@@ -143,7 +137,6 @@ function generateSecretCode() {
         var randomIndex = Math.floor(Math.random() * colors.length);
         secretCode.push(colors[randomIndex]);
     }
-console.log(secretCode);
     return secretCode;
 }
 
@@ -321,8 +314,6 @@ function handleCellClick(event) {
 function getPlayerByUsername(username) {
     // Récupérer les données du joueur en utilisant la clé "MM_" + username dans localStorage
     var playerData = localStorage.getItem("MM_" + username);
-    console.log("AncienPseudo: ", AncienPseudo);
-    console.log("username: ", username);
     // Vérifier si les données existent
     if (playerData !== null) {
         if(AncienPseudo==username){
@@ -426,8 +417,6 @@ if (userData !== null) {
                 var userData = JSON.parse(userDataString);
 
                 // Accès aux différentes propriétés de l'objet userData
-                        console.log("MM_" + username,userData);
-                        console.log('connected : && seconds < userData.score) --------- ', connected);
                         if ( (connected && seconds < userData.score) ){
 
                             localStorage.setItem('MM_connected',connected);
@@ -437,8 +426,6 @@ if (userData !== null) {
                             var updatedUserDataString = JSON.stringify(userData);
                             // Enregistrement de la chaîne JSON mise à jour dans le localStorage
                             localStorage.setItem("MM_" + username, updatedUserDataString);
-                            console.log("connected",connected);
-                            console.log("loginUsername",loginUsername);
                             localStorage.setItem('MM_connected',connected);
                             localStorage.setItem('loginUsername',loginUsername);
                         }
@@ -472,9 +459,6 @@ if (userData !== null) {
                             localStorage.setItem('loginUsername',loginUsername);       
 
                             
-
-                            console.log("connected",connected);
-                            console.log("loginUsername",loginUsername);
                             localStorage.setItem('MM_connected',connected);
                             localStorage.setItem('loginUsername',loginUsername);
                         }else // Si le joueur a soumis 10 tentatives et n'a pas réussi à deviner les 4 couleurs correctes, afficher un message de fin de jeu
@@ -500,9 +484,6 @@ if (userData !== null) {
                         }, 10000); 
                         var newGameBtn = document.getElementById("newGameBtn");
                         newGameBtn.disabled = false;
-
-                        console.log("connected",connected);
-                        console.log("loginUsername",loginUsername);
                         localStorage.setItem('MM_connected',connected);
                         localStorage.setItem('loginUsername',loginUsername);
 
@@ -518,21 +499,13 @@ if (userData !== null) {
 
 
                             
-    console.log("connected",connected);
-    console.log("loginUsername",loginUsername);
     localStorage.setItem('MM_connected',connected);
     localStorage.setItem('loginUsername',loginUsername);
 }else{
 
-    // Gérer le cas où userData est null
-    console.error("userData is null");
-    // Afficher un message à l'utilisateur pour l'inviter à se connecter ou à s'inscrire
-    console.error("Vous devez vous connecter ou vous inscrire pour jouer au jeu.");
     // Rediriger l'utilisateur vers la page de connexion ou d'inscription
     // window.location.href = "page_de_connexion_ou_inscription.html";
     
-    console.log("connected",connected);
-    console.log("loginUsername",loginUsername);
     localStorage.setItem('MM_connected',connected);
     localStorage.setItem('loginUsername',loginUsername);
 }
@@ -593,10 +566,9 @@ function resetGame() {
     table.innerHTML = ''; // Effacer le contenu du tableau
     secretCode = generateSecretCode(); // Générer un nouveau tirage secret
     hideSecretCode();
-    console.log("Nouvelle partie. Tirage secret:", secretCode);
+    console.log("Tirage secret:", secretCode);
 }
 
-// Fonction pour cacher le tirage secret
 // Fonction pour cacher le tirage secret et réinitialiser ses cellules à la couleur noire
 function hideSecretCode() {
     var secretCodeRow = document.getElementById('secret-code-table').querySelector('tr');
@@ -773,8 +745,8 @@ function jeu(){
 
  connected = localStorage.getItem('MM_connected'); 
     // Récupérer les valeurs saisies dans les champs du formulaire de connexion
-    var loginUsername = localStorage.getItem('loginUsername');console.log('loginUsername',loginUsername);
-    var loginPassword = localStorage.getItem('loginPassword');console.log('loginPassword',loginPassword);
+    var loginUsername = localStorage.getItem('loginUsername');
+    var loginPassword = localStorage.getItem('loginPassword');
 
 // Utiliser le nom d'utilisateur pour récupérer les informations de l'utilisateur depuis le localStorage
 var userDataJSON = localStorage.getItem("MM_" + loginUsername);
@@ -790,18 +762,9 @@ if (userDataJSON) {
 
     // Utilisez userEmail et userScore comme nécessaire dans votre application
     
-    console.log("Pseudo de l'utilisateur :", loginUsername);
-    console.log("mot de passe de l'utilisateur :", loginPassword);
-    console.log("Email de l'utilisateur :", userEmail);
-    console.log("Score de l'utilisateur :", userScore);
-
-
-
-
 } else {
     // Si les informations de l'utilisateur n'existent pas dans le localStorage, affichez un message d'erreur
-    console.log("Aucune information trouvée pour l'utilisateur :", loginUsername);
-}    resetGame();initUserForm;
+  }    resetGame();initUserForm;
      
      document.getElementById('timer').textContent = "00"; // Réinitialiser le chronomètre
      seconds = 0;
@@ -819,7 +782,7 @@ if (userDataJSON) {
     startTimer();
 
     // Boucle pour créer les lignes du tableau
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < totalCoups; i++) {
         var row = document.createElement("tr");
 
         // Boucle pour créer les cellules de chaque ligne
@@ -862,7 +825,6 @@ if (userDataJSON) {
         if (nextRow) {
             handleSubmit(nextRow);
         } else {
-            console.error("nextRow is null");
         }
     });
 
@@ -937,8 +899,6 @@ function checkCredentials(usernam, passwor) {
 // Fonction pour gérer la tentative de connexion de l'utilisateur
 function login(username, password) {
     // Vérifier les informations d'identification
-    console.log('username',username);
-    console.log('username',username);
     if (checkCredentials(username, password)) {
         // Si les informations sont correctes, afficher un message de bienvenue
         loginForm.style.display = "none";
@@ -1003,8 +963,6 @@ function changer3(){
 // });
 
 function go(){
-    console.log("connected",connected);
-    console.log("loginUsername",loginUsername);
     localStorage.setItem('MM_connected',connected);
     localStorage.setItem('loginUsername',loginUsername);
     window.location.assign("./menuMasterMind.html");
