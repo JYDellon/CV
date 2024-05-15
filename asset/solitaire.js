@@ -93,7 +93,6 @@ function gérerClicCelluleVide(event) {
         pionSelectionné = null;
 
         if (!aMouvementsValides()) {
-            alert("Partie terminée. Aucun mouvement possible.");
         }
 
         document.getElementById('score').textContent="Nombre de pions restants :"+ compterPionsRestants();
