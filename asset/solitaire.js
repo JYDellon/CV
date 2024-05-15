@@ -1,3 +1,10 @@
+var nombrePions;
+var record=0;
+if (localStorage.getItem('RecordSolitaire')>0){
+    record = localStorage.getItem('RecordSolitaire')
+    document.getElementById('record').textContent = "Record : " + record;
+}
+
 const plateau = [
     [null, null, 1, 1, 1, null, null],
     [null, null, 1, 1, 1, null, null],
@@ -33,15 +40,12 @@ function initialiserPlateau() {
         }
     }
 }
-
 function gérerClicPion(event) {
     const cellule = event.target;
     ligneSélectionnée = parseInt(cellule.dataset.row);
     colonneSélectionnée = parseInt(cellule.dataset.col); 
     pionSelectionné = cellule;
 }
-
-
 function estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelleLigne, nouvelleColonne) {
     const mouvementHorizontal = ligneSélectionnée === nouvelleLigne && Math.abs(colonneSélectionnée - nouvelleColonne) === 2;
     const mouvementVertical = colonneSélectionnée === nouvelleColonne && Math.abs(ligneSélectionnée - nouvelleLigne) === 2;
@@ -53,7 +57,6 @@ function estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelle
     }
     return false;
 }
-
 function aMouvementsValides() {
     for (let i = 0; i < plateau.length; i++) {
         for (let j = 0; j < plateau[i].length; j++) {
@@ -69,9 +72,13 @@ function aMouvementsValides() {
             }
         }
     }
+    if (record == 0 || nombrePions < localStorage.getItem('RecordSolitaire')){
+        localStorage.setItem('RecordSolitaire', nombrePions-1)
+        document.getElementById('record').textContent = "Record : " + localStorage.getItem('RecordSolitaire')
+                    
+    }
     return false; 
 }
-
 function gérerClicCelluleVide(event) {
     const cellule = event.target;
 
@@ -99,7 +106,6 @@ function gérerClicCelluleVide(event) {
     } else {
     }
 }
-
 function afficherPlateau() {
     while (elementPlateau.firstChild) {
         elementPlateau.removeChild(elementPlateau.firstChild);
@@ -124,9 +130,8 @@ function afficherPlateau() {
         }
     }
 }
-
 function compterPionsRestants() {
-    let nombrePions = 0;
+ nombrePions = 0;
     for (let i = 0; i < plateau.length; i++) {
         for (let j = 0; j < plateau[i].length; j++) {
             if (plateau[i][j] === 1) {
@@ -136,7 +141,6 @@ function compterPionsRestants() {
     }
     return nombrePions;
 }
-
 //-------------------------------------------------------------------------
 
 var rulesBtn = document.getElementById("rules-button");

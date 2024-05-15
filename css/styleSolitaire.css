@@ -110,7 +110,6 @@ body{
 }
 @media (min-width:501px){
     .lesBoutons {
-        margin-top: 2em;
         display: flex;
         justify-content: space-around;
     }
@@ -175,7 +174,9 @@ img{
     width: 40px;
 
 }
-header{
-    display: flex;
-    justify-content: center;
+
+.contenaire2{
+    text-align: center;
+    color: aqua;
+    font-size: 1.6em;
 }
