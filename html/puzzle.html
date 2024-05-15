@@ -11,12 +11,19 @@
 </head>
 <body>
     <header>
-        <div class="titre">
-            <h1>LE PUZZLE GLISSANT</h1>
+        <div class="headerContenaire1">
+            <div class="titre">
+                <h1>LE PUZZLE GLISSANT</h1>
+            </div>
+            <button class="btn" id="rules-button">
+                <img  src="../image/Help.png" alt="">
+            </button>
         </div>
-        <button class="btn" id="rules-button">
-            <img  src="../image/Help.png.png" alt="">
-        </button>
+        <div class="headerContenaire2">
+            <div id="score">Nbre de coups : 0</div>
+            <div id="record">Record :</div>
+        </div>
+
     </header>
     <div class="contenaire">
         <div class="puzzle">
@@ -60,9 +67,11 @@
             <span class="close">&times;</span>
             <h2>RÈGLES DU JEU</h2>
             <div class="texte">Sur un plateau de 9 cases, il faut replacer, en les glissant, 8 pions dans le bon ordre avec le moins de mouvements possibles.</div>
-           <div class="footer btn">
+            <div class="objectifPuzzle"><img src="../image/objectif.png" alt=""></div>
+           
+            <div class="footer btn">
              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtninfo" style="text-align: center;">Fermer</button>
-        </div>
+            </div>
         </div>
         
     </div>

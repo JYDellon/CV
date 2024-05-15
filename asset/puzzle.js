@@ -1,7 +1,11 @@
-
 const tuiles = document.querySelectorAll('.tuile');
 let nombreDeCoups = 0;
-
+var fini=false;
+var record=0;
+if ( localStorage.getItem('RecordPuzzleGlissant') >0){
+    record =  localStorage.getItem('RecordPuzzleGlissant')
+    document.getElementById('record').textContent = "Record : " + record;
+}
 // Fonction pour gérer les clics sur les tuiles
 function gérerClicTuile(tuile) {
     const tuileVide = document.querySelector('.vide');
@@ -13,25 +17,39 @@ function gérerClicTuile(tuile) {
     const colonneTuile = indexTuile % 3;
     const rangéeVide = Math.floor(indexVide / 3);
     const colonneVide = indexVide % 3;
-    
-    if ((rangéeTuile === rangéeVide && Math.abs(colonneTuile - colonneVide) === 1) || (colonneTuile === colonneVide && Math.abs(rangéeTuile - rangéeVide) === 1)) {
-        const temp = tuileVide.innerHTML;
-        tuileVide.innerHTML = tuile.innerHTML;
-        tuile.innerHTML = temp;
-        tuileVide.classList.remove('vide');
-        tuile.classList.add('vide');
+    if (fini == false){
+        if ((rangéeTuile === rangéeVide && Math.abs(colonneTuile - colonneVide) === 1) || (colonneTuile === colonneVide && Math.abs(rangéeTuile - rangéeVide) === 1)) {
+            const temp = tuileVide.innerHTML;
+            tuileVide.innerHTML = tuile.innerHTML;
+            tuile.innerHTML = temp;
+            tuileVide.classList.remove('vide');
+            tuile.classList.add('vide');
 
-        // Incrémenter le nombre de coups à chaque mouvement valide
-        nombreDeCoups++;
+            // Incrémenter le nombre de coups à chaque mouvement valide
+            nombreDeCoups++;
+            document.getElementById('score').textContent = `Nbre de coups : ${nombreDeCoups}`;
 
-        // Vérifie si le puzzle est résolu après chaque mouvement
-        if (estPuzzleRésolu()) {
-            // Puzzle résolu, affiche un message de félicitations avec le nombre de coups
-            alert(`Félicitations! Vous avez résolu le puzzle en ${nombreDeCoups} coups.`);
-            // Désactive les clics sur les tuiles
-            tuiles.forEach(tuile => {
-                tuile.removeEventListener('click', gérerClicTuile);
-            });
+            // Vérifie si le puzzle est résolu après chaque mouvement
+            if (estPuzzleRésolu()) {
+                // Désactive les clics sur les tuiles
+                tuiles.forEach(tuile => {
+                    tuile.removeEventListener('click', gérerClicTuile);
+                    fini= true;
+
+                    if (record == 0 || nombreDeCoups < localStorage.getItem('RecordPuzzleGlissant')){
+                        localStorage.setItem('RecordPuzzleGlissant', nombreDeCoups)
+                        document.getElementById('record').textContent = "Record : " + localStorage.getItem('RecordPuzzleGlissant')
+                    }
+
+                });
+            }
+
+            // Vérifie si le puzzle est déjà résolu, alors désactive les clics sur les tuiles
+            if (estPuzzleRésolu()) {
+                tuiles.forEach(tuile => {
+                    tuile.removeEventListener('click', gérerClicTuile);
+                });
+            }
         }
     }
 }
@@ -56,7 +74,6 @@ function estPuzzleSolvable() {
     // Si le nombre d'inversions est pair, le puzzle est solvable
     return inversions % 2 === 0;
 }
-
 
 // Fonction pour mélanger les tuiles
 function mélangerTuiles() {
@@ -92,12 +109,11 @@ function estPuzzleRésolu() {
         ordreActuel += tuile.classList.contains('vide') ? '9' : tuile.innerHTML;
     });
 
-    console.log('Ordre actuel:', ordreActuel); // Afficher l'ordre actuel avec le chiffre '9' pour la case vide
+    // console.log('Ordre actuel:', ordreActuel); // Afficher l'ordre actuel avec le chiffre '9' pour la case vide
 
     // Vérifie si l'ordre actuel correspond à l'ordre résolu
     return ordreActuel === '123456789';
 }
-
 
 // Ajoute un écouteur d'événements de clic aux tuiles
 tuiles.forEach(tuile => {
@@ -110,8 +126,6 @@ tuiles.forEach(tuile => {
 do {
     mélangerTuiles();
 } while (!estPuzzleSolvable());
-
-
 
 //-------------------------------------------------------------------------
 
@@ -135,7 +149,6 @@ closeBtninfo.addEventListener("click", function() {
 
 // Obtenez le bouton pour ouvrir le modal
 var rulesBtn = document.getElementById("rules-button");
-
 
 // Obtenez le modal
 var modal = document.getElementById("rules1");

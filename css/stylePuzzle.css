@@ -31,7 +31,6 @@ body{
 
 .titre{
     margin-top: 1em;
-    margin-bottom: 2em;
     text-align: center;
     color: aqua;
 }
@@ -83,20 +82,22 @@ body{
 @media (max-width:500px){
 
     .lesBoutons {
-        margin-top: 3em;
+        margin-top: 2.5em;
         text-align: center;
     }
 
 }
 
 img{
+    margin-top: 1.5em;
     width: 40px;
 
 }
-header{
+.headerContenaire1{
     display: flex;
     justify-content: center;
 }
+
 .btn{
     margin-top: -1em;
 }
@@ -144,3 +145,21 @@ header{
 }
 
 
+#score{
+    color: aqua;
+    font-size: 1.6em;
+    text-align: center;
+}
+.objectifPuzzle img{
+    width: 10em;
+}
+.objectifPuzzle{
+    text-align: center;
+}
+
+#record{
+    color: aqua;
+    font-size: 1.6em;
+    text-align: center;
+
+}

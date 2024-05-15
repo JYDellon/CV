@@ -70,12 +70,23 @@ async function extractTextFromPDF(pdfPath) {
     }
 }
 
-// Fonction pour choisir un mot aléatoire dans la liste
+// // Fonction pour choisir un mot aléatoire dans la liste
+// function choisirMot(uniqueWordsArray) {
+
+//     return uniqueWordsArray[Math.floor(Math.random() * uniqueWordsArray.length)];
+// }
+
+// Fonction pour choisir un mot aléatoire dans la liste, en tenant compte des critères spécifiés
 function choisirMot(uniqueWordsArray) {
-    return uniqueWordsArray[Math.floor(Math.random() * uniqueWordsArray.length)];
+    let motChoisi = '';
+    do {
+        motChoisi = uniqueWordsArray[Math.floor(Math.random() * uniqueWordsArray.length)];
+    } while (motChoisi.includes('-') || motChoisi.includes("'")); // Vérifier si le mot contient un tiret ou une apostrophe
+    return motChoisi;
 }
 
-// Fonction pour initialiser le jeu
+
+
 // Fonction pour initialiser le jeu
 function init(uniqueWordsArray) {
     motSecret = choisirMot(uniqueWordsArray);
