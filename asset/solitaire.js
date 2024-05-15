@@ -1,103 +1,142 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const plateau = document.getElementById('plateau');
-    // const counterContainer = document.getElementById('counter-container');
-    const nbreTrous = 49;
-    const indexTrouVide = Math.floor(nbreTrous / 2); 
-    let trouSelectionne = -1;
-    let compteur = 0; 
+const plateau = [
+    [null, null, 1, 1, 1, null, null],
+    [null, null, 1, 1, 1, null, null],
+    [1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
+    [null, null, 1, 1, 1, null, null],
+    [null, null, 1, 1, 1, null, null]
+];
 
-    // Création du plateau de jeu
-    for (let i = 0; i < nbreTrous; i++) {
-        const trou = document.createElement('div');
-        trou.classList.add('trou');
-        if (i === indexTrouVide) {
-            trou.classList.add('vide');
+const elementPlateau = document.getElementById('plateau');
+var pionSelectionné = null;
+var ligneSélectionnée = null; 
+var colonneSélectionnée = null;
+
+function initialiserPlateau() {
+    for (let i = 0; i < plateau.length; i++) {
+        for (let j = 0; j < plateau[i].length; j++) {
+            const cellule = document.createElement('div');
+            cellule.className = 'cellule';
+            if (plateau[i][j] === null) {
+                cellule.classList.add('null');
+            } else if (plateau[i][j] === 1) {
+                cellule.classList.add('pion');
+                cellule.addEventListener('click', gérerClicPion);
+            } else if (plateau[i][j] === 0) {
+                cellule.classList.add('vide');
+                cellule.addEventListener('click', gérerClicCelluleVide);
+            }
+            cellule.dataset.row = i;
+            cellule.dataset.col = j;
+            elementPlateau.appendChild(cellule);
         }
-        trou.addEventListener('click', function() {
-            trouselectionned(i);
-        });
-        plateau.appendChild(trou);
     }
+}
 
-    // Sélection d'un trou
-    function trouselectionned(index) {
-        const trous = document.getElementsByClassName('trou');
-        if (!trous[index].classList.contains('vide')) {
-            if (trouSelectionne === -1) {
-                trouSelectionne = index;
-                trous[index].classList.add('selectionne');
-            } else {
-                if (trouSelectionne === index) {
-                    trous[trouSelectionne].classList.remove('selectionne');
-                    trouSelectionne = -1;
-                } else {
-                    mouvement(trouSelectionne, index);
-                    trous[trouSelectionne].classList.remove('selectionne');
-                    trouSelectionne = -1;
+function gérerClicPion(event) {
+    const cellule = event.target;
+    ligneSélectionnée = parseInt(cellule.dataset.row);
+    colonneSélectionnée = parseInt(cellule.dataset.col); 
+    pionSelectionné = cellule;
+}
+
+
+function estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelleLigne, nouvelleColonne) {
+    const mouvementHorizontal = ligneSélectionnée === nouvelleLigne && Math.abs(colonneSélectionnée - nouvelleColonne) === 2;
+    const mouvementVertical = colonneSélectionnée === nouvelleColonne && Math.abs(ligneSélectionnée - nouvelleLigne) === 2;
+
+    if ((mouvementHorizontal || mouvementVertical) && plateau[nouvelleLigne][nouvelleColonne] === 0) {
+        const ligneMilieu = (ligneSélectionnée + nouvelleLigne) / 2;
+        const colonneMilieu = (colonneSélectionnée + nouvelleColonne) / 2;
+        return plateau[ligneMilieu][colonneMilieu] === 1; 
+    }
+    return false;
+}
+
+function aMouvementsValides() {
+    for (let i = 0; i < plateau.length; i++) {
+        for (let j = 0; j < plateau[i].length; j++) {
+            if (plateau[i][j] === 1) {
+                if (
+                    (i >= 2 && estMouvementValide(i, j, i - 2, j)) || 
+                    (i < plateau.length - 2 && estMouvementValide(i, j, i + 2, j)) || 
+                    (j >= 2 && estMouvementValide(i, j, i, j - 2)) || 
+                    (j < plateau[i].length - 2 && estMouvementValide(i, j, i, j + 2))
+                ) {
+                    return true; 
                 }
             }
-        } else if (trouSelectionne !== -1) {
-            mouvement(trouSelectionne, index);
-            trous[trouSelectionne].classList.remove('selectionne');
-            trouSelectionne = -1;
         }
     }
+    return false; 
+}
 
-    // Effectuer un mouvement
-    function mouvement(start, end) {
-        const trous = document.getElementsByClassName('trou');
-        const adjacents = getAdjacentHoles(start);
-        if (adjacents.includes(end)) {
-            const jumpIndex = getJumpIndex(start, end);
-            if (trous[end].classList.contains('vide') && !trous[jumpIndex].classList.contains('vide')) {
-                trous[start].classList.add('vide');
-                trous[end].classList.remove('vide');
-                trous[jumpIndex].classList.add('vide');
-                compteur++; 
-                majCompteur();
+function gérerClicCelluleVide(event) {
+    const cellule = event.target;
+
+    if (pionSelectionné === null) {
+        return;
+    }
+
+    const ligneSélectionnée = parseInt(pionSelectionné.dataset.row);
+    const colonneSélectionnée = parseInt(pionSelectionné.dataset.col);
+    const nouvelleLigne = parseInt(cellule.dataset.row);
+    const nouvelleColonne = parseInt(cellule.dataset.col);
+
+    if (estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelleLigne, nouvelleColonne)) {
+        plateau[ligneSélectionnée][colonneSélectionnée] = 0;
+        plateau[(ligneSélectionnée + nouvelleLigne) / 2][(colonneSélectionnée + nouvelleColonne) / 2] = 0;
+        plateau[nouvelleLigne][nouvelleColonne] = 1;
+        afficherPlateau();
+
+        pionSelectionné = null;
+
+        if (!aMouvementsValides()) {
+            alert("Partie terminée. Aucun mouvement possible.");
+        }
+
+        document.getElementById('score').textContent="Nombre de pions restants :"+ compterPionsRestants();
+    } else {
+    }
+}
+
+function afficherPlateau() {
+    while (elementPlateau.firstChild) {
+        elementPlateau.removeChild(elementPlateau.firstChild);
+    }
+
+    for (let i = 0; i < plateau.length; i++) {
+        for (let j = 0; j < plateau[i].length; j++) {
+            const cellule = document.createElement('div');
+            cellule.className = 'cellule';
+            if (plateau[i][j] === null) {
+                cellule.classList.add('null');
+            } else if (plateau[i][j] === 1) {
+                cellule.classList.add('pion');
+                cellule.addEventListener('click', gérerClicPion);
+            } else if (plateau[i][j] === 0) {
+                cellule.classList.add('vide');
+                cellule.addEventListener('click', gérerClicCelluleVide);
+            }
+            cellule.dataset.row = i;
+            cellule.dataset.col = j;
+            elementPlateau.appendChild(cellule);
+        }
+    }
+}
+
+function compterPionsRestants() {
+    let nombrePions = 0;
+    for (let i = 0; i < plateau.length; i++) {
+        for (let j = 0; j < plateau[i].length; j++) {
+            if (plateau[i][j] === 1) {
+                nombrePions++;
             }
         }
-        checkWin();
     }
+    return nombrePions;
+}
 
-    // Mettre à jour l'affichage du compteur
-    function majCompteur() {
-        const compteurElement = document.getElementById('compteur');
-        compteurElement.textContent = compteur;
-    }
 
-    // Obtenir les trous adjacents à un trou donné
-    function getAdjacentHoles(index) {
-        const adjacents = [];
-        const numRows = Math.sqrt(nbreTrous);
-        const row = Math.floor(index / numRows);
-        const col = index % numRows;
-
-        // Vérifier les trous adjacents dans toutes les directions
-        if (row >= 2) adjacents.push(index - 2 * numRows);
-        if (row < numRows - 2) adjacents.push(index + 2 * numRows);
-        if (col >= 2) adjacents.push(index - 2);
-        if (col < numRows - 2) adjacents.push(index + 2);
-
-        return adjacents;
-    }
-
-    // Obtenir l'index du trou à sauter
-    function getJumpIndex(start, end) {
-        return start + (end - start) / 2;
-    }
-
-    // Vérifier si le jeu est terminé
-    function checkWin() {
-        const trous = document.getElementsByClassName('trou');
-        let count = 0;
-        for (const trou of trous) {
-            if (!trou.classList.contains('vide')) {
-                count++;
-            }
-        }
-        if (count === 1) {
-            alert("Félicitations! Vous avez gagné !");
-        }
-    }
-});
+initialiserPlateau();

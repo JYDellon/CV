@@ -1,259 +1,79 @@
-@media (min-width:1200px){
-    body{
-    background-image : url(../image/fondecran.jpg);
-}
-/* .contenaire{
-    margin-top: em;
-} */
-.board {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    margin: auto;
+body{
+    background-image: url(../image/fondecran.jpg);
 }
 
-.trou {
-    width: 30px;
-    height: 30px;
+.conteneur{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.conteneur1{
+    display: flex;
+    justify-content: center;
+   
+}
+#score{
+    color: white;
+}
+
+.plateau {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+    gap: 2px;
+}
+
+.cellule {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background-color: #007bff;
-    margin: 5px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-.vide {
-    background-color: #fff;
+.cellule.null {
+    background-color: #ffffff00;
 }
 
-.selectionne {
+.cellule.null:hover {
+    background-color: #ffffff00;
+    cursor: pointer;
+}
+
+.cellule.pion {
+    background-color: aqua;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cellule.pion:hover {
+    border: 2px solid rgb(46, 15, 220);
+}
+
+.cellule.pion:active {
+    background-color: aqua;
+    transform: scale(0.9); 
+}
+
+.cellule.vide {
+    background-color: #ffffff00; /* Couleur de fond pour les cellules vides */
+}
+
+.cellule.vide:hover {
     border: 2px solid aqua;
 }
-.lesBoutons{
-    display: flex;
-    justify-content:space-around;
-    margin-top: 10em;
-}
-.lesBoutons #lien a .bouton, .validation .bouton {
-    border-radius: 40px;
-    width: 200px;
-    color: white;
-    font-size: 1.5em;
-}
-
-#counter-container{
-    margin-top: 2em;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-}
-}
-
-@media (min-width:992px) and (max-width:1199px){
-    body{
-        background-image : url(../image/fondecran.jpg);
-    }
-    /* .contenaire{
-        margin-top: em;
-    } */
-    .board {
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-        margin: auto;
-    }
-    
-    .trou {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #007bff;
-        margin: 5px;
-        cursor: pointer;
-    }
-    
-    .vide {
-        background-color: #fff;
-    }
-    
-    .selectionne {
-        border: 2px solid aqua;
-    }
-    .lesBoutons{
-        display: flex;
-        justify-content:space-around;
-        margin-top: 10em;
-    }
-    .lesBoutons #lien a .bouton, .validation .bouton {
-        border-radius: 40px;
-        width: 200px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    #counter-container{
-        margin-top: 2em;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-    }
-}
-
-@media (min-width:768px) and (max-width:991px){
-    body{
-        background-image : url(../image/fondecran.jpg);
-    }
-    /* .contenaire{
-        margin-top: em;
-    } */
-    .board {
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-        margin: auto;
-    }
-    
-    .trou {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #007bff;
-        margin: 5px;
-        cursor: pointer;
-    }
-    
-    .vide {
-        background-color: #fff;
-    }
-    
-    .selectionne {
-        border: 2px solid aqua;
-    }
-    .lesBoutons{
-        display: flex;
-        justify-content:space-around;
-        margin-top: 10em;
-    }
-    .lesBoutons #lien a .bouton, .validation .bouton {
-        border-radius: 40px;
-        width: 200px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    #counter-container{
-        margin-top: 2em;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-    }
-}
-
-@media (min-width:501px) and (max-width:767px){
-    body{
-        background-image : url(../image/fondecran.jpg);
-    }
-    /* .contenaire{
-        margin-top: em;
-    } */
-    .board {
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-        margin: auto;
-    }
-    
-    .trou {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #007bff;
-        margin: 5px;
-        cursor: pointer;
-    }
-    
-    .vide {
-        background-color: #fff;
-    }
-    
-    .selectionne {
-        border: 2px solid aqua;
-    }
-    .lesBoutons{
-        display: flex;
-        justify-content:space-around;
-        margin-top: 10em;
-    }
-    .lesBoutons #lien a .bouton, .validation .bouton {
-        border-radius: 40px;
-        width: 200px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    #counter-container{
-        margin-top: 2em;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-    }
-}
-@media (max-width:500px){
-    body{
-        background-image : url(../image/fondecran.jpg);
-    }
-    /* .contenaire{
-        margin-top: em;
-    } */
-    .board {
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-        margin: auto;
-    }
-    
-    .trou {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #007bff;
-        margin: 5px;
-        cursor: pointer;
-    }
-    
-    .vide {
-        background-color: #fff;
-    }
-    
-    .selectionne {
-        border: 2px solid aqua;
-    }
-    #lien{
-        text-align: center;
-        margin-top: 3em;
-    }
-    .lesBoutons #lien a .bouton, .validation .bouton {
-        border-radius: 40px;
-        width: 200px;
-        color: white;
-        font-size: 1.5em;
-    }
-    
-    #counter-container{
-        margin-top: 2em;
-        text-align: center;
-        color: white;
-        font-size: 2em;
-    }
-}
-
 
 .portfolio{
     font-size: 1.6em;
     border:none;
     text-decoration:none;
     color:#fff;
-    width:160px;
-    height:42px;
+    width:200px;
+    height: 42PX;
     background:transparent;
     border-radius: 20px;
     box-shadow: 0 0 0 0 rgb(75,107,171);
@@ -271,6 +91,13 @@
         box-shadow: 0 0 0 30px rgba(255,71,84,0);
       }
 }
+
+.lesBoutons #lien a .bouton, .validation .bouton {
+    border-radius: 40px;
+    width: 175px;
+    color: white;
+}
+
 .tp{
     display: inline-block;
     background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
@@ -280,4 +107,24 @@
     border-radius: 40px;
     font-size: 1.3em;
     width: 200px;
+}
+@media (min-width:501px){
+    .lesBoutons {
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-around;
+    }
+    }
+@media (max-width:500px){
+
+    .lesBoutons {
+        margin-top: 4em;
+        text-align: center;
+    }
+
+}
+
+.cellule.null:hover {
+    background-color: #ffffff00;
+    cursor:default;
 }

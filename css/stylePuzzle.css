@@ -1,0 +1,90 @@
+body{
+    background-image : url(../image/fondecran.jpg);
+}
+.contenaire{
+    display: flex;
+    justify-content: center;
+}
+.puzzle {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid aqua;
+}
+
+.tuile  {
+    border: 1px solid aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: aqua;
+    
+}
+
+.vide  {
+    background-color: aqua;
+}
+
+
+.titre{
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    color: aqua;
+}
+
+.tp{
+    display: inline-block;
+    background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 40px;
+    font-size: 1.3em;
+    width: 200px;
+}
+
+.portfolio{
+    font-size: 1.6em;
+    border:none;
+    text-decoration:none;
+    color:#fff;
+    width:200px;
+    height: 42PX;
+    background:transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0 rgb(75,107,171);
+    animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes battement {
+    to{
+        box-shadow: 0 0 0 30px rgba(255,71,84,0);
+      }
+}
+
+
+@media (min-width:501px){
+    .lesBoutons {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-around;
+    }
+    }
+@media (max-width:500px){
+
+    .lesBoutons {
+        margin-top: 3em;
+        text-align: center;
+    }
+
+}

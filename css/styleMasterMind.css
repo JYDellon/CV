@@ -1,0 +1,722 @@
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../image/fondecran.jpg);
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-image: url(../image/fondecran.jpg);
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles pour les sélecteurs de couleur */
+.color-selector-container {
+    display: inline-block;
+}
+
+#color-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.color-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 2px solid black; 
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Styles pour les pions écrus (couleurs bien placées) */
+.color-disc.correct-color-position {
+    background-color: grey;
+    border: 2px solid black; 
+    /* Autres styles */
+}
+
+/* Styles pour le bouton de validation */
+#submitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4c7daf; /* Couleur de fond distincte */
+    color: white; /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition lors du survol */
+}
+
+/* Effet de survol */
+#submitBtn:hover {
+    background-color: #4c7daf; /* Couleur de fond modifiée */
+    transform: scale(1.1); /* Zoom léger */
+    
+}
+
+
+/* Styles pour le tableau de jeu */
+#game-board {
+    border-collapse: collapse;
+}
+
+#game-table td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(54, 81, 128, 0);
+    border-radius: 50%;
+    
+}
+
+/* Styles pour la vidéo */
+#videoPlayer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 50%;
+    height: auto;
+    z-index: 5000;
+    object-fit: cover;
+}
+
+
+
+
+
+.portfolio{
+        font-size: 1.6em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:160px;
+        background:transparent;
+        border-radius: 20px;
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+@keyframes battement {
+    to{
+        box-shadow: 0 0 0 30px rgba(255,71,84,0);
+      }
+}
+.tp{
+    display: inline-block;
+    background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 40px;
+    font-size: 1.3em;
+    width: 10em;
+}
+.button-containerx {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#perduImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Assurez-vous que le z-index est plus élevé que celui du jeu */
+}
+
+
+
+
+#tentativeText{
+    color: white;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+@media (min-width:601px) {
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    /* CSS pour centrer le formulaire d'inscription */
+#signupForm {
+    
+    position: relative;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    /* background-image: url(../image/fondecran.jpg); */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#signupForm h2 {
+    text-align: center;
+}
+
+#signupForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#signupForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-image: url(../image/fondecran.jpg);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#signupForm button[type="submit"]:hover {
+    background-color: #32628b;
+}
+
+#signupForm button[type="button"],.login button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-image: url(../image/fondecran.jpg);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+#signupForm button[type="button"]:hover {
+    background-image: url(../image/fondecran.jpg);
+}
+
+
+#signupForm {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../image/fondecran.jpg);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#signupForm h2 {
+    text-align: center;
+}
+
+#signupForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#signupForm button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-image: url(../image/fondecran.jpg);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#signupForm button[type="submit"]:hover {
+    background-color: #1f588a;
+}
+
+}
+@media (max-width:600px){
+    .button-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #signupForm {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        background-image: url(../image/fondecran.jpg);
+        border-radius: 5px;
+    }
+    
+    #signupForm h2 {
+        text-align: center;
+    }
+    
+    #signupForm label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    #signupForm input[type="text"],
+    #signupForm input[type="email"],
+    #signupForm input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    #signupForm button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    #signupForm button[type="submit"]:hover {
+        background-image: url(../image/fondecran.jpg);
+    }
+    
+    #signupForm button[type="button"],.login button[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    
+    #signupForm button[type="button"]:hover {
+        background-image: url(../image/fondecran.jpg);
+    }
+    
+    
+    #signupForm {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url(../image/fondecran.jpg);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #signupForm h2 {
+        text-align: center;
+    }
+    
+    #signupForm label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    #signupForm input[type="text"],
+    #signupForm input[type="email"],
+    #signupForm input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    #signupForm button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-image: url(../image/fondecran.jpg);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    #signupForm button[type="submit"]:hover {
+        background-image: url(../image/fondecran.jpg);
+    }
+}
+
+.active-row{
+    border: 2px solid aqua;
+    border-radius: 50%;
+}
+
+.secret-code-row{
+    display: flex;
+    justify-content: center;
+}
+.secret-code-table  td{
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(174, 24, 89, 0);
+    border-radius: 50%;
+}
+.secret-code-row{
+    border: 2px solid aqua;
+    border-radius: 50%;
+
+}
+
+
+/* Styles pour le tableau d'une ligne */
+#secret-code-table {
+    border-collapse: collapse;
+    margin-top: 20px; /* Ajoutez un espacement supplémentaire si nécessaire */
+    
+}
+
+#secret-code-table td {
+    width: 40px; /* Largeur des cellules, ajustez si nécessaire */
+    height: 40px; /* Hauteur des cellules, ajustez si nécessaire */
+    border: 2px solid rgba(255, 255, 255, 0); /* Bordure */
+    border-radius: 50%; /* Bordure arrondie pour créer des cellules circulaires */
+    background-color: rgb(63, 50, 35);
+}
+
+/* Vous pouvez ajuster la taille des cellules en fonction de vos besoins */
+#secret-code-row{
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.hidden-cell {
+    display: none;
+}
+#timer{
+    color: blueviolet;
+    font-size: 2em;
+}
+#submitBtn:active {
+    background-color: #4c7daf;
+    transform: scale(0.9); 
+}
+
+img {
+    width: 40px;
+}
+
+.info2,.info3{
+    border-block-start : 0.5px solid grey ;
+}
+
+.info{
+    padding-bottom: 0.5em;
+}
+.info1{
+    margin-bottom: 0;
+    
+}
+
+.info,.modal-title,.info1{
+    background-image: url(../image/fondecran.jpg);
+        color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fade-out {
+    animation: fadeOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#perduImage{
+    width: 400px;
+    height: 400px;
+}
+.contenaire{
+    text-align: center;
+}
+
+
+
+/* le formulaire d'inscription */
+#loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-image: url(../image/fondecran.jpg);
+    background-image: url(../image/fondecran.jpg);
+    border-radius: 5px;
+}
+
+.login button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-image: url(../image/fondecran.jpg);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.une,  .trois{
+    width: 25%;
+}
+.deux{
+    width: 50%;
+}
+
+.btn{
+    border:none;
+    color: aqua;
+}
+.btn:hover{
+    color: aqua;
+ }
+ 
+ .btn {
+     margin-left: 10px; /* Ajouter un espace entre les boutons */
+ }
+.trois{
+    text-align: right;
+     height: 50px;
+     width: 25%;
+}
+.deux{
+    text-align: center;
+}
+#une{
+    color: aqua;
+    width: 25%;
+    text-align: left;
+}
+.contenaire0{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#signupBtn:active{
+    border: 1px solid aqua;
+    color: aqua;
+}
+#loginBtn:active{
+    border: 1px solid aqua;
+    color: aqua;
+}
+.modal-content table td.aqua {
+    color: rgb(255, 255, 255);
+}
+
+#crownForm .modal-body {
+    text-align: center; /* Centrer le contenu du modal */
+}
+
+#crownForm table {
+    margin: auto; /* Centrer le tableau dans le modal */
+}
+
+#players-table th{
+    color: white;
+}
+
+#exampleModalToggle .modal {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Utilise la hauteur de la fenêtre du navigateur */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex; /* Utilise la disposition flexbox pour centrer verticalement */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    background-image: url(../image/fondecran.jpg);
+    z-index: 1000; /* Assure que la modal est au-dessus de tout autre contenu */
+}
+
+#exampleModalToggle .modal-dialog {
+    width: 90%; /* Ajuste la largeur de la modal */
+    max-width: 600px; /* Largeur maximale de la modal */
+    background-image: url(../image/fondecran.jpg);
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+#exampleModalToggle .modal-dialog {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#exampleModalToggle .modal-content {
+    height: 100%;
+}
+
+exampleModalToggle .modal-body {
+    max-height: 100%;
+    overflow-y: auto; /* Ajoute une barre de défilement si le contenu est trop long */
+}
+h5, label{
+    color: white;
+}
+#exampleModalToggle .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ajoutez d'autres styles nécessaires */
+}
+
+#exampleModalToggle .modal-dialog {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    /* Ajoutez d'autres styles nécessaires */
+}
+#exampleModalToggle .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ajoutez d'autres styles nécessaires */
+}
+
+#exampleModalToggle .modal-dialog {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    /* Ajoutez d'autres styles nécessaires */
+}
+#usernameSignup,#email, #password, #confirmPassword{
+    background-image: url(../image/fondecran.jpg);
+}
+
+/* Styles pour centrer verticalement la modal d'information */
+#infoModal .modal {
+    display: flex;
+    align-items: center;
+}
+
+#infoModal .modal-dialog {
+    margin: auto;
+}
+
+#infoModal .modal-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signUp {
+    position: absolute;
+}
+/* ------------------------------------------------------------- */
+
+.azerty{
+    display: flex;
+    justify-content: space-between;
+}
+
+#eye{
+    padding-top: 1em;
+    padding-left: 0.5em;
+    cursor: pointer;
+    width: 30px;
+    height: 35px;
+}
+
+#submit:hover, #closeBtn:hover, #loginBtn1:hover, #closeBtnLogin:hover{
+    filter: brightness(1.75);
+}
+
+.btn{
+    margin-top: 2em;
+    margin-right: 2em;
+}
+.menu{
+    background-color: #45a049;
+    color: white;
+    width: 60%;
+}
+
+.active-row td {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
+#editPlayerModal {
+    /* display: flex; */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+}
+
+#editPlayerModal .modal-dialog {
+    max-width: 500px; /* Optionnel: ajustez la largeur de la modale */
+}
