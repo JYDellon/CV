@@ -1,7 +1,6 @@
 var logoutBtn = document.getElementById("logoutBtn");
 var loginBtn  = document.getElementById("loginBtn");
 var signupBtn = document.getElementById("signupBtn");
-var compteBtn = document.getElementById("compteBtn");
 var scoreDisplay;
 var loginUsername;var connected;
 
@@ -30,7 +29,6 @@ if (localStorage.getItem("MM_connected") == undefined || localStorage.getItem("M
     logoutBtn.style.display="block";
     loginBtn.style.display="none";
     signupBtn.style.display="none";
-    compteBtn.style.display="block";
 
 }
 
@@ -201,7 +199,6 @@ if(document.getElementById('username').value=="Admin" && document.getElementById
         
         loginForm.style.display="none";
         azer.style.display = "block";
-        compteBtn.style.display="none";
         logoutBtn.style.display="none";
     localStorage.setItem('loginUsername',"nonInscrits");
         displayPlayersAdmin();
@@ -209,7 +206,6 @@ if(document.getElementById('username').value=="Admin" && document.getElementById
     scoresBtn.style.display="block";
     loginForm.style.display="none";
     azer.style.display = "none";
-    compteBtn.style.display="block";
     logoutBtn.style.display="block";
     if (localStorage.getItem('MM_'+ document.getElementById('username').value)){
     bienvenue();
@@ -969,7 +965,6 @@ logoutBtn.addEventListener("click", function() {
         logoutBtn.style.display = "none";
         loginBtn.style.display = "block";
         signupBtn.style.display = "block";
-        compteBtn.style.display = "none";
         connected=false;loginUsername="nonInscrits";
         localStorage.setItem('loginUsername',loginUsername);
         localStorage.setItem('MM_connected',connected);
@@ -1086,7 +1081,6 @@ function login(username, password) {
         alert('Nom d\'utilisateur ou mot de passe incorrect.');
         scoresBtn.style.display="none";
         logoutBtn.style.display="none";
-        compteBtn.style.display="none";
         loginBtn.style.display="block";
         signupBtn.style.display="block";
         
