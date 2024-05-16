@@ -1,7 +1,6 @@
 var nombrePions;
-var record=0;
-if (localStorage.getItem('RecordSolitaire')>0){
-    record = localStorage.getItem('RecordSolitaire')
+var record = localStorage.getItem('RecordSolitaire') || 0;
+if (record > 0) {
     document.getElementById('record').textContent = "Record : " + record;
 }
 
@@ -17,7 +16,7 @@ const plateau = [
 
 const elementPlateau = document.getElementById('plateau');
 var pionSelectionné = null;
-var ligneSélectionnée = null; 
+var ligneSélectionnée = null;
 var colonneSélectionnée = null;
 
 function initialiserPlateau() {
@@ -40,12 +39,24 @@ function initialiserPlateau() {
         }
     }
 }
+
 function gérerClicPion(event) {
     const cellule = event.target;
+
+    // Supprimer la classe 'selectionnee' des autres cellules
+    const cellulesSelectionnées = document.querySelectorAll('.cellule.selectionnee');
+    cellulesSelectionnées.forEach(cell => {
+        cell.classList.remove('selectionnee');
+    });
+
     ligneSélectionnée = parseInt(cellule.dataset.row);
-    colonneSélectionnée = parseInt(cellule.dataset.col); 
+    colonneSélectionnée = parseInt(cellule.dataset.col);
     pionSelectionné = cellule;
+
+    // Ajouter la classe 'selectionnee' à la cellule sélectionnée
+    pionSelectionné.classList.add('selectionnee');
 }
+
 function estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelleLigne, nouvelleColonne) {
     const mouvementHorizontal = ligneSélectionnée === nouvelleLigne && Math.abs(colonneSélectionnée - nouvelleColonne) === 2;
     const mouvementVertical = colonneSélectionnée === nouvelleColonne && Math.abs(ligneSélectionnée - nouvelleLigne) === 2;
@@ -53,32 +64,33 @@ function estMouvementValide(ligneSélectionnée, colonneSélectionnée, nouvelle
     if ((mouvementHorizontal || mouvementVertical) && plateau[nouvelleLigne][nouvelleColonne] === 0) {
         const ligneMilieu = (ligneSélectionnée + nouvelleLigne) / 2;
         const colonneMilieu = (colonneSélectionnée + nouvelleColonne) / 2;
-        return plateau[ligneMilieu][colonneMilieu] === 1; 
+        return plateau[ligneMilieu][colonneMilieu] === 1;
     }
     return false;
 }
+
 function aMouvementsValides() {
     for (let i = 0; i < plateau.length; i++) {
         for (let j = 0; j < plateau[i].length; j++) {
             if (plateau[i][j] === 1) {
                 if (
-                    (i >= 2 && estMouvementValide(i, j, i - 2, j)) || 
-                    (i < plateau.length - 2 && estMouvementValide(i, j, i + 2, j)) || 
-                    (j >= 2 && estMouvementValide(i, j, i, j - 2)) || 
+                    (i >= 2 && estMouvementValide(i, j, i - 2, j)) ||
+                    (i < plateau.length - 2 && estMouvementValide(i, j, i + 2, j)) ||
+                    (j >= 2 && estMouvementValide(i, j, i, j - 2)) ||
                     (j < plateau[i].length - 2 && estMouvementValide(i, j, i, j + 2))
                 ) {
-                    return true; 
+                    return true;
                 }
             }
         }
     }
-    if (record == 0 || nombrePions < localStorage.getItem('RecordSolitaire')){
-        localStorage.setItem('RecordSolitaire', nombrePions-1)
-        document.getElementById('record').textContent = "Record : " + localStorage.getItem('RecordSolitaire')
-                    
+    if (record == 0 || nombrePions < record) {
+        localStorage.setItem('RecordSolitaire', nombrePions - 1);
+        document.getElementById('record').textContent = "Record : " + localStorage.getItem('RecordSolitaire');
     }
-    return false; 
+    return false;
 }
+
 function gérerClicCelluleVide(event) {
     const cellule = event.target;
 
@@ -102,10 +114,11 @@ function gérerClicCelluleVide(event) {
         if (!aMouvementsValides()) {
         }
 
-        document.getElementById('score').textContent="Nombre de pions restants :"+ compterPionsRestants();
+        document.getElementById('score').textContent = "Nombre de pions restants: " + compterPionsRestants();
     } else {
     }
 }
+
 function afficherPlateau() {
     while (elementPlateau.firstChild) {
         elementPlateau.removeChild(elementPlateau.firstChild);
@@ -130,8 +143,9 @@ function afficherPlateau() {
         }
     }
 }
+
 function compterPionsRestants() {
- nombrePions = 0;
+    nombrePions = 0;
     for (let i = 0; i < plateau.length; i++) {
         for (let j = 0; j < plateau[i].length; j++) {
             if (plateau[i][j] === 1) {
@@ -141,47 +155,24 @@ function compterPionsRestants() {
     }
     return nombrePions;
 }
-//-------------------------------------------------------------------------
 
+initialiserPlateau();
+
+// Code pour l'affichage des règles
 var rulesBtn = document.getElementById("rules-button");
-
-// Obtenez le modal
 var modal = document.getElementById("rules1");
-
-// Obtenez le bouton de fermeture du modal
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// Lorsque l'utilisateur clique sur le bouton, ouvrez le modal
 rulesBtn.onclick = function() {
     modal.style.display = "block";
 }
 
-// Ajout d'écouteurs d'événements pour le le bouton close du Modal des records
-closeBtninfo.addEventListener("click", function() {
-    rules1.style.display = "none";
-});
-
-// Obtenez le bouton pour ouvrir le modal
-var rulesBtn = document.getElementById("rules-button");
-
-
-// Obtenez le modal
-var modal = document.getElementById("rules1");
-
-// Récupère le bouton de fermeture
-var closeBtn = document.getElementsByClassName("close")[0];
-
-// Lorsque l'utilisateur clique sur le bouton de fermeture, ferme le modal
 closeBtn.onclick = function() {
-    document.getElementById("rules1").style.display = "none";
+    modal.style.display = "none";
 }
 
-// Lorsque l'utilisateur clique en dehors du modal, ferme le modal
 window.onclick = function(event) {
-    if (event.target == document.getElementById("rules1")) {
-        document.getElementById("rules1").style.display = "none";
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
 }
-
-
-initialiserPlateau();

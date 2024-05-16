@@ -2074,3 +2074,20 @@ body .hidden2 {
     height: auto;
     text-align: center;
 }
+.panelAdmin img{
+    width: 200px;
+    text-align: center;
+}
+.panelAdmin{
+    text-align: center;
+    padding-top: -1em;
+}
+.clignoter {
+    animation: clignote 1s infinite alternate;
+}
+
+@keyframes clignote {
+    
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
