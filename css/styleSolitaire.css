@@ -61,6 +61,7 @@ body{
 
 .cellule.vide {
     background-color: #ffffff00; /* Couleur de fond pour les cellules vides */
+    border: 1px solid aqua;
 }
 
 .cellule.vide:hover {
