@@ -2091,3 +2091,7 @@ body .hidden2 {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+h2 button img{
+    width: 200px;
+}

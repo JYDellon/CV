@@ -1,133 +1,219 @@
-const tuiles = document.querySelectorAll('.tuile');
-let nombreDeCoups = 0;
-var fini=false;
-var record=0;
-if ( localStorage.getItem('RecordPuzzleGlissant') >0){
-    record =  localStorage.getItem('RecordPuzzleGlissant')
-    document.getElementById('record').textContent = "Record : " + record;
-}
-// Fonction pour gérer les clics sur les tuiles
-function gérerClicTuile(tuile) {
-    const tuileVide = document.querySelector('.vide');
-    const rectTuile = tuile.getBoundingClientRect();
-    const rectTuileVide = tuileVide.getBoundingClientRect();
-    const indexTuile = Array.from(tuiles).indexOf(tuile);
-    const indexVide = Array.from(tuiles).indexOf(tuileVide);
-    const rangéeTuile = Math.floor(indexTuile / 3);
-    const colonneTuile = indexTuile % 3;
-    const rangéeVide = Math.floor(indexVide / 3);
-    const colonneVide = indexVide % 3;
-    if (fini == false){
-        if ((rangéeTuile === rangéeVide && Math.abs(colonneTuile - colonneVide) === 1) || (colonneTuile === colonneVide && Math.abs(rangéeTuile - rangéeVide) === 1)) {
-            const temp = tuileVide.innerHTML;
-            tuileVide.innerHTML = tuile.innerHTML;
-            tuile.innerHTML = temp;
-            tuileVide.classList.remove('vide');
-            tuile.classList.add('vide');
+document.addEventListener('DOMContentLoaded', () => {
+    const puzzleContainer = document.getElementById('puzzle-container');
+    const size = 3;
+    const emptyPosition = { x: size - 1, y: size - 1 };
+    const pieces = [];
+    let emptyPieceContent = ''; // Contenu HTML initial de la tuile vide
+    let gameWon = false; // Variable pour suivre l'état du jeu
+    let movesCount = 0; // Variable pour compter les coups
 
-            // Incrémenter le nombre de coups à chaque mouvement valide
-            nombreDeCoups++;
-            document.getElementById('score').textContent = `Nbre de coups : ${nombreDeCoups}`;
+    // Sélectionne l'élément où afficher le nombre de coups
+    const movesCountElement = document.getElementById('score');
 
-            // Vérifie si le puzzle est résolu après chaque mouvement
-            if (estPuzzleRésolu()) {
-                // Désactive les clics sur les tuiles
-                tuiles.forEach(tuile => {
-                    tuile.removeEventListener('click', gérerClicTuile);
-                    fini= true;
+    // Fonction pour mettre à jour le nombre de coups affiché
+    function updateMovesCount() {
+        movesCount++; // Incrémente le nombre de coups
+        movesCountElement.textContent = `Nbre de coups : ${movesCount}`; // Met à jour l'affichage du nombre de coups
+    }
 
-                    if (record == 0 || nombreDeCoups < localStorage.getItem('RecordPuzzleGlissant')){
-                        localStorage.setItem('RecordPuzzleGlissant', nombreDeCoups)
-                        document.getElementById('record').textContent = "Record : " + localStorage.getItem('RecordPuzzleGlissant')
+    // Fonction pour sauvegarder les records dans le localStorage
+    function saveRecords(records) {
+        localStorage.setItem('recordPuzzleGlissant', JSON.stringify(records));
+    }
+
+    // Fonction pour charger les records depuis le localStorage
+    function loadRecords() {
+        const records = localStorage.getItem('recordPuzzleGlissant');
+        return records ? JSON.parse(records) : { bestScore: Infinity };
+    }
+
+    // Charger les records au chargement de la page
+    let records = loadRecords();
+
+    // Fonction pour mettre à jour les records si un nouveau record est établi
+    function updateRecordsIfNewRecord(score) {
+        if (score < records.bestScore) {
+            records.bestScore = score;
+            saveRecords(records);
+            displayCurrentRecord();
+        }
+    }
+
+    // Fonction pour afficher le record actuel sur la page
+    function displayCurrentRecord() {
+        const recordElement = document.getElementById('record');
+        recordElement.textContent = `Record : ${records.bestScore === Infinity ? 'N/A' : records.bestScore}`;
+    }
+
+    // Afficher le record actuel au chargement de la page
+    displayCurrentRecord();
+
+    // Initialiser les pièces
+    let pieceNumber = 1; // Numéro des pièces
+    for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+            const piece = document.createElement('div');
+            piece.classList.add('puzzle-piece');
+            if (x === size - 1 && y === size - 1) {
+                piece.classList.add('empty');
+                piece.dataset.number = 9; // Ajouter le numéro 9 à la tuile vide
+                piece.innerHTML = `<span style="color: white; font-weight: bold;">9</span>`;
+                emptyPieceContent = piece.innerHTML; // Sauvegarder le contenu HTML initial de la tuile vide
+                piece.addEventListener('click', () => {}); // Empêcher les clics sur la tuile vide
+            } else {
+                piece.style.backgroundImage = 'url(../image/test.jpg)'; // Vérifie ce chemin
+                piece.style.backgroundPosition = `-${x * 100}px -${y * 100}px`;
+                piece.dataset.number = pieceNumber++; // Ajouter le numéro de la pièce
+                piece.innerHTML = `<span style="color: white; font-weight: bold;">${pieceNumber - 1}</span>`;
+                piece.addEventListener('click', () => {
+                    if (!gameWon) { // Vérifier si le jeu est gagné avant de permettre le déplacement
+                        movePiece(piece);
                     }
-
                 });
             }
+            piece.style.gridColumnStart = x + 1;
+            piece.style.gridRowStart = y + 1;
+            piece.dataset.x = x;
+            piece.dataset.y = y;
+            puzzleContainer.appendChild(piece);
+            pieces.push(piece);
+        }
+    }
 
-            // Vérifie si le puzzle est déjà résolu, alors désactive les clics sur les tuiles
-            if (estPuzzleRésolu()) {
-                tuiles.forEach(tuile => {
-                    tuile.removeEventListener('click', gérerClicTuile);
-                });
+    // Mélanger les pièces
+    initialize();
+
+    function movePiece(piece) {
+        const x = parseInt(piece.dataset.x);
+        const y = parseInt(piece.dataset.y);
+        const dx = Math.abs(x - emptyPosition.x);
+        const dy = Math.abs(y - emptyPosition.y);
+
+        if ((dx === 1 && dy === 0) || (dx === 0 && dy === 1)) {
+            piece.style.gridColumnStart = emptyPosition.x + 1;
+            piece.style.gridRowStart = emptyPosition.y + 1;
+            piece.dataset.x = emptyPosition.x;
+            piece.dataset.y = emptyPosition.y;
+            emptyPosition.x = x;
+            emptyPosition.y = y;
+
+            // Mettre à jour la position du numéro "9" s'il est sur la tuile vide
+            const number9 = document.querySelector('[data-number="9"]');
+            number9.style.gridColumnStart = x + 1;
+            number9.style.gridRowStart = y + 1;
+
+            // Mettre à jour le nombre de coups
+            updateMovesCount();
+
+            // Vérifier si le jeu est gagné et mettre à jour les records
+            if (checkWin()) {
+                gameWon = true;
+                updateRecordsIfNewRecord(movesCount);
             }
         }
     }
-}
 
-// Fonction pour vérifier si le puzzle est solvable
-function estPuzzleSolvable() {
-    const valeursTuiles = [];
-    tuiles.forEach(tuile => {
-        valeursTuiles.push(parseInt(tuile.innerHTML));
-    });
-
-    // Compter le nombre d'inversions
-    let inversions = 0;
-    for (let i = 0; i < valeursTuiles.length - 1; i++) {
-        for (let j = i + 1; j < valeursTuiles.length; j++) {
-            if (valeursTuiles[i] > valeursTuiles[j] && valeursTuiles[j] !== 9 && valeursTuiles[i] !== 9) {
-                inversions++;
+    // Vérifier si toutes les pièces sont en place
+    function checkWin() {
+        let allCorrect = true;
+        for (let i = 0; i < pieces.length; i++) {
+            const piece = pieces[i];
+            const x = parseInt(piece.dataset.x);
+            const y = parseInt(piece.dataset.y);
+            const correctX = (i % size);
+            const correctY = Math.floor(i / size);
+            if (x !== correctX || y !== correctY) {
+                allCorrect = false;
+                break;
             }
         }
-    }
-
-    // Si le nombre d'inversions est pair, le puzzle est solvable
-    return inversions % 2 === 0;
-}
-
-// Fonction pour mélanger les tuiles
-function mélangerTuiles() {
-    const valeursTuiles = Array.from({ length: 9 }, (_, i) => i + 1);
-
-    // Mélanger le tableau de valeurs de tuile
-    for (let i = valeursTuiles.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [valeursTuiles[i], valeursTuiles[j]] = [valeursTuiles[j], valeursTuiles[i]];
-    }
-
-    // Assigner les valeurs mélangées aux tuiles
-    tuiles.forEach((tuile, index) => {
-        tuile.innerHTML = valeursTuiles[index] === 9 ? '' : valeursTuiles[index]; // Si la valeur est 9, laissez la case vide
-        if (tuile.innerHTML === '') {
-            tuile.classList.add('vide');
-        } else {
-            tuile.classList.remove('vide');
+        if (allCorrect) {
+            // La photo est reconstituée
+            const number9 = document.querySelector('[data-number="9"]');
+            number9.style.backgroundImage = 'url(../image/test.jpg)';
+            number9.style.backgroundPosition = `-${(size - 1) * 100}px -${(size - 1) * 100}px`;
+            number9.innerHTML = ''; // Supprimer le contenu HTML (le numéro)
+            // Masquer les numéros des autres pièces
+            pieces.forEach(piece => {
+                const span = piece.querySelector('span');
+                if (span) {
+                    span.style.opacity = '0';
+                }
+            });
         }
-    });
-}
+        return allCorrect;
+    }
 
-// Fonction pour vérifier si le puzzle est résolu
-function estPuzzleRésolu() {
-    const valeursTuiles = [];
-    tuiles.forEach(tuile => {
-        valeursTuiles.push(parseInt(tuile.innerHTML));
-    });
+    // Mélanger les pièces
+    function initialize() {
+        const positions = [];
+        for (let y = 0; y < size; y++) {
+            for (let x = 0; x < size; x++) {
+                if (!(x === size - 1 && y === size - 1)) {
+                    positions.push({ x, y });
+                }
+            }
+        }
+        shuffle(positions);
+        pieces.forEach((piece, index) => {
+            if (!piece.classList.contains('empty')) {
+                const pos = positions[index];
+                piece.dataset.x = pos.x;
+                piece.dataset.y = pos.y;
+                piece.style.gridColumnStart = pos.x + 1;
+                piece.style.gridRowStart = pos.y + 1;
+            }
+        });
+        // S'assurer que la case vide est en bas à droite
+        emptyPosition.x = size - 1;
+        emptyPosition.y = size - 1;
+    }
 
-    let ordreActuel = '';
-    tuiles.forEach(tuile => {
-        // Ajouter le contenu de la tuile à l'ordre actuel, sauf si la tuile est vide (chiffre '9')
-        ordreActuel += tuile.classList.contains('vide') ? '9' : tuile.innerHTML;
-    });
+    // Restaurer le contenu HTML de la tuile vide
+    function restoreEmptyPieceContent() {
+        const number9 = document.querySelector('[data-number="9"]');
+        number9.innerHTML = emptyPieceContent;
+    }
 
-    // console.log('Ordre actuel:', ordreActuel); // Afficher l'ordre actuel avec le chiffre '9' pour la case vide
+    // Mélanger les pièces
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
-    // Vérifie si l'ordre actuel correspond à l'ordre résolu
-    return ordreActuel === '123456789';
-}
+    // Modal rules
+    var rulesBtn = document.getElementById("rules-button");
+    var modal = document.getElementById("rules1");
+    var closeBtn = document.getElementsByClassName("close")[0];
+    var closeBtninfo = document.getElementById("closeBtninfo");
 
-// Ajoute un écouteur d'événements de clic aux tuiles
-tuiles.forEach(tuile => {
-    tuile.addEventListener('click', function() {
-        gérerClicTuile(tuile);
-    });
+    rulesBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    closeBtninfo.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
 
-// Mélangez les tuiles jusqu'à ce que le puzzle soit solvable
-do {
-    mélangerTuiles();
-} while (!estPuzzleSolvable());
 
-//-------------------------------------------------------------------------
+
+
+
+
+
 
 var rulesBtn = document.getElementById("rules-button");
 
@@ -167,3 +253,4 @@ window.onclick = function(event) {
         document.getElementById("rules1").style.display = "none";
     }
 }
+
