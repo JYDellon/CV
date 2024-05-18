@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 emptyPieceContent = piece.innerHTML; // Sauvegarder le contenu HTML initial de la tuile vide
                 piece.addEventListener('click', () => {}); // Empêcher les clics sur la tuile vide
             } else {
-                piece.style.backgroundImage = 'url(../image/test.jpg)'; // Vérifie ce chemin
+                piece.style.backgroundImage = 'url(../image/test.jpg)'; 
                 piece.style.backgroundPosition = `-${x * 100}px -${y * 100}px`;
                 piece.dataset.number = pieceNumber++; // Ajouter le numéro de la pièce
                 piece.innerHTML = `<span style="color: white; font-weight: bold;">${pieceNumber - 1}</span>`;
@@ -133,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
             number9.style.backgroundImage = 'url(../image/test.jpg)';
             number9.style.backgroundPosition = `-${(size - 1) * 100}px -${(size - 1) * 100}px`;
             number9.innerHTML = ''; // Supprimer le contenu HTML (le numéro)
+            // Appliquer l'effet de fondu
+            number9.classList.add('fade-in');
             // Masquer les numéros des autres pièces
             pieces.forEach(piece => {
                 const span = piece.querySelector('span');
@@ -161,7 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 piece.dataset.x = pos.x;
                 piece.dataset.y = pos.y;
                 piece.style.gridColumnStart = pos.x + 1;
-                piece.style.gridRowStart = pos.y + 1;
+                piece.style.gridRowStart = pos.y
+                + 1;
             }
         });
         // S'assurer que la case vide est en bas à droite
@@ -209,11 +212,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//---------------------------------------------------------------------------------------------------------------------------
+// Fonction pour définir l'image de fond du puzzle
+// Fonction pour définir l'image de fond du puzzle
+function setPuzzleBackground(imageUrl) {
+    pieces.forEach(piece => {
+        if (!piece.classList.contains('empty')) {
+            piece.style.backgroundImage = `url(${imageUrl})`;
+        }
+    });
+}
 
+//----------------------------------------------------------------------------------------------------------------------------
 
+// Sélectionner l'élément de téléchargement d'image
+const imageUploadInput = document.getElementById('image-upload');
 
+// Écouter les changements dans le champ d'entrée de téléchargement d'image
+imageUploadInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const imageUrl = e.target.result;
+            setPuzzleBackground(imageUrl);
+        }
+        reader.readAsDataURL(file);
+    }
+});
 
-
+//----------------------------------------------------------------------------------------------------------------------------
 
 var rulesBtn = document.getElementById("rules-button");
 
@@ -253,4 +281,3 @@ window.onclick = function(event) {
         document.getElementById("rules1").style.display = "none";
     }
 }
-
