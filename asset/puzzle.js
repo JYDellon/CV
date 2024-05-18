@@ -6,9 +6,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let emptyPieceContent = ''; // Contenu HTML initial de la tuile vide
     let gameWon = false; // Variable pour suivre l'état du jeu
     let movesCount = 0; // Variable pour compter les coups
+    let imageUrl = ''; // Déclarer la variable imageUrl à l'extérieur de la fonction checkWin()
+
 
     // Sélectionne l'élément où afficher le nombre de coups
     const movesCountElement = document.getElementById('score');
+
+
+
+
+    // Sélectionner l'élément de téléchargement d'image
+const imageUploadInput = document.getElementById('image-upload');
+
+
+// Écouter les changements dans le champ d'entrée de téléchargement d'image
+imageUploadInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            imageUrl = e.target.result; // Affecter l'URL de l'image à la variable imageUrl
+            setPuzzleBackground(imageUrl);
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+
+// Fonction pour définir l'image de fond du puzzle
+function setPuzzleBackground(imageUrl) {
+    pieces.forEach(piece => {
+        if (!piece.classList.contains('empty')) {
+            piece.style.backgroundImage = `url(${imageUrl})`;
+        }
+    });
+}
+
+
+
 
     // Fonction pour mettre à jour le nombre de coups affiché
     function updateMovesCount() {
@@ -61,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 emptyPieceContent = piece.innerHTML; // Sauvegarder le contenu HTML initial de la tuile vide
                 piece.addEventListener('click', () => {}); // Empêcher les clics sur la tuile vide
             } else {
-                piece.style.backgroundImage = 'url(../image/test.jpg)'; 
+                piece.style.backgroundImage = 'url(../image/test.jpg)';
                 piece.style.backgroundPosition = `-${x * 100}px -${y * 100}px`;
                 piece.dataset.number = pieceNumber++; // Ajouter le numéro de la pièce
                 piece.innerHTML = `<span style="color: white; font-weight: bold;">${pieceNumber - 1}</span>`;
@@ -114,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Vérifier si toutes les pièces sont en place
+
     function checkWin() {
         let allCorrect = true;
         for (let i = 0; i < pieces.length; i++) {
@@ -130,21 +166,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (allCorrect) {
             // La photo est reconstituée
             const number9 = document.querySelector('[data-number="9"]');
-            number9.style.backgroundImage = 'url(../image/test.jpg)';
-            number9.style.backgroundPosition = `-${(size - 1) * 100}px -${(size - 1) * 100}px`;
-            number9.innerHTML = ''; // Supprimer le contenu HTML (le numéro)
-            // Appliquer l'effet de fondu
+            if (imageUrl !== '') {
+                // Si une image est téléchargée, l'utiliser
+                number9.style.backgroundImage = `url(${imageUrl})`;
+            } else {
+                // Sinon, utiliser la 9ème partie de "test.jpg"
+                number9.style.backgroundImage = `url(../image/test.jpg)`;
+            }
+            number9.style.backgroundPosition = `-${(size - 1) * 100}px -${(size - 1) * 100}px`; 
+            number9.innerHTML = '';
             number9.classList.add('fade-in');
-            // Masquer les numéros des autres pièces
             pieces.forEach(piece => {
                 const span = piece.querySelector('span');
                 if (span) {
                     span.style.opacity = '0';
                 }
             });
+            // Désactiver l'input de téléchargement d'image
+            imageUploadInput.disabled = true;
         }
         return allCorrect;
-    }
+    } 
 
     // Mélanger les pièces
     function initialize() {
@@ -163,8 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 piece.dataset.x = pos.x;
                 piece.dataset.y = pos.y;
                 piece.style.gridColumnStart = pos.x + 1;
-                piece.style.gridRowStart = pos.y
-                + 1;
+                piece.style.gridRowStart= pos.y + 1;
             }
         });
         // S'assurer que la case vide est en bas à droite
@@ -211,73 +252,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-//---------------------------------------------------------------------------------------------------------------------------
-// Fonction pour définir l'image de fond du puzzle
-// Fonction pour définir l'image de fond du puzzle
-function setPuzzleBackground(imageUrl) {
-    pieces.forEach(piece => {
-        if (!piece.classList.contains('empty')) {
-            piece.style.backgroundImage = `url(${imageUrl})`;
-        }
-    });
-}
-
-//----------------------------------------------------------------------------------------------------------------------------
-
-// Sélectionner l'élément de téléchargement d'image
-const imageUploadInput = document.getElementById('image-upload');
-
-// Écouter les changements dans le champ d'entrée de téléchargement d'image
-imageUploadInput.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            const imageUrl = e.target.result;
-            setPuzzleBackground(imageUrl);
-        }
-        reader.readAsDataURL(file);
-    }
-});
-
-//----------------------------------------------------------------------------------------------------------------------------
-
-var rulesBtn = document.getElementById("rules-button");
-
-// Obtenez le modal
-var modal = document.getElementById("rules1");
-
-// Obtenez le bouton de fermeture du modal
-var closeBtn = document.getElementsByClassName("close")[0];
-
-// Lorsque l'utilisateur clique sur le bouton, ouvrez le modal
-rulesBtn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// Ajout d'écouteurs d'événements pour le le bouton close du Modal des records
-closeBtninfo.addEventListener("click", function() {
-    rules1.style.display = "none";
-});
-
-// Obtenez le bouton pour ouvrir le modal
-var rulesBtn = document.getElementById("rules-button");
-
-// Obtenez le modal
-var modal = document.getElementById("rules1");
-
-// Récupère le bouton de fermeture
-var closeBtn = document.getElementsByClassName("close")[0];
-
-// Lorsque l'utilisateur clique sur le bouton de fermeture, ferme le modal
-closeBtn.onclick = function() {
-    document.getElementById("rules1").style.display = "none";
-}
-
-// Lorsque l'utilisateur clique en dehors du modal, ferme le modal
-window.onclick = function(event) {
-    if (event.target == document.getElementById("rules1")) {
-        document.getElementById("rules1").style.display = "none";
-    }
-}
