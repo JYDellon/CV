@@ -1,19 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     const puzzleContainer = document.getElementById('puzzle-container');
     const movesCountElement = document.getElementById('score');
+    const chronometreElement = document.getElementById('chronometre');
     const imageUploadInput = document.getElementById('image-upload');
     const selectSize = document.getElementById('select-size');
+    const selectDifficulty = document.getElementById('select-difficulty');
 
     let size = parseInt(selectSize.value); 
+    let difficulty = selectDifficulty.value;
     let emptyPosition = { x: size - 1, y: size - 1 };
     let pieces = [];
     let emptyPieceContent = '';
     let gameWon = false;
     let movesCount = 0;
     let imageUrl = '';
+    let timerInterval = null;
+    let secondsElapsed = 0;
 
     selectSize.addEventListener('change', () => {
         size = parseInt(selectSize.value);
+        resetPuzzle(size);
+    });
+
+    selectDifficulty.addEventListener('change', () => {
+        difficulty = selectDifficulty.value;
         resetPuzzle(size);
     });
 
@@ -73,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
         movesCount = 0;
         gameWon = false;
         movesCountElement.textContent = 'Nbre de coups : 0';
-        
+        resetChronometer();
+
         for (let y = 0; y < size; y++) {
             for (let x = 0; x < size; x++) {
                 const piece = document.createElement('div');
@@ -109,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         shufflePieces();
+        startChronometer();
     }
 
     function resetPuzzle(newSize) {
@@ -136,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (checkWin()) {
                 gameWon = true;
                 updateRecordsIfNewRecord(movesCount);
+                stopChronometer();
             }
 
             const numberEmpty = document.querySelector('[data-number="' + size * size + '"]');
@@ -196,41 +209,87 @@ document.addEventListener('DOMContentLoaded', () => {
         pieces.forEach((piece, index) => {
             if (!piece.classList.contains('empty')) {
                 const pos = positions[index];
-                piece.dataset.x = pos.x;
-                piece.dataset.y = pos.y;
                 piece.style.left = `${pos.x * 300 / size}px`; /* Position absolue */
                 piece.style.top = `${pos.y * 300 / size}px`; /* Position absolue */
+                piece.dataset.x = pos.x;
+                piece.dataset.y = pos.y;
             }
         });
         emptyPosition = { x: size - 1, y: size - 1 };
     }
 
     function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+        let shuffleTimes = difficulty === 'easy' ? 20 : difficulty === 'medium' ? 50 : 100;
+        for (let i = 0; i < shuffleTimes; i++) {
+            const j = Math.floor(Math.random() * array.length);
+            [array[i % array.length], array[j]] = [array[j], array[i % array.length]];
         }
     }
 
-    var rulesBtn = document.getElementById("rules-button");
-    var modal = document.getElementById("rules-modal");
-    var closeBtn = document.getElementsByClassName("close")[0];
-
-    rulesBtn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    function startChronometer() {
+        secondsElapsed = 0;
+        chronometreElement.textContent = "Temps écoulé : 00:00";
+        if (timerInterval) {
+            clearInterval(timerInterval);
         }
+        timerInterval = setInterval(updateChronometer, 1000);
+    }
+
+    function updateChronometer() {
+        secondsElapsed++;
+        const minutes = Math.floor(secondsElapsed / 60);
+        const seconds = secondsElapsed % 60;
+        chronometreElement.textContent = `Temps écoulé : ${padZero(minutes)}:${padZero(seconds)}`;
+    }
+
+    function resetChronometer() {
+        clearInterval(timerInterval);
+        secondsElapsed = 0;
+        chronometreElement.textContent = "Temps écoulé : 00:00";
+    }
+
+    function stopChronometer() {
+        clearInterval(timerInterval);
+    }
+
+    function padZero(num) {
+        return num < 10 ? `0${num}` : num;
     }
 
     const records = loadRecords();
     displayCurrentRecord();
     initializePuzzle(size);
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const rulesButton = document.getElementById('rules-button');
+    const modal = document.getElementById('rules1');
+    const closeButton = document.querySelector('.modal .close');
+    const closeFooterButton = document.getElementById('closeBtninfo');
+
+    // Fonction pour ouvrir la modal
+    rulesButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    // Fonction pour fermer la modal
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Fermer la modal en cliquant sur le bouton de fermeture dans le footer
+    closeFooterButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Fermer la modal en cliquant en dehors de celle-ci
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });

@@ -18,8 +18,11 @@
                 <img src="../image/Help.png" alt="">
             </button>
         </div>
-        <div class="headerContenaire2">
-            
+        <div class="centrer">
+            <div id="chronometre">Temps écoulé : 00:00</div>
+        </div>
+
+        <div class="headerContenaire2">            
             <div id="score">Nbre de coups : 0</div>
             <div id="record">Record :</div>
         </div>
@@ -34,30 +37,33 @@
         <div><input type="file" id="image-upload" accept="image/*"></div>
     </div>
 
-
-
-
-<div class="centrer">
-
-<div class="placer">
-    <label for="select-size">Choisissez la taille du puzzle :</label>
-    <select class="form-select" id="select-size">
-        <option value="3">3x3</option>
-        <option value="4">4x4</option>
-        <option value="5">5x5</option>
-        <!-- Ajoutez d'autres options selon vos besoins -->
-    </select>
- </div>   
+<div class="option">
+    <div class="centrer">
+        <div class="placer">
+            <label for="select-size">Choisissez la taille du puzzle :</label>
+            <select class="form-select" id="select-size">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <!-- Ajoutez d'autres options selon vos besoins -->
+            </select>
+        </div>
+    </div>
+    
+    <div class="centrer">
+        <div class="placer">
+            <label for="select-difficulty">Choisissez la difficulté :</label>
+            <select class="form-select" id="select-difficulty">
+                <option value="easy">Facile</option>
+                <option value="medium">Moyen</option>
+                <option value="hard">Difficile</option>
+            </select>
+        </div>
+    </div>
 </div>
 
 
-
-
-
-
-
-
-
+    
     <div class="lesBoutons">
         <div id="lien">
             <button onclick="location.reload()" class="tp">NOUVELLE PARTIE</button>
