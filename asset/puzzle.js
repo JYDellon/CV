@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pieces.push(piece);
             }
         }
-        // shufflePieces();
+        shufflePieces();
         startChronometer();
         toggleNumbersVisibility(afficherChiffresCheckbox.checked); 
     }
