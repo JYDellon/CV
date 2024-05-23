@@ -11,14 +11,11 @@
 <body>
     <header>
         <div class="headerContenaire1">
-            <div class="titre">
-                <h1>LE PUZZLE GLISSANT</h1>
-            </div>
             <button class="btn" id="rules-button">
                 <img src="../image/Help.png" alt="">
             </button>
         </div>
-        <div class="centrer">
+        <div class="centrer1">
             <div id="chronometre">Temps écoulé : 00:00</div>
         </div>
 
@@ -32,41 +29,12 @@
         <div id="puzzle-container"></div>
     </div>
 
-    <!-- Section pour télécharger une image -->
-    <div class="telechargement">
-        <div><input type="file" id="image-upload" accept="image/*"></div>
+    <div class="option">
     </div>
 
-<div class="option">
-    <div class="centrer">
-        <div class="placer">
-            <label for="select-size">Choisissez la taille du puzzle :</label>
-            <select class="form-select" id="select-size">
-                <option value="3">3x3</option>
-                <option value="4">4x4</option>
-                <option value="5">5x5</option>
-                <!-- Ajoutez d'autres options selon vos besoins -->
-            </select>
-        </div>
-    </div>
-    
-    <div class="centrer">
-        <div class="placer">
-            <label for="select-difficulty">Choisissez la difficulté :</label>
-            <select class="form-select" id="select-difficulty">
-                <option value="easy">Facile</option>
-                <option value="medium">Moyen</option>
-                <option value="hard">Difficile</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-
-    
     <div class="lesBoutons">
         <div id="lien">
-            <button onclick="location.reload()" class="tp">NOUVELLE PARTIE</button>
+            <button onclick="location.reload()" class="tp" id="nouvellePartie">NOUVELLE PARTIE</button>
         </div>
         <div id="lien">
             <a href="../index.html#portfolio">
@@ -84,6 +52,52 @@
             <div class="objectifPuzzle"><img src="../image/objectif.png" alt=""></div>
             <div class="footer btn">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeBtninfo" style="text-align: center;">Fermer</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Options de Jeu -->
+    <div id="options-modal" class="modal">
+        <div class="modal-content2">
+            <span class="close">&times;</span>
+            <h2>OPTION DE JEU</h2>
+            <div class="centrer">
+                <div class="telechargement">
+                    <div><input type="file" id="image-upload" accept="image/*"></div>
+                </div>
+            </div>
+
+            <div class="centrer">
+                <div class="placer">
+                    <label for="select-size">Choisissez la taille du puzzle :</label>
+                    <select class="form-select" id="select-size">
+                        <option value="3">3x3</option>
+                        <option value="4">4x4</option>
+                        <option value="5">5x5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="centrer">
+                <div class="placer">
+                    <label for="select-difficulty">Choisissez la difficulté :</label>
+                    <select class="form-select" id="select-difficulty">
+                        <option value="easy">Facile</option>
+                        <option value="medium">Moyen</option>
+                        <option value="hard">Difficile</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="centrer">
+                <div class="placer">
+                    <label><input type="checkbox" id="afficher-chiffres"> Afficher les chiffres</label>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="centrer1">
+                    <button type="button" class="btn btn-secondary close-btn" id="demarrer">Démarrer</button>
+                </div>
             </div>
         </div>
     </div>

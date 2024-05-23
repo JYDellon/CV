@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageUploadInput = document.getElementById('image-upload');
     const selectSize = document.getElementById('select-size');
     const selectDifficulty = document.getElementById('select-difficulty');
+    const afficherChiffresCheckbox = document.getElementById('afficher-chiffres');
 
     let size = parseInt(selectSize.value); 
     let difficulty = selectDifficulty.value;
@@ -19,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     selectSize.addEventListener('change', () => {
         size = parseInt(selectSize.value);
-        resetPuzzle(size);
+        // resetPuzzle(size);
     });
 
     selectDifficulty.addEventListener('change', () => {
         difficulty = selectDifficulty.value;
-        resetPuzzle(size);
+        // resetPuzzle(size);
     });
 
     imageUploadInput.addEventListener('change', (event) => {
@@ -33,11 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const reader = new FileReader();
             reader.onload = function (e) {
                 imageUrl = e.target.result;
-                resetPuzzle(size);
+                // resetPuzzle(size);
             }
             reader.readAsDataURL(file);
         }
     });
+
+    afficherChiffresCheckbox.addEventListener('change', () => {
+        toggleNumbersVisibility(afficherChiffresCheckbox.checked);
+    });
+
+    function loadDefaultImage() {
+        const defaultImageUrl = localStorage.getItem('defaultImageUrl');
+        if (defaultImageUrl) {
+            imageUrl = defaultImageUrl;
+        }
+    }
+
+    loadDefaultImage();
 
     function setPuzzleBackground(imageUrl) {
         pieces.forEach(piece => {
@@ -46,6 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    function toggleNumbersVisibility(afficherChiffres) {
+        pieces.forEach(piece => {
+            const span = piece.querySelector('span');
+            if (span) {
+                span.style.visibility = afficherChiffres ? 'visible' : 'hidden';
+                if (!afficherChiffres && piece.classList.contains('empty')) {
+                    span.style.visibility = 'hidden'; // Assure que la tuile vide reste visible
+                }
+            }
+        });
+    }
+    
 
     function updateMovesCount() {
         movesCount++;
@@ -71,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayCurrentRecord() {
         const recordElement = document.getElementById('record');
-        recordElement.textContent = `Record : ${records.bestScore === Infinity ? 'N/A' : records.bestScore}`;
+        recordElement.textContent = `Record : ${records.bestScore === Infinity ? "Aucun pour l'instant" : records.bestScore}`;
     }
 
     function initializePuzzle(size) {
@@ -93,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (x === size - 1 && y === size - 1) {
                     piece.classList.add('empty');
                     piece.dataset.number = size * size;
-                    piece.innerHTML = `<span style="color: white; font-weight: bold;">${size * size}</span>`;
+                    piece.innerHTML = `<span style="color: aqua; font-weight: bold;">${size * size}</span>`;
                     emptyPieceContent = piece.innerHTML;
                     piece.addEventListener('click', () => {});
                 } else {
@@ -101,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     piece.style.backgroundSize = `${puzzleSize}px ${puzzleSize}px`;
                     piece.style.backgroundPosition = `-${x * tileSize}px -${y * tileSize}px`;
                     piece.dataset.number = x + y * size + 1;
-                    piece.innerHTML = `<span style="color: white; font-weight: bold;">${x + y * size + 1}</span>`;
+                    piece.innerHTML = `<span style="color: aqua; font-weight: bold;">${x + y * size + 1}</span>`;
                     piece.addEventListener('click', () => {
                         if (!gameWon) {
                             movePiece(piece);
@@ -111,16 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 piece.style.width = `${tileSize}px`;
                 piece.style.height = `${tileSize}px`;
-                piece.style.left = `${x * tileSize}px`; /* Position absolue */
-                piece.style.top = `${y * tileSize}px`; /* Position absolue */
+                piece.style.left = `${x * tileSize}px`; 
+                piece.style.top = `${y * tileSize}px`; 
                 piece.dataset.x = x;
                 piece.dataset.y = y;
                 puzzleContainer.appendChild(piece);
                 pieces.push(piece);
             }
         }
-        shufflePieces();
+        // shufflePieces();
         startChronometer();
+        toggleNumbersVisibility(afficherChiffresCheckbox.checked); 
     }
 
     function resetPuzzle(newSize) {
@@ -148,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (checkWin()) {
                 gameWon = true;
                 updateRecordsIfNewRecord(movesCount);
-                stopChronometer();
             }
 
             const numberEmpty = document.querySelector('[data-number="' + size * size + '"]');
@@ -174,27 +201,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const lastEmptyTileNumber = size * size;
             const lastEmptyTile = document.querySelector(`[data-number="${lastEmptyTileNumber}"]`);
     
-            if (imageUrl !== '') {
-                lastEmptyTile.style.backgroundImage = `url(${imageUrl})`;
-            } else {
-                lastEmptyTile.style.backgroundImage = `url(../image/test.jpg)`;
-            }
-            const puzzleSize = 300; 
-            const tileSize = puzzleSize / size; 
+            const puzzleSize = 300;
+            const tileSize = puzzleSize / size;
+            lastEmptyTile.style.backgroundImage = `url(${imageUrl || '../image/test.jpg'})`;
             lastEmptyTile.style.backgroundSize = `${puzzleSize}px ${puzzleSize}px`;
             lastEmptyTile.style.backgroundPosition = `-${(size - 1) * tileSize}px -${(size - 1) * tileSize}px`;
             lastEmptyTile.innerHTML = '';
             lastEmptyTile.classList.add('fade-in');
+    
+            // Ajoutez une classe spéciale à la cellule vide
+            lastEmptyTile.classList.add('visible-empty');
+    
             pieces.forEach(piece => {
                 const span = piece.querySelector('span');
                 if (span) {
                     span.style.opacity = '0';
+                    piece.classList.add('fade-in');
                 }
             });
-            imageUploadInput.disabled = true;
+            stopChronometer();
         }
         return allCorrect;
     }
+    
+    
 
     function shufflePieces() {
         const positions = [];
@@ -209,8 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         pieces.forEach((piece, index) => {
             if (!piece.classList.contains('empty')) {
                 const pos = positions[index];
-                piece.style.left = `${pos.x * 300 / size}px`; /* Position absolue */
-                piece.style.top = `${pos.y * 300 / size}px`; /* Position absolue */
+                piece.style.left = `${pos.x * 300 / size}px`; 
+                piece.style.top = `${pos.y * 300 / size}px`; 
                 piece.dataset.x = pos.x;
                 piece.dataset.y = pos.y;
             }
@@ -259,37 +289,62 @@ document.addEventListener('DOMContentLoaded', () => {
     const records = loadRecords();
     displayCurrentRecord();
     initializePuzzle(size);
-});
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     const rulesButton = document.getElementById('rules-button');
-    const modal = document.getElementById('rules1');
-    const closeButton = document.querySelector('.modal .close');
-    const closeFooterButton = document.getElementById('closeBtninfo');
+    const modalRules = document.getElementById('rules1');
+    const closeButtonRules = document.querySelector('.modal .close');
+    const closeFooterButtonRules = document.getElementById('closeBtninfo');
 
-    // Fonction pour ouvrir la modal
+    const modalOptions = document.getElementById('options-modal');
+    const startButton = document.getElementById('demarrer');
+
     rulesButton.addEventListener('click', () => {
-        modal.style.display = 'block';
+        modalRules.style.display = 'block';
     });
 
-    // Fonction pour fermer la modal
+    closeButtonRules.addEventListener('click', () => {
+        modalRules.style.display = 'none';
+    });
+
+    closeFooterButtonRules.addEventListener('click', () => {
+        modalRules.style.display = 'none';
+    });
+
+    const optionsModal = document.getElementById('options-modal');
+    const closeButton = document.querySelector('.modal-content2 .close');
+
+    // Gestionnaire d'événements de clic sur la balise <span> de fermeture
     closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
+        optionsModal.style.display = 'none'; // Masquer la modal
     });
 
-    // Fermer la modal en cliquant sur le bouton de fermeture dans le footer
-    closeFooterButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Fermer la modal en cliquant en dehors de celle-ci
     window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
+        if (event.target === modalRules) {
+            modalRules.style.display = 'none';
         }
     });
+
+    const nouvellePartieButton = document.getElementById('nouvellePartie');
+    modalOptions.style.display = 'block';
+    resetChronometer();
+    stopChronometer();
+
+    startButton.addEventListener('click', () => {
+        const selectedSize = parseInt(selectSize.value);
+        const selectedDifficulty = selectDifficulty.value;
+        resetPuzzle(selectedSize);
+        modalOptions.style.display = 'none';
+    });
+
+    startButton.addEventListener('click', () => {
+        if (modalOptions.style.display !== 'block') {
+            const selectedSize = parseInt(selectSize.value);
+            const selectedDifficulty = selectDifficulty.value;
+            resetPuzzle(selectedSize);
+            resetChronometer();
+            startChronometer();
+            modalOptions.style.display = 'none';
+        }
+    });
+   
 });

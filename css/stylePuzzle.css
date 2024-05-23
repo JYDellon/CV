@@ -180,13 +180,6 @@ img{
 .empty {
     cursor: default;
 }
-.puzzle-piece::after {
-    content: attr(data-number);
-    position: absolute;
-    color: aqua;
-    font-size: 24px;
-    font-weight: bold;
-}
 
 @keyframes fadeIn {
     from {
@@ -246,13 +239,6 @@ img{
     cursor: default;
 }
 
-.puzzle-piece::after {
-    content: attr(data-number);
-    position: absolute;
-    color: aqua;
-    font-size: 24px;
-    font-weight: bold;
-}
 
 @keyframes fadeIn {
     from {
@@ -277,12 +263,17 @@ img{
     text-align: center;
     width: 300px;
     color: aqua;
-    text-align: center;
 }
 .centrer{
     display: flex;
     justify-content: center;
+    margin-bottom: 1em;
 }
+.centrer1{
+    display: flex;
+    justify-content: center;
+}
+
 /* ------------------------------------------------------------------------------------------------------------- */
 
 #puzzle-container {
@@ -360,4 +351,71 @@ img{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.puzzle-piece.fade-in::after {
+    animation: fadeOut 2s forwards; /* Utilisation de l'animation fadeOut pour faire disparaître les chiffres */
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); /* Ajout d'un fond semi-transparent */
+}
+
+.modal-content2 {
+    background-image : url(../image/fondecran.jpg);
+    margin: auto; /* Centrage horizontal */
+    margin-top: 3%; /* Marge depuis le haut pour centrer verticalement */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur de la modal */
+    max-width: 600px; /* Largeur maximale */
+    position: relative; /* Position relative pour utiliser des valeurs relatives pour les éléments internes */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute; /* Position absolue pour pouvoir positionner le bouton de fermeture n'importe où dans la modal */
+    top: 10px; /* Distance depuis le haut */
+    right: 10px; /* Distance depuis la droite */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content2 h2{
+    color: aqua;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.puzzle-piece span {
+    display: block;
+}
+
+.hide-numbers .puzzle-piece span {
+    display: none;
 }
