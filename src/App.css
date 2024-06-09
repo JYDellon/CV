@@ -417,7 +417,9 @@ h4{
     text-align: center;  
     text-justify: auto;
   }
-
+.lang2{
+  padding-top: 2em;
+}
   .cardo{
     font-size: 1.2em;
   }
