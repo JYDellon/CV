@@ -342,7 +342,9 @@ h4{
 
 
 @media (min-width:1200px) {
-  
+  .lang2{
+    padding-top: 2em;
+  }  
   .carousel{
     margin-top: 5em;
     display: block;
