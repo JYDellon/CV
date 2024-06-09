@@ -36,12 +36,12 @@ const Formation = () => {
       <div id="langues"> 
                     <h3 className='moi'>Langues</h3>
                     <div id="bilingue">
-                        <div className="imgLang2">
-                          <img src="/image/drapeauangleterre.png" alt="anglais" title="Anglais"></img>
-                        </div>
-                        <div className="lang2">
-                            <p>B1</p>
-                        </div>
+                            <div className="imgLang2">
+                                <img src="./image/drapeauangleterre.png" alt="anglais" title="Anglais"></img>
+                            </div>
+                            <div className="lang2">
+                                B1
+                            </div>
                     </div>
       </div>
       <div id="hobbies">

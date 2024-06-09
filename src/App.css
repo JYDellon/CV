@@ -491,6 +491,9 @@ h4{
   }
 }
 @media (min-width:768px) and (max-width:991px){
+  .lang2{
+    padding-top: 2em;
+  }
   .blabla{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -573,6 +576,9 @@ h4{
   }
 }
 @media (min-width:501px) and (max-width:767px){
+  .lang2{
+    padding-top: 2em;
+  }
   .blabla{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
@@ -673,6 +679,9 @@ h4{
   }
 }
 @media (max-width:500px){
+  .lang2{
+    padding-top: 2em;
+  }
   .blabla{
     background-color: rgba(26, 37, 61, 0.6);
     border: 1mm ridge rgba(75, 107, 175, 0.6);
