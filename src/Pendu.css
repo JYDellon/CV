@@ -1,0 +1,28 @@
+.mot {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+  }
+  
+  .lettre {
+    margin: 0 0.5em;
+  }
+  
+  .clavier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  .clavier button {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  
+  .erreurs {
+    margin-top: 1em;
+    text-align: center;
+  }
+  

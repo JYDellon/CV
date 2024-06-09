@@ -1,0 +1,414 @@
+.corps2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../public/image/background.jpg');
+    z-index: 9999; 
+}
+#lien a button{
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+}
+#lien button{
+    border-radius: 40px;
+    width:250px;
+    height: 50px;
+}
+#lien{
+    text-align: center;
+    font-size:1.6em;
+    
+}
+.container14{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+.resultat200{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container22 img {
+    width: 120px;
+    height: 120px;
+}
+.container33 img {
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+.container44 img, .container55 img{
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+}
+
+
+#diable1, #diable2, #diable3{
+    width: 150px;
+    visibility: hidden;
+}
+#ange1, #ange2, #ange3{
+    visibility: hidden;
+}
+.affichResultat, .affichResultat2, .affichResultat3 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+/* .cardz{
+    margin-bottom: 1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+
+} */
+.cardz {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ajout pour centrer verticalement */
+    width: 120px;
+    height: 120px;
+    border-radius: 8px; /* Ajout pour arrondir les coins */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ajout de l'ombre */
+    transition: transform 0.3s ease; /* Ajout d'une transition pour l'animation */
+}
+
+.cardz:hover {
+    transform: scale(1.05); /* Ajout pour agrandir la carte au survol */
+}
+
+#resultAnge, #resultDiable{
+    font-size: 50px;
+    color: white;
+}
+#pierreUser:hover{
+    box-shadow: 10px 5px 5px teal;
+    width: 120px;
+    height: 120px;
+}
+#papierUser:hover{
+    box-shadow: 10px 5px 5px teal;
+}
+#ciseauxUser:hover{
+    box-shadow: 10px 5px 5px teal;
+}.containerZZ{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+    .portfolio20{
+        font-size: 1.3em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:200px;
+        height: 35px;
+        background:transparent;
+        border-radius: 20px;
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+#result1{
+    font-size: 1.6em;
+}
+    .tp20{
+        display: inline-block;
+        background: linear-gradient(to left,rgb(54, 54, 221), rgb(42, 218, 218) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 260px;
+        font-size: 1.2em;
+    }
+    
+    
+
+@media (min-width:768px) and (max-width:991px){
+    .corps{
+        background-image : url(../public/image/background.jpg);
+    }
+    #lien button a{
+        font-size: 1.3em;
+        text-decoration: none;
+    }
+    #lien button{
+        border-radius: 40px;
+        width:200px;
+    }
+    #lien{
+        text-align: center;
+    }
+    .container14{
+        margin-left: 3em;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+    }
+    .resultat200{
+        /* margin-top: -5em; */
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .ccontainer11 img{
+        width: 120px;
+    }
+    #ange1, #ange2, #ange3{
+        visibility: hidden;
+    }
+    #diable1, #diable2, #diable3{
+        visibility: hidden;
+    }
+    .container44 img, .container55 img{
+        width: 120px;
+        height: 120px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2em;
+    }
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+
+    .portfolio{
+        font-size: 2em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:400px;
+        height: 35px;
+        background:transparent;
+        border-radius: 20px;
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+    }
+    .portfolio2{
+        font-size: 2em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:400px;
+        height: 35px;
+        background:transparent;
+        border-radius: 20px;
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+    }
+
+}
+@media (min-width:501px) and (max-width:767px){
+    .corps{
+        background-image :  url(../public/image/background.jpg);
+    }  
+    #lien button a{
+        font-size: 1.3em;
+        text-decoration: none;
+    }
+    #lien button{
+        border-radius: 40px;
+        width:200px;
+    }
+    #lien{
+        margin-top: 1em;
+        text-align: center;
+    }  
+.container14{
+    margin-left: 3em;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+.resultat200{
+    /* margin-top: -4em; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.ccontainer11 img{
+    width: 100px;
+}
+#ange1, #ange2, #ange3{
+    visibility: hidden;
+}
+#diable1, #diable2, #diable3{
+    visibility: hidden;
+}
+.container44 img, .container55 img{
+    width: 120px;
+    height: 120px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+}
+#lien a button{
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.portfolio{
+    font-size: 2em;
+    border:none;
+    text-decoration:none;
+    color:#fff;
+    width:400px;
+    height: 35px;
+    background:transparent;
+    border-radius: 20px;
+    animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+    box-shadow: 0 0 0 0 rgb(75,107,171);
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.portfolio2{
+    font-size: 2em;
+    border:none;
+    text-decoration:none;
+    color:#fff;
+    width:400px;
+    height: 35px;
+    background:transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0 rgb(75,107,171);
+    animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+}
+@media  (max-width:500px){
+    .corps{
+        background-image :  url(../public/image/background.jpg);
+    }
+    #lien a button{
+        font-size: 1.3em;
+        text-decoration: none;
+    }
+    #lien button{
+        border-radius: 40px;
+        width:200px;
+    }
+    #lien{
+        margin-top: 1em;
+        text-align: center;
+    }  
+        .container14{
+        margin-left: 1em;
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+    }
+    .resultat200{
+        margin-top: -1em;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #lien a button{
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+    #ange1, #ange2, #ange3{
+        display: none;
+    }
+    #diable1, #diable2, #diable3{
+        display: none;
+    }
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 2em;
+    }
+    
+    .portfolio{
+        font-size: 2em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:400px;
+        height: 35px;
+        background:transparent;
+        border-radius: 20px;
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+    }
+    .portfolio2{
+        font-size: 2em;
+        border:none;
+        text-decoration:none;
+        color:#fff;
+        width:400px;
+        height: 35px;
+        background:transparent;
+        border-radius: 20px;
+        box-shadow: 0 0 0 0 rgb(75,107,171);
+        animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+        display: inline-block;
+        background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    
+    }
+
+}
+@keyframes battement {
+    to{
+        box-shadow: 0 0 0 30px rgba(255,71,84,0);
+      }
+}

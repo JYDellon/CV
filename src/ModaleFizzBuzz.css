@@ -1,0 +1,106 @@
+.modale-fizzbuzz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../public/image/background.jpg');
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: white;
+}
+
+.modale-fizzbuzz h1 {
+    margin-bottom: 20px;
+}
+
+.modale-fizzbuzz p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.boutons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.boutons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #007bff;
+    background-color: #007bff00;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.bouton{
+    border:1px solid #007bff;
+}
+
+.boutons button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+.finDePage{
+    padding-top:6.5em;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.modale-fizzbuzz2{
+
+    position: fixed;
+    top: 33em;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfoliA{
+    font-size: 1.4em;
+    border:none;
+    text-decoration:none;
+    color:hsl(0, 74%, 18%);
+    width:160px;
+    height: 42px;
+    background:transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0 rgb(75,107,171);
+    animation:battement 2s infinite cubic-bezier(.66,0,0,1);
+    display: inline-block;
+    background: linear-gradient(to Top,rgb(54, 54, 221), rgb(234, 163, 76) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 500px) {
+    .modale-fizzbuzz {
+        padding: 10px;
+    }
+    .modale-fizzbuzz2{
+
+        position: fixed;
+        top: 30em;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+    }
+}
