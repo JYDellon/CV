@@ -124,7 +124,7 @@ const ModaleSnake = ({ isOpen, onClose }) => {
                             <button onClick={() => handleDirectionClick('RIGHT')}>DROITE</button>
                         </div>
                         <button onClick={() => handleDirectionClick('DOWN')}>BAS</button>
-                        {/* <div className='finDePageUI'>
+                        <div className='finDePageUI'>
                             
                             <dix>
                                 <button onClick={nouvellePartie} className='tpUI'>
@@ -138,23 +138,23 @@ const ModaleSnake = ({ isOpen, onClose }) => {
                                 </a>
                             </div>
                             
-                        </div> */}
+                        </div>
                     </div>
-                    <div className='finDePageUI'>
+                    {/* <div className='finDePageUI'>
                             
-                            <dix>
+                            <dix className='trac'>
                                 <button onClick={nouvellePartie} className='tpUI'>
                                     NOUVELLE PARTIE
                                 </button>
                             </dix>
                             
-                            <div>
+                            <div className='trac'>
                                 <a href="#portfolio">
                                     <dix><button onClick={onClose} className='portfolioA'>PORTFOLIO</button></dix>
                                 </a>
                             </div>
                             
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
