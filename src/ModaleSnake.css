@@ -42,7 +42,7 @@
     grid-template-rows: repeat(20, 15px);
     gap: 1px;
     border: 2px solid aqua; 
-    margin-top: 5em;
+    margin-top: 1em;
 }
 
 .row {
@@ -64,7 +64,7 @@
 }
 
 .controls {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,6 +81,7 @@ button {
 }
 
 .tpUI {
+    margin-top: -10em;
     font-size: 1em;
     width: 280px;
     height: 40px;
@@ -114,5 +115,6 @@ button {
 }
 finDePageUI{
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
