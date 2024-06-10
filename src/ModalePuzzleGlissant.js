@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ModalePuzzleGlissant.css';
 
-const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imageUrl, numberColor, onClose }) => {
+const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imageUrl, numberColor, onClose, onReset }) => {
     const [size, setSize] = useState(defaultSize);
     const [movesCount, setMovesCount] = useState(0);
     const [gameWon, setGameWon] = useState(false);
@@ -59,10 +59,10 @@ const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imag
     };
 
     const shufflePieces = (newPieces, size) => {
-        for (let i = newPieces.length - 2; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newPieces[i], newPieces[j]] = [newPieces[j], newPieces[i]];
-        }
+        // for (let i = newPieces.length - 2; i > 0; i--) {
+        //     const j = Math.floor(Math.random() * (i + 1));
+        //     [newPieces[i], newPieces[j]] = [newPieces[j], newPieces[i]];
+        // }
         const emptyPiece = newPieces.find(piece => piece.number === size * size);
         const lastIndex = size * size - 1;
         const lastPiece = newPieces[lastIndex];
@@ -112,6 +112,7 @@ const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imag
 
     const handleClose = () => {
         onClose();
+        onReset(); // Réinitialiser les options du composant parent
     };
 
     return (
@@ -168,4 +169,3 @@ const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imag
 };
 
 export default ModalePuzzleGlissant;
-
