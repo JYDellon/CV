@@ -47,7 +47,7 @@ const ModaleMenuPuzzleGlissant = ({ onClose }) => {
 
     const handleReset = () => {
         setSize(3);
-        selectSizeRef.current.value = 3; // Mettre à jour la sélection du dropdown
+        selectSizeRef.current.value = 3; 
         setDifficulty('easy');
         setShowNumbers(true);
         setImageUrl('');
@@ -55,7 +55,7 @@ const ModaleMenuPuzzleGlissant = ({ onClose }) => {
         setIsModalePuzzleGlissantOpen(false);
         setIsModaleMenuPuzzleGlissantOpen(false);
         if (imageUploadRef.current) {
-            imageUploadRef.current.value = ''; // Réinitialiser le champ de téléchargement d'image
+            imageUploadRef.current.value = '';
         }
     };
 
