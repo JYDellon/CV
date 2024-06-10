@@ -251,7 +251,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease-in-out; /* Ajoute une transition */
+    transition: transform 0.3s ease-in-out; 
 }
 
 .empty {
@@ -379,7 +379,7 @@ img{
 }
 
 .puzzle-piece.fade-in::after {
-    animation: fadeOut 2s forwards; /* Utilisation de l'animation fadeOut pour faire disparaître les chiffres */
+    animation: fadeOut 2s forwards; 
 }
 
 

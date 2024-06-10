@@ -1,21 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ModalePuzzleGlissant.css';
 
-    const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imageUrl, numberColor, onClose }) => {
+const ModalePuzzleGlissant = ({ size: defaultSize, difficulty, showNumbers, imageUrl, numberColor, onClose }) => {
     const [size, setSize] = useState(defaultSize);
     const [movesCount, setMovesCount] = useState(0);
     const [gameWon, setGameWon] = useState(false);
     const [records, setRecords] = useState({ bestScore: Infinity });
     const [pieces, setPieces] = useState([]);
     const [emptyPosition, setEmptyPosition] = useState({ x: defaultSize - 1, y: defaultSize - 1 });
-    
+
     const puzzleContainer = useRef(null);
     const movesCountElement = useRef(null);
 
     useEffect(() => {
         initializePuzzle(defaultSize);
         loadRecords();
-        
     }, [defaultSize]);
 
     const initializePuzzle = (size) => {
@@ -27,7 +26,7 @@ import './ModalePuzzleGlissant.css';
             }
         }
         
-        newPieces[size * size - 1].number =  size*size;
+        newPieces[size * size - 1].number = size * size;
         shufflePieces(newPieces, size);
     };
 
@@ -64,9 +63,7 @@ import './ModalePuzzleGlissant.css';
             const j = Math.floor(Math.random() * (i + 1));
             [newPieces[i], newPieces[j]] = [newPieces[j], newPieces[i]];
         }
-
-        // Remettre la case vide à la dernière position
-        const emptyPiece = newPieces.find(piece => piece.number === size*size);
+        const emptyPiece = newPieces.find(piece => piece.number === size * size);
         const lastIndex = size * size - 1;
         const lastPiece = newPieces[lastIndex];
         newPieces[lastIndex] = emptyPiece;
@@ -89,14 +86,12 @@ import './ModalePuzzleGlissant.css';
     const checkWin = (pieces) => {
         return pieces.every((piece, index) => {
             if (index === pieces.length - 1) 
-                return piece.number === size*size; 
+                return piece.number === size * size; 
             return piece.number === piece.y * size + piece.x + 1;
-            
         });
     };
 
     const displayWinMessage = () => {
-        
         if (records.bestScore > movesCount) {
             const updatedRecords = { ...records, bestScore: movesCount };
             saveRecords(updatedRecords);
@@ -117,60 +112,60 @@ import './ModalePuzzleGlissant.css';
 
     const handleClose = () => {
         onClose();
-      };
-
+    };
 
     return (
         <div className='corpsD'>
             <div className="modale-puzzle-glissant">
-            <div className="controls2">
+                <div className="controls2">
                     <div className="controls">
                         <div id="movesCount" ref={movesCountElement}>Nbre de coups : {movesCount}</div>
-                        <div id="record">Record : {records.bestScore === Infinity ? "Aucun pour l'instant" : records.bestScore+1}</div>
+                        <div id="record">Record : {records.bestScore === Infinity ? "Aucun pour l'instant" : records.bestScore + 1}</div>
                     </div>
                 </div>
-                <div className="puzzle-container puzzle-container-centered" ref={puzzleContainer}>display
+                <div className="puzzle-container puzzle-container-centered" ref={puzzleContainer}>
                     {pieces.map((piece, index) => (
                         <div
                             key={index}
-                            className={`puzzle-piece ${piece.number === null ? 'empty' : ''} ${gameWon ? 'win' : ''}`}
+                            className={`puzzle-piece ${piece.number === size * size ? 'empty' : ''} ${gameWon ? 'win' : ''}`}
                             style={{
                                 width: `${300 / size}px`,
                                 height: `${300 / size}px`,
                                 left: `${piece.x * (300 / size)}px`,
                                 top: `${piece.y * (300 / size)}px`,
-                                backgroundPosition: piece.number === null && !gameWon ? 'none' : `-${piece.imgX * (300 / size)}px -${piece.imgY * (300 / size)}px`,
-                                backgroundImage: piece.number === null && !gameWon ? 'none' : `url(${imageUrl})`,
+                                backgroundPosition: (!gameWon && piece.number === size * size) || !imageUrl ? 'none' : `-${piece.imgX * (300 / size)}px -${piece.imgY * (300 / size)}px`,
+                                backgroundImage: (!gameWon && piece.number === size * size) || !imageUrl ? 'none' : `url(${imageUrl})`,
                                 backgroundSize: '300px 300px'
-                                
                             }}
-                            
                             onClick={() => movePiece(piece)}
                         >
-                            {showNumbers && piece.number !== null && !gameWon &&
-                             <span style={{ color: numberColor }}>{piece.number}</span>}
+                            {showNumbers && !gameWon && piece.number !== size * size && (
+                                <span style={{ color: numberColor }}>{piece.number}</span>
+                            )}
 
-                            {showNumbers && piece.number === null && gameWon && 
-                            <span>{size * size}</span>}
+                            {gameWon && !imageUrl && (
+                                <span style={{ color: numberColor }}>{piece.number}</span>
+                            )}
 
-                            {showNumbers && piece.number !== null && gameWon && !imageUrl &&
-                            <span style={{ color: numberColor }}>{piece.number}</span>}
-
+                            {gameWon && !imageUrl && piece.number === size * size && (
+                                <span style={{ color: numberColor }}></span>
+                            )}
                         </div>
                     ))}
                 </div>
             </div>
             <div className="container33">
-                        <div id="lien13">
-                                <a>
-                                <button className="tp2" onClick={handleClose}>
-                                        NOUVELLE PARTIE
-                                    </button>
-                                </a>
-                        </div> 
+                <div id="lien13">
+                    <a>
+                        <button className="tp2" onClick={handleClose}>
+                            NOUVELLE PARTIE
+                        </button>
+                    </a>
                 </div>
+            </div>
         </div>
     );
 };
 
 export default ModalePuzzleGlissant;
+
