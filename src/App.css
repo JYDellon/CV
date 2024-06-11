@@ -402,6 +402,7 @@ h4{
   }
   contact100{
     width: 400px;
+    padding-top: 2em;
   }
 }
 @media (min-width:992px) and (max-width:1199px){
