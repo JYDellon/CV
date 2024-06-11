@@ -24,11 +24,11 @@ const Contact = () => {
           <div className='reseauxetportfolio'>
               <div className='reseaux'>
                 <div className='contact2'>
-                    <a href="https://www.linkedin.com/in/jean-yves-dellon-5218499b/" target="_blank"><img src="./image/linkedin.png" width="50px" alt="linkedIn"></img></a>
+                    <a href="https://www.linkedin.com/in/jean-yves-dellon-5218499b/" target="_blank"><img src="./image/linkedin.png" width="75px" alt="linkedIn"></img></a>
                 </div>
                 
                 <div className='contact3'>
-                    <a href="https://my.indeed.com/p/jeanyvesd-8ljnqr8" target="_blank"><img src="./image/indeed.png" width="50px" alt="indeed"></img></a>
+                    <a href="https://my.indeed.com/p/jeanyvesd-8ljnqr8" target="_blank"><img src="./image/indeed.png" width="75px" alt="indeed"></img></a>
                 </div>
               </div>
 
