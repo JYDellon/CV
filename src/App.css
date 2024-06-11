@@ -214,7 +214,7 @@ text-justify: auto;
   text-decoration: underline;
 }
 .contact11, .contact41{
-  margin-top: 0.5em;
+  margin-top: -1em;
 }
 h3{
   font-size: 1.6em;
@@ -402,7 +402,6 @@ h4{
   }
   contact100{
     width: 400px;
-    padding-top: 2em;
   }
 }
 @media (min-width:992px) and (max-width:1199px){
