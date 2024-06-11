@@ -104,7 +104,7 @@ body {
 .contactX{
   margin-top: 1em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   color:rgb(234, 163, 76);
   font-size: 1.5em;
 }
