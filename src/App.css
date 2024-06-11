@@ -111,6 +111,10 @@ body {
 .contact199, .contact4{
   width: 240px;
 }
+.contact4{
+  text-align: center;
+}
+
 .corpsX{
   display: flex;
   justify-content: space-around;
